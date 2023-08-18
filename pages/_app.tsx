@@ -1,7 +1,6 @@
 import '../styles/globals.css';
 import { useSession, SessionProvider } from 'next-auth/react';
 import type { AppProps } from 'next/app';
-import GlobalContext from '../context/GlobalContext';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import LoginLoad from '../components/sections/LoginLoad';
 
@@ -24,18 +23,16 @@ export default function App({ Component, pageProps }: AppProps) {
    return (
       <SessionProvider session={pageProps.session}>
          <QueryClientProvider client={queryClient}>
-            <GlobalContext>
-               {/* essa configuração faz com que basta colocar
+            {/* essa configuração faz com que basta colocar
                   nomedocomponente.auth = true para fazer com que a página seja
                   restrita */}
-               {Component.auth ? (
-                  <Auth>
-                     <Component {...pageProps} />
-                  </Auth>
-               ) : (
+            {Component.auth ? (
+               <Auth>
                   <Component {...pageProps} />
-               )}
-            </GlobalContext>
+               </Auth>
+            ) : (
+               <Component {...pageProps} />
+            )}
          </QueryClientProvider>
       </SessionProvider>
    );

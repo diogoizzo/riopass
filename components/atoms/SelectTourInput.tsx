@@ -1,5 +1,7 @@
+import IPatient from '../../interfaces/IPatient';
 import ITour from '../../interfaces/ITour';
 import ITourCategory from '../../interfaces/ITourCategory';
+import IUser from '../../interfaces/IUser';
 import {
    Select,
    SelectContent,
