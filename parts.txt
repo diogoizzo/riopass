@@ -42,3 +42,5 @@ tag da tabela status vermelho:
          underResponsibilityOf,
          underResponsibilityOfUserId
       );
+
+      postgresql://dizzo:aw210787@localhost:5432/riopass?schema=public
