@@ -1,0 +1,99 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  password  String
+  name      String
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  cpf       String?
+  phone     String?
+
+  @@index([name, cpf])
+}
+
+model Client {
+  id          String    @id @default(cuid())
+  name        String
+  email       String?
+  birthday    DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  location    String
+  phone       String
+  observation String?
+}
+
+model Tour {
+  id               String          @id @default(cuid())
+  name             String
+  categories       TourCategory[]
+  destination      String?
+  description      String
+  longDescription  String
+  durationHours    Int?
+  price            Float
+  finalPrice       Float
+  obs              String?
+  languages        String?
+  restrictions     String?
+  placeOfDeparture String?
+  placeOfReturn    String?
+  timeOfDeparture  String?
+  timeOfReturn     String?
+  belongsTobring   String?
+  availability     String?
+  include          String?
+  notInclude       String?
+  textLanguage     String
+  partner          String
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+  itinerary        ItineraryStep[]
+  photoGallery     Photo[]         @relation("gallery")
+  featuredPhoto    Photo           @relation("featured", fields: [featuredPhotoId], references: [id])
+  featuredPhotoId  String          @unique
+}
+
+model TourCategory {
+  id     String @id @default(cuid())
+  name   String
+  enName String
+  esName String
+  tours  Tour[]
+}
+
+model ItineraryStep {
+  id          String   @id @default(cuid())
+  name        String
+  time        String?
+  description String
+  order       Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  partOfTour  Tour     @relation(fields: [tourId], references: [id])
+  tourId      String
+}
+
+model Photo {
+  id             String   @id @default(cuid())
+  name           String
+  description    String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  src            String
+  Tour           Tour?    @relation("gallery", fields: [tourId], references: [id])
+  tourId         String?
+  featuredOfTour Tour?    @relation("featured")
+}

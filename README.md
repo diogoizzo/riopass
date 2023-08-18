@@ -1,0 +1,2 @@
+Aplicação NextJs com tailwind, Next-Auth, react-query, para controle de uma ONG de assistência psicosocial denominada Chega Junto.
+O sistema em desenvolvimento vai controlar todos os pacientes, suas informações pessoais, disponibilidades de horários, documentos (intergração com o google drive) e prontuário, a lista de espera, os profissionais, suas disponiblidade, seus compromissos marcados e os atendimentos realizados.
