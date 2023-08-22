@@ -21,7 +21,6 @@ export default function Tours<NextPage>() {
    const toursQuery = useQuery(['tours'], () => TourServices.getAll());
 
    const tours = toursQuery.data && Tour.createMany(toursQuery.data);
-
    const { toast } = useToast();
 
    useEffect(() => {

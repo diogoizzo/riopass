@@ -1,142 +1,55 @@
 "use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 532;
-exports.ids = [532];
+exports.id = "pages/api/tour/[id]";
+exports.ids = ["pages/api/tour/[id]"];
 exports.modules = {
 
-/***/ 614:
+/***/ "@prisma/client":
+/*!*********************************!*\
+  !*** external "@prisma/client" ***!
+  \*********************************/
+/***/ ((module) => {
+
+module.exports = require("@prisma/client");
+
+/***/ }),
+
+/***/ "next-auth/jwt":
+/*!********************************!*\
+  !*** external "next-auth/jwt" ***!
+  \********************************/
 /***/ ((module) => {
 
 module.exports = require("next-auth/jwt");
 
 /***/ }),
 
-/***/ 8869:
+/***/ "(api)/./lib/prisma.ts":
+/*!***********************!*\
+  !*** ./lib/prisma.ts ***!
+  \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  Z: () => (/* binding */ lib_prisma)
-});
-
-;// CONCATENATED MODULE: external "@prisma/client"
-const client_namespaceObject = require("@prisma/client");
-;// CONCATENATED MODULE: ./lib/prisma.ts
-
-let prisma;
-if (true) {
-    prisma = new client_namespaceObject.PrismaClient();
-} else {}
-/* harmony default export */ const lib_prisma = (prisma);
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _prisma_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @prisma/client */ \"@prisma/client\");\n/* harmony import */ var _prisma_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_prisma_client__WEBPACK_IMPORTED_MODULE_0__);\n\nlet prisma;\nif (false) {} else {\n    if (!global.prisma) {\n        global.prisma = new _prisma_client__WEBPACK_IMPORTED_MODULE_0__.PrismaClient();\n    }\n    prisma = global.prisma;\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prisma);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9saWIvcHJpc21hLnRzIiwibWFwcGluZ3MiOiI7Ozs7OztBQUE4QztBQUU5QyxJQUFJQztBQU1KLElBQUlDLEtBQXlCLEVBQWMsRUFFMUMsTUFBTTtJQUNKLElBQUksQ0FBQ0MsT0FBT0YsTUFBTSxFQUFFO1FBQ2pCRSxPQUFPRixNQUFNLEdBQUcsSUFBSUQsd0RBQVlBO0lBQ25DO0lBQ0FDLFNBQVNFLE9BQU9GLE1BQU07QUFDekI7QUFFQSxpRUFBZUEsTUFBTUEsRUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL2NoZWdhanVudG8vLi9saWIvcHJpc21hLnRzPzk4MjIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUHJpc21hQ2xpZW50IH0gZnJvbSAnQHByaXNtYS9jbGllbnQnO1xuXG5sZXQgcHJpc21hOiBQcmlzbWFDbGllbnQ7XG5cbmRlY2xhcmUgZ2xvYmFsIHtcbiAgIHZhciBwcmlzbWE6IFByaXNtYUNsaWVudDtcbn1cblxuaWYgKHByb2Nlc3MuZW52Lk5PREVfRU5WID09PSAncHJvZHVjdGlvbicpIHtcbiAgIHByaXNtYSA9IG5ldyBQcmlzbWFDbGllbnQoKTtcbn0gZWxzZSB7XG4gICBpZiAoIWdsb2JhbC5wcmlzbWEpIHtcbiAgICAgIGdsb2JhbC5wcmlzbWEgPSBuZXcgUHJpc21hQ2xpZW50KCk7XG4gICB9XG4gICBwcmlzbWEgPSBnbG9iYWwucHJpc21hO1xufVxuXG5leHBvcnQgZGVmYXVsdCBwcmlzbWE7XG4iXSwibmFtZXMiOlsiUHJpc21hQ2xpZW50IiwicHJpc21hIiwicHJvY2VzcyIsImdsb2JhbCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./lib/prisma.ts\n");
 
 /***/ }),
 
-/***/ 2427:
+/***/ "(api)/./pages/api/tour/[id].ts":
+/*!********************************!*\
+  !*** ./pages/api/tour/[id].ts ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ handler)
-/* harmony export */ });
-/* harmony import */ var next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(614);
-/* harmony import */ var next_auth_jwt__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _lib_prisma__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8869);
-
-
-async function handler(req, res) {
-    if (req.method === "GET") {
-        const token = await (0,next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__.getToken)({
-            req
-        });
-        const id = String(req.query.id);
-        if (token) {
-            const tour = await _lib_prisma__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z.tour.findUnique({
-                where: {
-                    id: id
-                },
-                include: {
-                    itinerary: true,
-                    photoGallery: true,
-                    featuredPhoto: true
-                }
-            });
-            if (tour) {
-                res.status(200).json(tour);
-            } else {
-                res.status(404).json({
-                    error: "Tour n\xe3o encontrado"
-                });
-            }
-        } else {
-            res.status(401).send({
-                message: "Acesso negado"
-            });
-        }
-    } else if (req.method === "PATCH") {
-        const token = await (0,next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__.getToken)({
-            req
-        });
-        const id = String(req.query.id);
-        const data = req.body;
-        delete data.featuredPhoto;
-        delete data.categories;
-        delete data.itinerary;
-        delete data.photoGallery;
-        delete data.featuredPhotoId;
-        if (token) {
-            const tour = await _lib_prisma__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z.tour.update({
-                where: {
-                    id: id
-                },
-                data: {
-                    ...req.body
-                }
-            });
-            if (tour) {
-                res.status(200).json(tour);
-            } else {
-                res.status(404).json({
-                    error: "Tour n\xe3o encontrado"
-                });
-            }
-        } else {
-            res.status(404).json({
-                message: "Acesso Negado"
-            });
-        }
-    } else if (req.method === "DELETE") {
-        const token = await (0,next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__.getToken)({
-            req
-        });
-        const id = String(req.query.id);
-        if (token) {
-            const deletedTour = await _lib_prisma__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z.tour.delete({
-                where: {
-                    id: id
-                }
-            });
-            if (deletedTour) {
-                res.status(200).json(deletedTour);
-            } else {
-                res.status(404).json({
-                    error: "Tour n\xe3o encontrado"
-                });
-            }
-        } else {
-            res.status(401).send({
-                message: "Acesso Negado"
-            });
-        }
-    } else {
-        return res.status(405).json({
-            error: "Esse tipo de requisi\xe7\xe3o n\xe3o \xe9 suportada nesta rota"
-        });
-    }
-}
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\n/* harmony import */ var next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next-auth/jwt */ \"next-auth/jwt\");\n/* harmony import */ var next_auth_jwt__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _lib_prisma__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../lib/prisma */ \"(api)/./lib/prisma.ts\");\n\n\nasync function handler(req, res) {\n    if (req.method === \"GET\") {\n        const token = await (0,next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__.getToken)({\n            req\n        });\n        const id = String(req.query.id);\n        if (token) {\n            const tour = await _lib_prisma__WEBPACK_IMPORTED_MODULE_1__[\"default\"].tour.findUnique({\n                where: {\n                    id: id\n                },\n                include: {\n                    itinerary: true,\n                    photoGallery: true,\n                    featuredPhoto: true,\n                    categories: true\n                }\n            });\n            if (tour) {\n                res.status(200).json(tour);\n            } else {\n                res.status(404).json({\n                    error: \"Tour n\\xe3o encontrado\"\n                });\n            }\n        } else {\n            res.status(401).send({\n                message: \"Acesso negado\"\n            });\n        }\n    } else if (req.method === \"PATCH\") {\n        const token = await (0,next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__.getToken)({\n            req\n        });\n        const id = String(req.query.id);\n        const data = req.body;\n        delete data.featuredPhoto;\n        delete data.categories;\n        delete data.itinerary;\n        delete data.photoGallery;\n        delete data.featuredPhotoId;\n        if (token) {\n            const tour = await _lib_prisma__WEBPACK_IMPORTED_MODULE_1__[\"default\"].tour.update({\n                where: {\n                    id: id\n                },\n                data: {\n                    ...req.body\n                }\n            });\n            if (tour) {\n                res.status(200).json(tour);\n            } else {\n                res.status(404).json({\n                    error: \"Tour n\\xe3o encontrado\"\n                });\n            }\n        } else {\n            res.status(404).json({\n                message: \"Acesso Negado\"\n            });\n        }\n    } else if (req.method === \"DELETE\") {\n        const token = await (0,next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__.getToken)({\n            req\n        });\n        const id = String(req.query.id);\n        if (token) {\n            const deletedTour = await _lib_prisma__WEBPACK_IMPORTED_MODULE_1__[\"default\"].tour.delete({\n                where: {\n                    id: id\n                }\n            });\n            if (deletedTour) {\n                res.status(200).json(deletedTour);\n            } else {\n                res.status(404).json({\n                    error: \"Tour n\\xe3o encontrado\"\n                });\n            }\n        } else {\n            res.status(401).send({\n                message: \"Acesso Negado\"\n            });\n        }\n    } else {\n        return res.status(405).json({\n            error: \"Esse tipo de requisi\\xe7\\xe3o n\\xe3o \\xe9 suportada nesta rota\"\n        });\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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ZXMvYXBpL3RvdXIvW2lkXS50cz8wMWE5Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB0eXBlIHsgTmV4dEFwaVJlcXVlc3QsIE5leHRBcGlSZXNwb25zZSB9IGZyb20gJ25leHQnO1xuaW1wb3J0IHsgZ2V0VG9rZW4gfSBmcm9tICduZXh0LWF1dGgvand0JztcbmltcG9ydCBwcmlzbWEgZnJvbSAnLi4vLi4vLi4vbGliL3ByaXNtYSc7XG5cbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIGhhbmRsZXIoXG4gICByZXE6IE5leHRBcGlSZXF1ZXN0LFxuICAgcmVzOiBOZXh0QXBpUmVzcG9uc2Vcbikge1xuICAgaWYgKHJlcS5tZXRob2QgPT09ICdHRVQnKSB7XG4gICAgICBjb25zdCB0b2tlbiA9IGF3YWl0IGdldFRva2VuKHsgcmVxIH0pO1xuICAgICAgY29uc3QgaWQgPSBTdHJpbmcocmVxLnF1ZXJ5LmlkKTtcbiAgICAgIGlmICh0b2tlbikge1xuICAgICAgICAgY29uc3QgdG91ciA9IGF3YWl0IHByaXNtYS50b3VyLmZpbmRVbmlxdWUoe1xuICAgICAgICAgICAgd2hlcmU6IHsgaWQ6IGlkIH0sXG4gICAgICAgICAgICBpbmNsdWRlOiB7XG4gICAgICAgICAgICAgICBpdGluZXJhcnk6IHRydWUsXG4gICAgICAgICAgICAgICBwaG90b0dhbGxlcnk6IHRydWUsXG4gICAgICAgICAgICAgICBmZWF0dXJlZFBob3RvOiB0cnVlLFxuICAgICAgICAgICAgICAgY2F0ZWdvcmllczogdHJ1ZVxuICAgICAgICAgICAgfVxuICAgICAgICAgfSk7XG4gICAgICAgICBpZiAodG91cikge1xuICAgICAgICAgICAgcmVzLnN0YXR1cygyMDApLmpzb24odG91cik7XG4gICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgICAgcmVzLnN0YXR1cyg0MDQpLmpzb24oeyBlcnJvcjogJ1RvdXIgbsOjbyBlbmNvbnRyYWRvJyB9KTtcbiAgICAgICAgIH1cbiAgICAgIH0gZWxzZSB7XG4gICAgICAgICByZXMuc3RhdHVzKDQwMSkuc2VuZCh7IG1lc3NhZ2U6ICdBY2Vzc28gbmVnYWRvJyB9KTtcbiAgICAgIH1cbiAgIH0gZWxzZSBpZiAocmVxLm1ldGhvZCA9PT0gJ1BBVENIJykge1xuICAgICAgY29uc3QgdG9rZW4gPSBhd2FpdCBnZXRUb2tlbih7IHJlcSB9KTtcbiAgICAgIGNvbnN0IGlkID0gU3RyaW5nKHJlcS5xdWVyeS5pZCk7XG4gICAgICBjb25zdCBkYXRhID0gcmVxLmJvZHk7XG4gICAgICBkZWxldGUgZGF0YS5mZWF0dXJlZFBob3RvO1xuICAgICAgZGVsZXRlIGRhdGEuY2F0ZWdvcmllcztcbiAgICAgIGRlbGV0ZSBkYXRhLml0aW5lcmFyeTtcbiAgICAgIGRlbGV0ZSBkYXRhLnBob3RvR2FsbGVyeTtcbiAgICAgIGRlbGV0ZSBkYXRhLmZlYXR1cmVkUGhvdG9JZDtcbiAgICAgIGlmICh0b2tlbikge1xuICAgICAgICAgY29uc3QgdG91ciA9IGF3YWl0IHByaXNtYS50b3VyLnVwZGF0ZSh7XG4gICAgICAgICAgICB3aGVyZToge1xuICAgICAgICAgICAgICAgaWQ6IGlkXG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAgZGF0YToge1xuICAgICAgICAgICAgICAgLi4ucmVxLmJvZHlcbiAgICAgICAgICAgIH1cbiAgICAgICAgIH0pO1xuICAgICAgICAgaWYgKHRvdXIpIHtcbiAgICAgICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHRvdXIpO1xuICAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAgIHJlcy5zdGF0dXMoNDA0KS5qc29uKHsgZXJyb3I6ICdUb3VyIG7Do28gZW5jb250cmFkbycgfSk7XG4gICAgICAgICB9XG4gICAgICB9IGVsc2Uge1xuICAgICAgICAgcmVzLnN0YXR1cyg0MDQpLmpzb24oeyBtZXNzYWdlOiAnQWNlc3NvIE5lZ2FkbycgfSk7XG4gICAgICB9XG4gICB9IGVsc2UgaWYgKHJlcS5tZXRob2QgPT09ICdERUxFVEUnKSB7XG4gICAgICBjb25zdCB0b2tlbiA9IGF3YWl0IGdldFRva2VuKHsgcmVxIH0pO1xuICAgICAgY29uc3QgaWQgPSBTdHJpbmcocmVxLnF1ZXJ5LmlkKTtcbiAgICAgIGlmICh0b2tlbikge1xuICAgICAgICAgY29uc3QgZGVsZXRlZFRvdXIgPSBhd2FpdCBwcmlzbWEudG91ci5kZWxldGUoe1xuICAgICAgICAgICAgd2hlcmU6IHtcbiAgICAgICAgICAgICAgIGlkOiBpZFxuICAgICAgICAgICAgfVxuICAgICAgICAgfSk7XG4gICAgICAgICBpZiAoZGVsZXRlZFRvdXIpIHtcbiAgICAgICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKGRlbGV0ZWRUb3VyKTtcbiAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICByZXMuc3RhdHVzKDQwNCkuanNvbih7IGVycm9yOiAnVG91ciBuw6NvIGVuY29udHJhZG8nIH0pO1xuICAgICAgICAgfVxuICAgICAgfSBlbHNlIHtcbiAgICAgICAgIHJlcy5zdGF0dXMoNDAxKS5zZW5kKHsgbWVzc2FnZTogJ0FjZXNzbyBOZWdhZG8nIH0pO1xuICAgICAgfVxuICAgfSBlbHNlIHtcbiAgICAgIHJldHVybiByZXNcbiAgICAgICAgIC5zdGF0dXMoNDA1KVxuICAgICAgICAgLmpzb24oeyBlcnJvcjogJ0Vzc2UgdGlwbyBkZSByZXF1aXNpw6fDo28gbsOjbyDDqSBzdXBvcnRhZGEgbmVzdGEgcm90YScgfSk7XG4gICB9XG59XG4iXSwibmFtZXMiOlsiZ2V0VG9rZW4iLCJwcmlzbWEiLCJoYW5kbGVyIiwicmVxIiwicmVzIiwibWV0aG9kIiwidG9rZW4iLCJpZCIsIlN0cmluZyIsInF1ZXJ5IiwidG91ciIsImZpbmRVbmlxdWUiLCJ3aGVyZSIsImluY2x1ZGUiLCJpdGluZXJhcnkiLCJwaG90b0dhbGxlcnkiLCJmZWF0dXJlZFBob3RvIiwiY2F0ZWdvcmllcyIsInN0YXR1cyIsImpzb24iLCJlcnJvciIsInNlbmQiLCJtZXNzYWdlIiwiZGF0YSIsImJvZHkiLCJmZWF0dXJlZFBob3RvSWQiLCJ1cGRhdGUiLCJkZWxldGVkVG91ciIsImRlbGV0ZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./pages/api/tour/[id].ts\n");
 
 /***/ })
 
@@ -147,7 +60,7 @@ async function handler(req, res) {
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(2427));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/tour/[id].ts"));
 module.exports = __webpack_exports__;
 
 })();

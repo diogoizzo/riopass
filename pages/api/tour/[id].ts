@@ -15,7 +15,8 @@ export default async function handler(
             include: {
                itinerary: true,
                photoGallery: true,
-               featuredPhoto: true
+               featuredPhoto: true,
+               categories: true
             }
          });
          if (tour) {

@@ -1,38 +1,49 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getToken } from 'next-auth/jwt';
-import formidable from 'formidable';
-import GoogleDriveServices from '../../../../services/GoogleDriveServices';
+import s3 from 'aws-sdk/clients/s3';
+import { randomUUID } from 'crypto';
+import { S3Control } from 'aws-sdk';
 
-export const config = {
-   api: {
-      bodyParser: false
-   }
-};
+const region = process.env.REGION;
+const bucketName = process.env.BUCKET_NAME;
+const accessKeyId = process.env.ACCESS_KEY;
+const secretAccessKey = process.env.SECRET_ACCESS_KEY;
 
-async function readFile(
-   req: NextApiRequest
-): Promise<{ fields: formidable.Fields; files: formidable.Files }> {
-   const form = formidable();
-   return new Promise((resolve, reject) => {
-      form.parse(req, (err, fields, files) => {
-         if (err) reject(err);
-         resolve({ fields, files });
-      });
-   });
-}
+const bucket = new s3({
+   apiVersion: '2006-03-01',
+   region,
+   accessKeyId,
+   secretAccessKey,
+   signatureVersion: 'v4'
+});
 
 export default async function handler(
    req: NextApiRequest,
    res: NextApiResponse
 ) {
-   if (req.method === 'POST') {
+   if (req.method === 'GET') {
       const token = await getToken({ req });
       if (token) {
-         //  const { files } = await readFile(req);
-         //  const resposta = await GoogleDriveServices.uploadFile(files.image[0]);
-         //  const files = await GoogleDriveServices.readAll();
-         //  await GoogleDriveServices.deleteAll(files);
-         res.status(200).send('ok');
+         const fileName = randomUUID();
+         const params = {
+            Bucket: bucketName,
+            Key: fileName,
+            Expires: 60
+         };
+         const uploadUrl = await bucket.getSignedUrlPromise(
+            'putObject',
+            params
+         );
+         if (uploadUrl) {
+            res.status(200).json({
+               uploadUrl,
+               fileName
+            });
+         } else {
+            res.status(503).json({
+               error: 'Não foi possível criar a url'
+            });
+         }
       } else {
          res.status(401).send({ message: 'Acesso negado' });
       }

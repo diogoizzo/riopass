@@ -7,6 +7,7 @@ interface TourTableProps {
 }
 
 function UserTable({ small, data }: TourTableProps) {
+   console.log(data[6].categories);
    return (
       <section className="py-3">
          <div className="container px-4 mx-auto">
@@ -90,7 +91,12 @@ function UserTable({ small, data }: TourTableProps) {
                                                 }`}
                                              >
                                                 <span className="text-sm text-cool-gray-200 font-medium">
-                                                   {tour.categories}
+                                                   {tour.categories
+                                                      .map(
+                                                         (category) =>
+                                                            category.name
+                                                      )
+                                                      .join(', ')}
                                                 </span>
                                              </div>
                                           </Link>

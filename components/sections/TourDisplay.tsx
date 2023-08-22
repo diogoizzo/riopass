@@ -1,12 +1,12 @@
 import DisplayLine from '../atoms/DisplayLine';
-import IUser from '../../interfaces/IUser';
-import Tour from '../../entities/Tour';
+import ITour from '../../interfaces/ITour';
 
-interface UserDisplayProps {
-   tour?: Tour;
+interface TourDisplayProps {
+   tour?: ITour;
 }
 
-function UserDisplay({ tour }: UserDisplayProps) {
+function TourDisplay({ tour }: TourDisplayProps) {
+   console.log(tour);
    return (
       <section className="py-3 mt-3">
          <div className="container px-4 mx-auto">
@@ -25,7 +25,12 @@ function UserDisplay({ tour }: UserDisplayProps) {
                   content={tour?.longDescription}
                />
                <DisplayLine label="Obervações" content={tour?.obs} />
-               <DisplayLine label="Categorias" content={tour?.categories} />
+               <DisplayLine
+                  label="Categorias"
+                  content={tour?.categories
+                     ?.map((category) => category.name)
+                     .join(', ')}
+               />
                <DisplayLine
                   label="Idioma do Conteúdo"
                   content={tour?.textLanguage}
@@ -104,4 +109,4 @@ function UserDisplay({ tour }: UserDisplayProps) {
       </section>
    );
 }
-export default UserDisplay;
+export default TourDisplay;

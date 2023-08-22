@@ -1,7 +1,10 @@
+import IImage from './IImage';
+import ITourCategory from './ITourCategory';
+
 export default interface ITour {
    id?: string;
    name: string;
-   categories: any;
+   categories?: ITourCategory[];
    destination?: string;
    description: string;
    longDescription: string;
@@ -22,7 +25,7 @@ export default interface ITour {
    textLanguage?: string;
    partner?: string;
    itinerary: any;
-   photoGallery?: any;
+   photoGallery?: IImage[];
    featuredPhoto: any;
    featuredPhotoId: string;
 }

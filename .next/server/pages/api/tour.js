@@ -1,114 +1,55 @@
 "use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 148;
-exports.ids = [148];
+exports.id = "pages/api/tour";
+exports.ids = ["pages/api/tour"];
 exports.modules = {
 
-/***/ 614:
+/***/ "@prisma/client":
+/*!*********************************!*\
+  !*** external "@prisma/client" ***!
+  \*********************************/
+/***/ ((module) => {
+
+module.exports = require("@prisma/client");
+
+/***/ }),
+
+/***/ "next-auth/jwt":
+/*!********************************!*\
+  !*** external "next-auth/jwt" ***!
+  \********************************/
 /***/ ((module) => {
 
 module.exports = require("next-auth/jwt");
 
 /***/ }),
 
-/***/ 8869:
+/***/ "(api)/./lib/prisma.ts":
+/*!***********************!*\
+  !*** ./lib/prisma.ts ***!
+  \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  Z: () => (/* binding */ lib_prisma)
-});
-
-;// CONCATENATED MODULE: external "@prisma/client"
-const client_namespaceObject = require("@prisma/client");
-;// CONCATENATED MODULE: ./lib/prisma.ts
-
-let prisma;
-if (true) {
-    prisma = new client_namespaceObject.PrismaClient();
-} else {}
-/* harmony default export */ const lib_prisma = (prisma);
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _prisma_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @prisma/client */ \"@prisma/client\");\n/* harmony import */ var _prisma_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_prisma_client__WEBPACK_IMPORTED_MODULE_0__);\n\nlet prisma;\nif (false) {} else {\n    if (!global.prisma) {\n        global.prisma = new _prisma_client__WEBPACK_IMPORTED_MODULE_0__.PrismaClient();\n    }\n    prisma = global.prisma;\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prisma);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9saWIvcHJpc21hLnRzIiwibWFwcGluZ3MiOiI7Ozs7OztBQUE4QztBQUU5QyxJQUFJQztBQU1KLElBQUlDLEtBQXlCLEVBQWMsRUFFMUMsTUFBTTtJQUNKLElBQUksQ0FBQ0MsT0FBT0YsTUFBTSxFQUFFO1FBQ2pCRSxPQUFPRixNQUFNLEdBQUcsSUFBSUQsd0RBQVlBO0lBQ25DO0lBQ0FDLFNBQVNFLE9BQU9GLE1BQU07QUFDekI7QUFFQSxpRUFBZUEsTUFBTUEsRUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL2NoZWdhanVudG8vLi9saWIvcHJpc21hLnRzPzk4MjIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUHJpc21hQ2xpZW50IH0gZnJvbSAnQHByaXNtYS9jbGllbnQnO1xuXG5sZXQgcHJpc21hOiBQcmlzbWFDbGllbnQ7XG5cbmRlY2xhcmUgZ2xvYmFsIHtcbiAgIHZhciBwcmlzbWE6IFByaXNtYUNsaWVudDtcbn1cblxuaWYgKHByb2Nlc3MuZW52Lk5PREVfRU5WID09PSAncHJvZHVjdGlvbicpIHtcbiAgIHByaXNtYSA9IG5ldyBQcmlzbWFDbGllbnQoKTtcbn0gZWxzZSB7XG4gICBpZiAoIWdsb2JhbC5wcmlzbWEpIHtcbiAgICAgIGdsb2JhbC5wcmlzbWEgPSBuZXcgUHJpc21hQ2xpZW50KCk7XG4gICB9XG4gICBwcmlzbWEgPSBnbG9iYWwucHJpc21hO1xufVxuXG5leHBvcnQgZGVmYXVsdCBwcmlzbWE7XG4iXSwibmFtZXMiOlsiUHJpc21hQ2xpZW50IiwicHJpc21hIiwicHJvY2VzcyIsImdsb2JhbCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./lib/prisma.ts\n");
 
 /***/ }),
 
-/***/ 322:
+/***/ "(api)/./pages/api/tour/index.ts":
+/*!*********************************!*\
+  !*** ./pages/api/tour/index.ts ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ handler)
-/* harmony export */ });
-/* harmony import */ var next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(614);
-/* harmony import */ var next_auth_jwt__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _lib_prisma__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8869);
-
-
-async function handler(req, res) {
-    if (req.method === "GET") {
-        const token = await (0,next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__.getToken)({
-            req
-        });
-        if (token) {
-            const tours = await _lib_prisma__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z.tour.findMany();
-            if (tours) {
-                res.status(200).json(tours);
-            } else {
-                res.status(404).json({
-                    error: "Nenhum tour encontrado"
-                });
-            }
-        } else {
-            res.status(401).send({
-                message: "Acesso negado"
-            });
-        }
-    } else if (req.method === "POST") {
-        const token = await (0,next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__.getToken)({
-            req
-        });
-        const data = req.body;
-        console.log(data);
-        const { price, finalPrice, durationHours } = data;
-        delete data.id;
-        delete data.featuredPhoto;
-        delete data.categories;
-        delete data.itinerary;
-        delete data.photoGallery;
-        delete data.featuredPhotoId;
-        if (token) {
-            const tour = await _lib_prisma__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z.tour.create({
-                data: {
-                    ...data,
-                    price: Number(price),
-                    finalPrice: Number(finalPrice),
-                    durationHours: Number(durationHours),
-                    itinerary: undefined,
-                    featuredPhoto: {
-                        create: {
-                            name: "Teste",
-                            description: "Imagem de teste para cria\xe7\xe3o de tour",
-                            src: "https://images.unsplash.com/photo-1682686580186-b55d2a91053c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80"
-                        }
-                    }
-                }
-            });
-            res.status(200).json(tour);
-        // res.status(200).send('ok');
-        } else {
-            res.status(401).send({
-                message: "Acesso negado"
-            });
-        }
-    } else {
-        return res.status(405).json({
-            error: "Esse tipo de requisi\xe7\xe3o n\xe3o \xe9 suportada nesta rota"
-        });
-    }
-}
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\n/* harmony import */ var next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next-auth/jwt */ \"next-auth/jwt\");\n/* harmony import */ var next_auth_jwt__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _lib_prisma__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../lib/prisma */ \"(api)/./lib/prisma.ts\");\n\n\nasync function handler(req, res) {\n    if (req.method === \"GET\") {\n        const token = await (0,next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__.getToken)({\n            req\n        });\n        if (token) {\n            const tours = await _lib_prisma__WEBPACK_IMPORTED_MODULE_1__[\"default\"].tour.findMany({\n                include: {\n                    categories: true\n                }\n            });\n            if (tours) {\n                res.status(200).json(tours);\n            } else {\n                res.status(404).json({\n                    error: \"Nenhum tour encontrado\"\n                });\n            }\n        } else {\n            res.status(401).send({\n                message: \"Acesso negado\"\n            });\n        }\n    } else if (req.method === \"POST\") {\n        const token = await (0,next_auth_jwt__WEBPACK_IMPORTED_MODULE_0__.getToken)({\n            req\n        });\n        const data = req.body;\n        console.log(data);\n        const { price, finalPrice, durationHours } = data;\n        delete data.id;\n        delete data.featuredPhoto;\n        delete data.itinerary;\n        delete data.photoGallery;\n        delete data.featuredPhotoId;\n        if (token) {\n            if (data.categories?.length > 0) {\n                const tour = await _lib_prisma__WEBPACK_IMPORTED_MODULE_1__[\"default\"].tour.create({\n                    data: {\n                        ...data,\n                        price: Number(price),\n                        finalPrice: Number(finalPrice),\n                        durationHours: Number(durationHours),\n                        itinerary: undefined,\n                        featuredPhoto: {\n                            create: {\n                                name: \"Teste\",\n                                description: \"Imagem de teste para cria\\xe7\\xe3o de tour\",\n                                src: \"https://images.unsplash.com/photo-1682686580186-b55d2a91053c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80\"\n                            }\n                        },\n                        categories: {\n                            connect: data.categories\n                        }\n                    }\n                });\n                res.status(200).json(tour);\n            } else {\n                const tour = await _lib_prisma__WEBPACK_IMPORTED_MODULE_1__[\"default\"].tour.create({\n                    data: {\n                        ...data,\n                        price: Number(price),\n                        finalPrice: Number(finalPrice),\n                        durationHours: Number(durationHours),\n                        itinerary: undefined,\n                        featuredPhoto: {\n                            create: {\n                                name: \"Teste\",\n                                description: \"Imagem de teste para cria\\xe7\\xe3o de tour\",\n                                src: \"https://images.unsplash.com/photo-1682686580186-b55d2a91053c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80\"\n                            }\n                        }\n                    }\n                });\n                res.status(200).json(tour);\n            }\n        // res.status(200).send('ok');\n        } else {\n            res.status(401).send({\n                message: \"Acesso negado\"\n            });\n        }\n    } else {\n        return res.status(405).json({\n            error: \"Esse tipo de requisi\\xe7\\xe3o n\\xe3o \\xe9 suportada nesta rota\"\n        });\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdG91ci9pbmRleC50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQ3lDO0FBQ0E7QUFFMUIsZUFBZUUsUUFDM0JDLEdBQW1CLEVBQ25CQyxHQUFvQjtJQUVwQixJQUFJRCxJQUFJRSxNQUFNLEtBQUssT0FBTztRQUN2QixNQUFNQyxRQUFRLE1BQU1OLHVEQUFRQSxDQUFDO1lBQUVHO1FBQUk7UUFDbkMsSUFBSUcsT0FBTztZQUNSLE1BQU1DLFFBQVEsTUFBTU4sd0RBQVcsQ0FBQ1EsUUFBUSxDQUFDO2dCQUN0Q0MsU0FBUztvQkFDTkMsWUFBWTtnQkFDZjtZQUNIO1lBQ0EsSUFBSUosT0FBTztnQkFDUkgsSUFBSVEsTUFBTSxDQUFDLEtBQUtDLElBQUksQ0FBQ047WUFDeEIsT0FBTztnQkFDSkgsSUFBSVEsTUFBTSxDQUFDLEtBQUtDLElBQUksQ0FBQztvQkFBRUMsT0FBTztnQkFBeUI7WUFDMUQ7UUFDSCxPQUFPO1lBQ0pWLElBQUlRLE1BQU0sQ0FBQyxLQUFLRyxJQUFJLENBQUM7Z0JBQUVDLFNBQVM7WUFBZ0I7UUFDbkQ7SUFDSCxPQUFPLElBQUliLElBQUlFLE1BQU0sS0FBSyxRQUFRO1FBQy9CLE1BQU1DLFFBQVEsTUFBTU4sdURBQVFBLENBQUM7WUFBRUc7UUFBSTtRQUNuQyxNQUFNYyxPQUFPZCxJQUFJZSxJQUFJO1FBQ3JCQyxRQUFRQyxHQUFHLENBQUNIO1FBQ1osTUFBTSxFQUFFSSxLQUFLLEVBQUVDLFVBQVUsRUFBRUMsYUFBYSxFQUFFLEdBQUdOO1FBQzdDLE9BQU9BLEtBQUtPLEVBQUU7UUFDZCxPQUFPUCxLQUFLUSxhQUFhO1FBQ3pCLE9BQU9SLEtBQUtTLFNBQVM7UUFDckIsT0FBT1QsS0FBS1UsWUFBWTtRQUN4QixPQUFPVixLQUFLVyxlQUFlO1FBQzNCLElBQUl0QixPQUFPO1lBQ1IsSUFBSVcsS0FBS04sVUFBVSxFQUFFa0IsU0FBUyxHQUFHO2dCQUM5QixNQUFNckIsT0FBTyxNQUFNUCx3REFBVyxDQUFDNkIsTUFBTSxDQUFDO29CQUNuQ2IsTUFBTTt3QkFDSCxHQUFHQSxJQUFJO3dCQUNQSSxPQUFPVSxPQUFPVjt3QkFDZEMsWUFBWVMsT0FBT1Q7d0JBQ25CQyxlQUFlUSxPQUFPUjt3QkFDdEJHLFdBQVdNO3dCQUNYUCxlQUFlOzRCQUNaSyxRQUFRO2dDQUNMRyxNQUFNO2dDQUNOQyxhQUFhO2dDQUNiQyxLQUFLOzRCQUNSO3dCQUNIO3dCQUNBeEIsWUFBWTs0QkFDVHlCLFNBQVNuQixLQUFLTixVQUFVO3dCQUMzQjtvQkFDSDtnQkFDSDtnQkFDQVAsSUFBSVEsTUFBTSxDQUFDLEtBQUtDLElBQUksQ0FBQ0w7WUFDeEIsT0FBTztnQkFDSixNQUFNQSxPQUFPLE1BQU1QLHdEQUFXLENBQUM2QixNQUFNLENBQUM7b0JBQ25DYixNQUFNO3dCQUNILEdBQUdBLElBQUk7d0JBQ1BJLE9BQU9VLE9BQU9WO3dCQUNkQyxZQUFZUyxPQUFPVDt3QkFDbkJDLGVBQWVRLE9BQU9SO3dCQUN0QkcsV0FBV007d0JBQ1hQLGVBQWU7NEJBQ1pLLFFBQVE7Z0NBQ0xHLE1BQU07Z0NBQ05DLGFBQWE7Z0NBQ2JDLEtBQUs7NEJBQ1I7d0JBQ0g7b0JBQ0g7Z0JBQ0g7Z0JBQ0EvQixJQUFJUSxNQUFNLENBQUMsS0FBS0MsSUFBSSxDQUFDTDtZQUN4QjtRQUVBLDhCQUE4QjtRQUNqQyxPQUFPO1lBQ0pKLElBQUlRLE1BQU0sQ0FBQyxLQUFLRyxJQUFJLENBQUM7Z0JBQUVDLFNBQVM7WUFBZ0I7UUFDbkQ7SUFDSCxPQUFPO1FBQ0osT0FBT1osSUFDSFEsTUFBTSxDQUFDLEtBQ1BDLElBQUksQ0FBQztZQUFFQyxPQUFPO1FBQXFEO0lBQzFFO0FBQ0giLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jaGVnYWp1bnRvLy4vcGFnZXMvYXBpL3RvdXIvaW5kZXgudHM/ZjdhYSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgdHlwZSB7IE5leHRBcGlSZXF1ZXN0LCBOZXh0QXBpUmVzcG9uc2UgfSBmcm9tICduZXh0JztcbmltcG9ydCB7IGdldFRva2VuIH0gZnJvbSAnbmV4dC1hdXRoL2p3dCc7XG5pbXBvcnQgcHJpc21hIGZyb20gJy4uLy4uLy4uL2xpYi9wcmlzbWEnO1xuXG5leHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBoYW5kbGVyKFxuICAgcmVxOiBOZXh0QXBpUmVxdWVzdCxcbiAgIHJlczogTmV4dEFwaVJlc3BvbnNlXG4pIHtcbiAgIGlmIChyZXEubWV0aG9kID09PSAnR0VUJykge1xuICAgICAgY29uc3QgdG9rZW4gPSBhd2FpdCBnZXRUb2tlbih7IHJlcSB9KTtcbiAgICAgIGlmICh0b2tlbikge1xuICAgICAgICAgY29uc3QgdG91cnMgPSBhd2FpdCBwcmlzbWEudG91ci5maW5kTWFueSh7XG4gICAgICAgICAgICBpbmNsdWRlOiB7XG4gICAgICAgICAgICAgICBjYXRlZ29yaWVzOiB0cnVlXG4gICAgICAgICAgICB9XG4gICAgICAgICB9KTtcbiAgICAgICAgIGlmICh0b3Vycykge1xuICAgICAgICAgICAgcmVzLnN0YXR1cygyMDApLmpzb24odG91cnMpO1xuICAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAgIHJlcy5zdGF0dXMoNDA0KS5qc29uKHsgZXJyb3I6ICdOZW5odW0gdG91ciBlbmNvbnRyYWRvJyB9KTtcbiAgICAgICAgIH1cbiAgICAgIH0gZWxzZSB7XG4gICAgICAgICByZXMuc3RhdHVzKDQwMSkuc2VuZCh7IG1lc3NhZ2U6ICdBY2Vzc28gbmVnYWRvJyB9KTtcbiAgICAgIH1cbiAgIH0gZWxzZSBpZiAocmVxLm1ldGhvZCA9PT0gJ1BPU1QnKSB7XG4gICAgICBjb25zdCB0b2tlbiA9IGF3YWl0IGdldFRva2VuKHsgcmVxIH0pO1xuICAgICAgY29uc3QgZGF0YSA9IHJlcS5ib2R5O1xuICAgICAgY29uc29sZS5sb2coZGF0YSk7XG4gICAgICBjb25zdCB7IHByaWNlLCBmaW5hbFByaWNlLCBkdXJhdGlvbkhvdXJzIH0gPSBkYXRhO1xuICAgICAgZGVsZXRlIGRhdGEuaWQ7XG4gICAgICBkZWxldGUgZGF0YS5mZWF0dXJlZFBob3RvO1xuICAgICAgZGVsZXRlIGRhdGEuaXRpbmVyYXJ5O1xuICAgICAgZGVsZXRlIGRhdGEucGhvdG9HYWxsZXJ5O1xuICAgICAgZGVsZXRlIGRhdGEuZmVhdHVyZWRQaG90b0lkO1xuICAgICAgaWYgKHRva2VuKSB7XG4gICAgICAgICBpZiAoZGF0YS5jYXRlZ29yaWVzPy5sZW5ndGggPiAwKSB7XG4gICAgICAgICAgICBjb25zdCB0b3VyID0gYXdhaXQgcHJpc21hLnRvdXIuY3JlYXRlKHtcbiAgICAgICAgICAgICAgIGRhdGE6IHtcbiAgICAgICAgICAgICAgICAgIC4uLmRhdGEsXG4gICAgICAgICAgICAgICAgICBwcmljZTogTnVtYmVyKHByaWNlKSxcbiAgICAgICAgICAgICAgICAgIGZpbmFsUHJpY2U6IE51bWJlcihmaW5hbFByaWNlKSxcbiAgICAgICAgICAgICAgICAgIGR1cmF0aW9uSG91cnM6IE51bWJlcihkdXJhdGlvbkhvdXJzKSxcbiAgICAgICAgICAgICAgICAgIGl0aW5lcmFyeTogdW5kZWZpbmVkLFxuICAgICAgICAgICAgICAgICAgZmVhdHVyZWRQaG90bzoge1xuICAgICAgICAgICAgICAgICAgICAgY3JlYXRlOiB7XG4gICAgICAgICAgICAgICAgICAgICAgICBuYW1lOiAnVGVzdGUnLFxuICAgICAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb246ICdJbWFnZW0gZGUgdGVzdGUgcGFyYSBjcmlhw6fDo28gZGUgdG91cicsXG4gICAgICAgICAgICAgICAgICAgICAgICBzcmM6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTY4MjY4NjU4MDE4Ni1iNTVkMmE5MTA1M2M/aXhsaWI9cmItNC4wLjMmaXhpZD1NM3d4TWpBM2ZERjhNSHh3YUc5MGJ5MXdZV2RsZkh4OGZHVnVmREI4Zkh4OGZBJTNEJTNEJmF1dG89Zm9ybWF0JmZpdD1jcm9wJnc9MTk3NSZxPTgwJ1xuICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgICAgIGNhdGVnb3JpZXM6IHtcbiAgICAgICAgICAgICAgICAgICAgIGNvbm5lY3Q6IGRhdGEuY2F0ZWdvcmllc1xuICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICByZXMuc3RhdHVzKDIwMCkuanNvbih0b3VyKTtcbiAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICBjb25zdCB0b3VyID0gYXdhaXQgcHJpc21hLnRvdXIuY3JlYXRlKHtcbiAgICAgICAgICAgICAgIGRhdGE6IHtcbiAgICAgICAgICAgICAgICAgIC4uLmRhdGEsXG4gICAgICAgICAgICAgICAgICBwcmljZTogTnVtYmVyKHByaWNlKSxcbiAgICAgICAgICAgICAgICAgIGZpbmFsUHJpY2U6IE51bWJlcihmaW5hbFByaWNlKSxcbiAgICAgICAgICAgICAgICAgIGR1cmF0aW9uSG91cnM6IE51bWJlcihkdXJhdGlvbkhvdXJzKSxcbiAgICAgICAgICAgICAgICAgIGl0aW5lcmFyeTogdW5kZWZpbmVkLFxuICAgICAgICAgICAgICAgICAgZmVhdHVyZWRQaG90bzoge1xuICAgICAgICAgICAgICAgICAgICAgY3JlYXRlOiB7XG4gICAgICAgICAgICAgICAgICAgICAgICBuYW1lOiAnVGVzdGUnLFxuICAgICAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb246ICdJbWFnZW0gZGUgdGVzdGUgcGFyYSBjcmlhw6fDo28gZGUgdG91cicsXG4gICAgICAgICAgICAgICAgICAgICAgICBzcmM6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTY4MjY4NjU4MDE4Ni1iNTVkMmE5MTA1M2M/aXhsaWI9cmItNC4wLjMmaXhpZD1NM3d4TWpBM2ZERjhNSHh3YUc5MGJ5MXdZV2RsZkh4OGZHVnVmREI4Zkh4OGZBJTNEJTNEJmF1dG89Zm9ybWF0JmZpdD1jcm9wJnc9MTk3NSZxPTgwJ1xuICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICByZXMuc3RhdHVzKDIwMCkuanNvbih0b3VyKTtcbiAgICAgICAgIH1cblxuICAgICAgICAgLy8gcmVzLnN0YXR1cygyMDApLnNlbmQoJ29rJyk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICAgcmVzLnN0YXR1cyg0MDEpLnNlbmQoeyBtZXNzYWdlOiAnQWNlc3NvIG5lZ2FkbycgfSk7XG4gICAgICB9XG4gICB9IGVsc2Uge1xuICAgICAgcmV0dXJuIHJlc1xuICAgICAgICAgLnN0YXR1cyg0MDUpXG4gICAgICAgICAuanNvbih7IGVycm9yOiAnRXNzZSB0aXBvIGRlIHJlcXVpc2nDp8OjbyBuw6NvIMOpIHN1cG9ydGFkYSBuZXN0YSByb3RhJyB9KTtcbiAgIH1cbn1cbiJdLCJuYW1lcyI6WyJnZXRUb2tlbiIsInByaXNtYSIsImhhbmRsZXIiLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJ0b2tlbiIsInRvdXJzIiwidG91ciIsImZpbmRNYW55IiwiaW5jbHVkZSIsImNhdGVnb3JpZXMiLCJzdGF0dXMiLCJqc29uIiwiZXJyb3IiLCJzZW5kIiwibWVzc2FnZSIsImRhdGEiLCJib2R5IiwiY29uc29sZSIsImxvZyIsInByaWNlIiwiZmluYWxQcmljZSIsImR1cmF0aW9uSG91cnMiLCJpZCIsImZlYXR1cmVkUGhvdG8iLCJpdGluZXJhcnkiLCJwaG90b0dhbGxlcnkiLCJmZWF0dXJlZFBob3RvSWQiLCJsZW5ndGgiLCJjcmVhdGUiLCJOdW1iZXIiLCJ1bmRlZmluZWQiLCJuYW1lIiwiZGVzY3JpcHRpb24iLCJzcmMiLCJjb25uZWN0Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/tour/index.ts\n");
 
 /***/ })
 
@@ -119,7 +60,7 @@ async function handler(req, res) {
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(322));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/tour/index.ts"));
 module.exports = __webpack_exports__;
 
 })();

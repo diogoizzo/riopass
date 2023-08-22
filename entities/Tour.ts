@@ -1,10 +1,12 @@
+import IImage from '../interfaces/IImage';
 import ITour from '../interfaces/ITour';
+import ITourCategory from '../interfaces/ITourCategory';
 
 export default class Tour implements ITour {
    constructor(
       public id: string,
       public name: string,
-      public categories: any,
+      public categories: ITourCategory[],
       public description: string,
       public longDescription: string,
       public price: number,
@@ -27,7 +29,7 @@ export default class Tour implements ITour {
       public notInclude?: string,
       public textLanguage?: string,
       public partner?: string,
-      public photoGallery?: any
+      public photoGallery?: IImage[]
    ) {}
 
    static createFromObject({

@@ -18,7 +18,7 @@ export default class TourServices {
          console.log(e);
       }
    }
-   static async updateById(formData: ITour) {
+   static async updateById(formData: any) {
       if (formData) {
          const res = await axios.patch(`/api/tour/${formData.id}`, formData);
          return res.data;
@@ -31,7 +31,7 @@ export default class TourServices {
       }
    }
 
-   static async create(formData: ITour) {
+   static async create(formData: any) {
       if (formData) {
          const rest = await axios.post(`/api/tour/`, formData);
          return rest.data;
