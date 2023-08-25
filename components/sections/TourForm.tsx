@@ -10,6 +10,7 @@ import InfoForm from '../parts/InfoForm';
 import ITourForm, { Categories } from '../../interfaces/ITourForm';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import ImageForm from '../parts/ImageForm';
+import ItineraryForm from '../parts/ItineraryForm';
 
 interface TourFormProps {
    tour?: ITour;
@@ -130,17 +131,17 @@ function TourForm({ tour }: TourFormProps) {
          />
          <Tabs
             defaultValue="info"
-            className="text-center mt-4 "
+            className="w-full mt-4 "
             orientation="vertical"
          >
-            <TabsList className="bg-raisin-black-lighter space-x-3">
-               <TabsTrigger value="info" className="text-lg">
+            <TabsList className="bg-raisin-black space-x-3 w-full border border-raisin-black-lighter rounded-t-lg ">
+               <TabsTrigger value="info" className="text-lg w-1/3">
                   Informações
                </TabsTrigger>
-               <TabsTrigger value="images" className="text-lg">
+               <TabsTrigger value="images" className="text-lg w-1/3">
                   Imagens
                </TabsTrigger>
-               <TabsTrigger value="itinerary" className="text-lg">
+               <TabsTrigger value="itinerary" className="text-lg w-1/3">
                   Itinerário
                </TabsTrigger>
             </TabsList>
@@ -158,19 +159,12 @@ function TourForm({ tour }: TourFormProps) {
             <TabsContent value="images" className="">
                <ImageForm
                   images={tour?.photoGallery || []}
-                  tourId={tour?.id || ''}
+                  tourId={tour?.id}
+                  featuredPhoto={tour?.featuredPhoto}
                />
             </TabsContent>
             <TabsContent value="itinerary">
-               <InfoForm
-                  tour={tour}
-                  form={form}
-                  setForm={setForm}
-                  selectedCategories={selectedCategories}
-                  setSelectedCategories={setSelectedCategories}
-                  salvar={salvar}
-                  openConfirmationModal={openConfirmationModal}
-               />
+               <ItineraryForm />
             </TabsContent>
          </Tabs>
       </div>

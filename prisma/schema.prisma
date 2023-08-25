@@ -68,8 +68,7 @@ model Tour {
   updatedAt        DateTime        @updatedAt
   itinerary        ItineraryStep[]
   photoGallery     Photo[]         @relation("gallery")
-  featuredPhoto    Photo           @relation("featured", fields: [featuredPhotoId], references: [id])
-  featuredPhotoId  String          @unique
+  featuredPhoto    Photo?
 }
 
 model TourCategory {
@@ -93,13 +92,15 @@ model ItineraryStep {
 }
 
 model Photo {
-  id             String   @id @default(cuid())
-  name           String
-  description    String?
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-  src            String
-  Tour           Tour?    @relation("gallery", fields: [tourId], references: [id])
-  tourId         String?
-  featuredOfTour Tour?    @relation("featured")
+  id               String   @id @default(cuid())
+  name             String
+  description      String?
+  awsFileName      String
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  src              String
+  Tour             Tour?    @relation("gallery", fields: [tourId], references: [id])
+  tourId           String?
+  featuredOfTour   Tour?    @relation(fields: [featuredOfTourId], references: [id])
+  featuredOfTourId String?  @unique
 }

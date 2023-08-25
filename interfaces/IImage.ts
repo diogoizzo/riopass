@@ -7,4 +7,7 @@ export default interface IImage {
    src: string;
    tour: ITour;
    tourId: string;
+   awsFileName?: string;
+   featuredOfTour?: ITour;
+   featuredOfTourId?: String;
 }

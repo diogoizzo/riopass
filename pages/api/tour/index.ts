@@ -40,14 +40,6 @@ export default async function handler(
                   price: Number(price),
                   finalPrice: Number(finalPrice),
                   durationHours: Number(durationHours),
-                  itinerary: undefined,
-                  featuredPhoto: {
-                     create: {
-                        name: 'Teste',
-                        description: 'Imagem de teste para criação de tour',
-                        src: 'https://images.unsplash.com/photo-1682686580186-b55d2a91053c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80'
-                     }
-                  },
                   categories: {
                      connect: data.categories
                   }
@@ -60,15 +52,7 @@ export default async function handler(
                   ...data,
                   price: Number(price),
                   finalPrice: Number(finalPrice),
-                  durationHours: Number(durationHours),
-                  itinerary: undefined,
-                  featuredPhoto: {
-                     create: {
-                        name: 'Teste',
-                        description: 'Imagem de teste para criação de tour',
-                        src: 'https://images.unsplash.com/photo-1682686580186-b55d2a91053c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80'
-                     }
-                  }
+                  durationHours: Number(durationHours)
                }
             });
             res.status(200).json(tour);

@@ -14,7 +14,7 @@ const TabsList = React.forwardRef<
    <TabsPrimitive.List
       ref={ref}
       className={cn(
-         'inline-flex items-center justify-center  rounded-tl-md rounded-tr-md bg-slate-100 py-2 px-4 text-cool-gray-200 dark:bg-slate-800 dark:text-slate-400',
+         'inline-flex items-center justify-center  rounded-tl-md rounded-tr-md  py-2 px-4 text-cool-gray-200',
          className
       )}
       {...props}
@@ -29,7 +29,7 @@ const TabsTrigger = React.forwardRef<
    <TabsPrimitive.Trigger
       ref={ref}
       className={cn(
-         'inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium ring-offset-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-raisin-black data-[state=active]:text-cool-gray-200 data-[state=active]:shadow-md dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=active]:bg-slate-950 dark:data-[state=active]:text-slate-50',
+         'inline-flex items-center justify-center  rounded-md px-3 py-1.5 text-sm font-medium     data-[state=active]:bg-raisin-black-lighter data-[state=active]:border data-[state=active]:border-[#393D56] data-[state=active]:text-cool-gray-200 data-[state=active]:shadow-md ',
          className
       )}
       {...props}
@@ -41,14 +41,7 @@ const TabsContent = React.forwardRef<
    React.ElementRef<typeof TabsPrimitive.Content>,
    React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
 >(({ className, ...props }, ref) => (
-   <TabsPrimitive.Content
-      ref={ref}
-      className={cn(
-         ' ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300',
-         className
-      )}
-      {...props}
-   />
+   <TabsPrimitive.Content ref={ref} className={className} {...props} />
 ));
 TabsContent.displayName = TabsPrimitive.Content.displayName;
 

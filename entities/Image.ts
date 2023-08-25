@@ -8,7 +8,10 @@ export default class Image implements IImage {
       public tour: ITour,
       public tourId: string,
       public name?: string,
-      public description?: string
+      public description?: string,
+      public awsFileName?: string,
+      public featuredOfTour?: ITour,
+      public featuredOfTourId?: String
    ) {}
 
    static createFromObject({
@@ -17,14 +20,49 @@ export default class Image implements IImage {
       tour,
       tourId,
       name,
-      description
+      description,
+      awsFileName,
+      featuredOfTour,
+      featuredOfTourId
    }: IImage): Image {
-      return new Image(String(id), src, tour, tourId, name, description);
+      return new Image(
+         String(id),
+         src,
+         tour,
+         tourId,
+         name,
+         description,
+         awsFileName,
+         featuredOfTour,
+         featuredOfTourId
+      );
    }
 
    static createMany(images: IImage[]): Image[] {
-      return images.map(({ id, src, tour, tourId, name, description }) => {
-         return new Image(String(id), src, tour, tourId, name, description);
-      });
+      return images.map(
+         ({
+            id,
+            src,
+            tour,
+            tourId,
+            name,
+            description,
+            awsFileName,
+            featuredOfTour,
+            featuredOfTourId
+         }) => {
+            return new Image(
+               String(id),
+               src,
+               tour,
+               tourId,
+               name,
+               description,
+               awsFileName,
+               featuredOfTour,
+               featuredOfTourId
+            );
+         }
+      );
    }
 }

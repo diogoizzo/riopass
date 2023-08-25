@@ -7,7 +7,6 @@ interface TourTableProps {
 }
 
 function UserTable({ small, data }: TourTableProps) {
-   console.log(data[6].categories);
    return (
       <section className="py-3">
          <div className="container px-4 mx-auto">
