@@ -19,6 +19,7 @@ function TourDisplay({ tour }: TourDisplayProps) {
                   </div>
                </div>
                <DisplayLine label="Nome" content={tour?.name} />
+               <DisplayLine label="Url Amigável" content={tour?.url} />
                <DisplayLine label="Descrição" content={tour?.description} />
                <DisplayLine
                   label="Descrição Longa"

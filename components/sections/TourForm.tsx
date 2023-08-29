@@ -26,6 +26,7 @@ function TourForm({ tour }: TourFormProps) {
    const [form, setForm] = useState<ITourForm>({
       id: tour?.id || '',
       name: tour?.name || '',
+      url: tour?.url || '',
       description: tour?.description || '',
       longDescription: tour?.longDescription || '',
       categories: (tour?.categories &&
@@ -54,7 +55,6 @@ function TourForm({ tour }: TourFormProps) {
       partner: tour?.partner || '',
       photoGallery: tour?.photoGallery || ''
    });
-
    const [selectedCategories, setSelectedCategories] = useState<
       ITourCategory[] | []
    >(tour?.categories || []);
@@ -120,7 +120,6 @@ function TourForm({ tour }: TourFormProps) {
       e.preventDefault();
       setIsOpen(true);
    }
-   console.log(typeof tour?.photoGallery);
    return (
       <div className="w-full pb-6">
          <ConfirmationModal
@@ -164,7 +163,7 @@ function TourForm({ tour }: TourFormProps) {
                />
             </TabsContent>
             <TabsContent value="itinerary">
-               <ItineraryForm />
+               <ItineraryForm steps={tour?.itinerary} tourId={tour?.id} />
             </TabsContent>
          </Tabs>
       </div>

@@ -4,6 +4,7 @@ import ITourCategory from './ITourCategory';
 export default interface ITour {
    id?: string;
    name: string;
+   url: string;
    categories?: ITourCategory[];
    destination?: string;
    description: string;

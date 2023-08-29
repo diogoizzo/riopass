@@ -25,7 +25,6 @@ export default async function handler(
    } else if (req.method === 'POST') {
       const token = await getToken({ req });
       const data = req.body;
-      console.log(data);
       const { price, finalPrice, durationHours } = data;
       delete data.id;
       delete data.featuredPhoto;
@@ -47,6 +46,7 @@ export default async function handler(
             });
             res.status(200).json(tour);
          } else {
+            delete data.categories;
             const tour = await prisma.tour.create({
                data: {
                   ...data,

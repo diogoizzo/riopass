@@ -6,6 +6,7 @@ export default class Tour implements ITour {
    constructor(
       public id: string,
       public name: string,
+      public url: string,
       public categories: ITourCategory[],
       public description: string,
       public longDescription: string,
@@ -35,6 +36,7 @@ export default class Tour implements ITour {
    static createFromObject({
       id,
       name,
+      url,
       categories,
       description,
       longDescription,
@@ -63,6 +65,7 @@ export default class Tour implements ITour {
       return new Tour(
          id,
          name,
+         url,
          categories,
          description,
          longDescription,
@@ -95,6 +98,7 @@ export default class Tour implements ITour {
          ({
             id,
             name,
+            url,
             categories,
             description,
             longDescription,
@@ -123,6 +127,7 @@ export default class Tour implements ITour {
             return new Tour(
                id,
                name,
+               url,
                categories,
                description,
                longDescription,

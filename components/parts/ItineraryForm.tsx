@@ -1,29 +1,158 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import ConfirmationModal from './ConfirmationModal';
 import FormInputLine from '../atoms/FormInputLine';
 import FormTextareaLine from '../atoms/FormTextareaLine';
 import PrimaryBtn from '../atoms/PrimaryBtn';
 import SecundaryBtn from '../atoms/SecundaryBtn';
 import DangerBtn from '../atoms/DangerBtn';
+import StringSelectInput from '../atoms/StringSelectInput';
+import { useToast } from '../ui/use-toast';
+import useErrorToast from '../../hooks/useErrorToast';
+import { useMutation, useQueryClient } from 'react-query';
+import ItineraryServices from '../../services/ItineraryServices';
+import IItineraryStep from '../../interfaces/IItineraryStep';
+import { AxiosError } from 'axios';
+import SuccessMsg from './SuccessMsg';
 
 export interface IItineraryForm {
    name: string;
    description: string;
    time: string;
+   order?: string;
 }
 
-function ItineraryForm() {
+interface ItineraryFormProps {
+   steps: IItineraryStep[];
+   tourId?: string;
+}
+
+function ItineraryForm({ steps, tourId }: ItineraryFormProps) {
    const [isOpen, setIsOpen] = useState(false);
 
-   const [selectedStep, setSelectedStep] = useState(null);
+   const [selectedStep, setSelectedStep] = useState<IItineraryStep | null>(
+      null
+   );
 
    const [form, setForm] = useState<IItineraryForm>({
       name: '',
       description: '',
-      time: ''
+      time: '',
+      order: undefined
    });
 
+   const orderedSteps = steps?.sort((a, b) => a.order - b.order);
+
+   const { toast } = useToast();
+
+   const errorToast = useErrorToast();
+
+   const queryClient = useQueryClient();
+
+   const stepsRef = useRef(null);
+
+   const stepCreateMutation = useMutation({
+      mutationFn: ItineraryServices.create,
+      onSuccess: () => {
+         toast({
+            // @ts-expect-error
+            title: <SuccessMsg msg="Nova Etapa Salva" />,
+            description: (
+               <p className="text-cool-gray-500">
+                  A nova etapa foi salva com sucesso
+               </p>
+            )
+         });
+         queryClient.invalidateQueries(['tour', tourId]);
+         cancelHandler();
+      },
+      onError: (error: AxiosError) => {
+         errorToast(String(error.response?.data));
+      }
+   });
+
+   const stepDeleteMutation = useMutation({
+      mutationFn: ItineraryServices.delete,
+      onSuccess: () => {
+         toast({
+            // @ts-expect-error
+            title: <SuccessMsg msg="Etapa Apagada" />,
+            description: (
+               <p className="text-cool-gray-500">
+                  A etapa foi apagada com sucesso
+               </p>
+            )
+         });
+         queryClient.invalidateQueries(['tour', tourId]);
+         clearForm();
+         setSelectedStep(null);
+      },
+      onError: (error: AxiosError) => {
+         errorToast(String(error.response?.data));
+      }
+   });
+
+   const stepUpdateMutation = useMutation({
+      mutationFn: ItineraryServices.update,
+      onSuccess: () => {
+         toast({
+            // @ts-expect-error
+            title: <SuccessMsg msg="Etapa Atualizada" />,
+            description: (
+               <p className="text-cool-gray-500">
+                  A etapa foi atualizada com sucesso
+               </p>
+            )
+         });
+         queryClient.invalidateQueries(['tour', tourId]);
+         cancelHandler();
+      },
+      onError: (error: AxiosError) => {
+         errorToast(String(error.response?.data));
+      }
+   });
+
+   function clearForm() {
+      setForm({
+         name: '',
+         description: '',
+         time: '',
+         order: undefined
+      });
+   }
+
+   function clearSelect() {
+      const remove = (div: any) => {
+         div.classList.remove('border-blue-300');
+         div.classList.add('border-raisin-black-lighter');
+      };
+      //@ts-ignore
+      for (let div of stepsRef.current.children) remove(div);
+   }
+
+   function handleSelect(e: any, step: IItineraryStep) {
+      clearSelect();
+      e.target.classList.remove('border-raisin-black-lighter');
+      e.target.classList.add('border-blue-300');
+      setSelectedStep(step);
+      setForm({
+         name: step.name || '',
+         description: step.description || '',
+         time: step.time || '',
+         order: String(step.order) || ''
+      });
+   }
+
+   function cancelHandler() {
+      clearSelect();
+      setSelectedStep(null);
+      clearForm();
+   }
+
    async function deleteAction() {
+      stepDeleteMutation.mutate({
+         stepId: selectedStep?.id,
+         tourId
+      });
       closeModal();
    }
    function closeModal() {
@@ -33,6 +162,23 @@ function ItineraryForm() {
    function openConfirmationModal(e: Event) {
       e.preventDefault();
       setIsOpen(true);
+   }
+
+   async function save() {
+      if (selectedStep) {
+         stepUpdateMutation.mutate({ form, stepId: selectedStep.id, tourId });
+      } else {
+         if (tourId) {
+            stepCreateMutation.mutate({
+               form,
+               tourId
+            });
+         } else {
+            errorToast(
+               'É necessário salvar as informações do novo tour primeiro'
+            );
+         }
+      }
    }
 
    return (
@@ -79,6 +225,30 @@ function ItineraryForm() {
                      type="time"
                      placeHolder="Digite o horário da nova etapa do itinerário."
                   />
+                  <StringSelectInput
+                     title="Ordem"
+                     placeholder="Selecione o número de ordem dessa etapa"
+                     name="order"
+                     state={form.order}
+                     setState={setForm}
+                     options={[
+                        '1',
+                        '2',
+                        '3',
+                        '4',
+                        '5',
+                        '6',
+                        '7',
+                        '8',
+                        '9',
+                        '10',
+                        '11',
+                        '12',
+                        '13',
+                        '14',
+                        '15'
+                     ]}
+                  />
 
                   <FormTextareaLine
                      state={form.description}
@@ -89,17 +259,17 @@ function ItineraryForm() {
                   />
 
                   <div className="text-right space-x-6">
-                     <PrimaryBtn text={'Salvar Etapa'} clickHandle={() => {}} />
+                     <PrimaryBtn text={'Salvar Etapa'} clickHandle={save} />
 
                      {selectedStep ? (
                         <>
                            <SecundaryBtn
                               text="Cancelar"
-                              clickHandle={() => {}}
+                              clickHandle={cancelHandler}
                            />
                            <DangerBtn
                               text={'Apagar'}
-                              openConfirmation={() => {}}
+                              openConfirmation={openConfirmationModal}
                            />
                         </>
                      ) : null}
@@ -117,49 +287,28 @@ function ItineraryForm() {
                         clique em uma para editar
                      </p>
                   </div>
-                  <div className="pr-4">
-                     <PrimaryBtn text="Salvar Alterações" />
-                  </div>
                </div>
-               <div className="flex flex-col space-y-3 ">
-                  <div className="bg-raisin-black-light flex rounded-md shadow-md shadow-black/20 border border-raisin-black-lighter">
-                     <div className="flex items-center justify-center text-5xl text-raisin-black font-extrabold w-1/6 rounded-tl-md rounded-bl-md bg-raisin-black-lighter">
-                        1
+               <div ref={stepsRef} className="flex flex-col space-y-3 ">
+                  {orderedSteps?.map((step) => (
+                     <div
+                        key={step.id}
+                        onClick={(e) => handleSelect(e, step)}
+                        className="bg-raisin-black-light flex rounded-md shadow-md shadow-black/20 border border-raisin-black-lighter"
+                     >
+                        <div className="flex items-center justify-center text-5xl text-raisin-black font-extrabold w-1/6 rounded-tl-md rounded-bl-md bg-raisin-black-lighter">
+                           {step.order}
+                        </div>
+                        <div className="flex flex-col p-5">
+                           <h3 className="text-cool-gray-500 font-medium text-xl">
+                              {step.name}
+                           </h3>
+                           <p className="text-carolina-blue">{step.time}</p>
+                           <p className="mt-2 text-cool-gray-900">
+                              {step.description}
+                           </p>
+                        </div>
                      </div>
-                     <div className="flex flex-col p-5">
-                        <h3 className="text-cool-gray-500 font-medium text-xl">
-                           Teste de Título da etapa do itinerário
-                        </h3>
-                        <p className="text-carolina-blue">14:30</p>
-                        <p className="mt-2 text-cool-gray-900">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Sunt saepe explicabo totam exercitationem,
-                           adipisci dolorem doloremque, libero quos sint itaque
-                           voluptates. Inventore eveniet beatae mollitia alias
-                           placeat, adipisci vero illum at repudiandae. Eum
-                           alias dolorem odio ex iusto eaque aperiam
-                        </p>
-                     </div>
-                  </div>
-                  <div className="bg-raisin-black-light flex rounded-md shadow-md shadow-black/20 border border-raisin-black-lighter">
-                     <div className="flex items-center justify-center text-5xl text-raisin-black font-extrabold w-1/6 rounded-tl-md rounded-bl-md bg-raisin-black-lighter">
-                        2
-                     </div>
-                     <div className="flex flex-col p-5">
-                        <h3 className="text-cool-gray-500 font-medium text-xl">
-                           Teste de Título da etapa do itinerário
-                        </h3>
-                        <p className="text-carolina-blue">14:30</p>
-                        <p className="mt-2 text-cool-gray-900">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Sunt saepe explicabo totam exercitationem,
-                           adipisci dolorem doloremque, libero quos sint itaque
-                           voluptates. Inventore eveniet beatae mollitia alias
-                           placeat, adipisci vero illum at repudiandae. Eum
-                           alias dolorem odio ex iusto eaque aperiam
-                        </p>
-                     </div>
-                  </div>
+                  ))}
                </div>
             </div>
          </section>

@@ -56,6 +56,14 @@ function InfoForm({
                   type="text"
                   placeHolder="Digite o nome do novo tour..."
                />
+               <FormInputLine
+                  state={form.url}
+                  setState={setForm}
+                  name="url"
+                  label="Url Amigável"
+                  type="text"
+                  placeHolder="Digite a url do novo tour..."
+               />
                <FormTextareaLine
                   state={form.description}
                   setState={setForm}

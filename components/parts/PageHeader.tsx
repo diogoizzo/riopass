@@ -1,6 +1,4 @@
 import PrimaryBtnLink from '../atoms/PrimaryBtnLink';
-import IUser from '../../interfaces/IUser';
-import IPatient from '../../interfaces/IPatient';
 
 interface PageHeaderProps {
    title?: string;

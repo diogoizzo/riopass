@@ -4,6 +4,7 @@ export interface Categories {
 
 export default interface ITourForm {
    id?: string;
+   url: string;
    name: string;
    categories?: Categories[] | [];
    destination?: string;

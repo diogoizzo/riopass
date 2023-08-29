@@ -1,41 +1,130 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills.js"
+    "static/chunks/polyfills-78c92fac7aa8fdd8.js"
   ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
+  "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/fzJ9G-__0lklZRkx2GgVQ/_buildManifest.js",
+    "static/fzJ9G-__0lklZRkx2GgVQ/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
+    "/": [
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/chunks/756-288ee40d9bdfe7c9.js",
+      "static/chunks/559-6382955756f0b5d9.js",
+      "static/chunks/pages/index-dd61de4614f5fcc1.js"
+    ],
     "/_app": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/css/5d049d567e1d9351.css",
+      "static/chunks/pages/_app-7d55dc5321080101.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_error.js"
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/chunks/pages/_error-54de1933a164a1ff.js"
+    ],
+    "/admin/teste": [
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/chunks/154-8ca2cf819b914c10.js",
+      "static/chunks/pages/admin/teste-0e15a37cf99513ea.js"
     ],
     "/admin/tours": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/admin/tours.js"
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/chunks/756-288ee40d9bdfe7c9.js",
+      "static/chunks/154-8ca2cf819b914c10.js",
+      "static/chunks/559-6382955756f0b5d9.js",
+      "static/chunks/pages/admin/tours-2b9c4bb43e16afad.js"
     ],
     "/admin/tours/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/admin/tours/[id].js"
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/chunks/756-288ee40d9bdfe7c9.js",
+      "static/chunks/154-8ca2cf819b914c10.js",
+      "static/chunks/559-6382955756f0b5d9.js",
+      "static/chunks/pages/admin/tours/[id]-1d30353675462876.js"
     ],
     "/admin/tours/editar/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/admin/tours/editar/[id].js"
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/chunks/756-288ee40d9bdfe7c9.js",
+      "static/chunks/154-8ca2cf819b914c10.js",
+      "static/chunks/492-5d452b4e5315ef15.js",
+      "static/chunks/747-0597b9ebe05f220a.js",
+      "static/chunks/559-6382955756f0b5d9.js",
+      "static/chunks/485-8c2a26544d0b5642.js",
+      "static/chunks/pages/admin/tours/editar/[id]-68731b8e4a3aeb23.js"
+    ],
+    "/admin/tours/novo": [
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/chunks/756-288ee40d9bdfe7c9.js",
+      "static/chunks/154-8ca2cf819b914c10.js",
+      "static/chunks/492-5d452b4e5315ef15.js",
+      "static/chunks/747-0597b9ebe05f220a.js",
+      "static/chunks/559-6382955756f0b5d9.js",
+      "static/chunks/485-8c2a26544d0b5642.js",
+      "static/chunks/pages/admin/tours/novo-645e0f1226e21817.js"
+    ],
+    "/admin/usuarios": [
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/chunks/756-288ee40d9bdfe7c9.js",
+      "static/chunks/154-8ca2cf819b914c10.js",
+      "static/chunks/559-6382955756f0b5d9.js",
+      "static/chunks/pages/admin/usuarios-8b5c6e2b8867c7c9.js"
+    ],
+    "/admin/usuarios/[id]": [
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/chunks/756-288ee40d9bdfe7c9.js",
+      "static/chunks/154-8ca2cf819b914c10.js",
+      "static/chunks/559-6382955756f0b5d9.js",
+      "static/chunks/pages/admin/usuarios/[id]-bb6c51311ae0217e.js"
+    ],
+    "/admin/usuarios/editar/[id]": [
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/chunks/756-288ee40d9bdfe7c9.js",
+      "static/chunks/154-8ca2cf819b914c10.js",
+      "static/chunks/492-5d452b4e5315ef15.js",
+      "static/chunks/559-6382955756f0b5d9.js",
+      "static/chunks/724-f783cac95c5b2362.js",
+      "static/chunks/pages/admin/usuarios/editar/[id]-50155b4bcf61e898.js"
+    ],
+    "/auth/signin": [
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/chunks/pages/auth/signin-05a04585aa57b56d.js"
+    ],
+    "/auth/signup": [
+      "static/chunks/webpack-2df7a8d27de1794c.js",
+      "static/chunks/framework-305cb810cde7afac.js",
+      "static/chunks/main-bfbd70c9b9a5a25b.js",
+      "static/chunks/756-288ee40d9bdfe7c9.js",
+      "static/chunks/154-8ca2cf819b914c10.js",
+      "static/chunks/492-5d452b4e5315ef15.js",
+      "static/chunks/559-6382955756f0b5d9.js",
+      "static/chunks/724-f783cac95c5b2362.js",
+      "static/chunks/pages/auth/signup-89e0bf992bb11c8a.js"
     ]
   },
   "ampFirstPages": []

@@ -60,7 +60,7 @@ function ImageForm({ images, tourId, featuredPhoto }: ImageFormProps) {
             )
          });
          queryClient.invalidateQueries(['tour', tourId]);
-         clearForm();
+         cancelHandler();
       },
       onError: (error: AxiosError) => {
          errorToast(String(error.response?.data));
@@ -101,7 +101,7 @@ function ImageForm({ images, tourId, featuredPhoto }: ImageFormProps) {
             )
          });
          queryClient.invalidateQueries(['tour', tourId]);
-         clearForm();
+         cancelHandler();
       },
       onError: (error: AxiosError) => {
          errorToast(String(error.response?.data));
@@ -291,7 +291,7 @@ function ImageForm({ images, tourId, featuredPhoto }: ImageFormProps) {
                         onClick={(e) => handleSelect(e, featuredPhoto)}
                         className="w-full h-36 border border-raisin-black-lighter rounded-md relative"
                      >
-                        <span className="absolute top-1 left-1">
+                        <span className="absolute z-40 top-1 left-1">
                            <svg
                               className="w-5 h-5 text-yellow-300"
                               xmlns="http://www.w3.org/2000/svg"
