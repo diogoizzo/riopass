@@ -5,6 +5,7 @@ import { useQuery } from 'react-query';
 import TourServices from '../../../services/TourServices';
 import Tour from '../../../entities/Tour';
 import TourDisplay from '../../../components/sections/TourDisplay';
+import Loading from '../../../components/sections/loading';
 
 export default function TourView<NextPage>() {
    const router = useRouter();
@@ -17,14 +18,20 @@ export default function TourView<NextPage>() {
 
    return (
       <Menu>
-         <PageHeader
-            title={tour?.name}
-            subtitle="Veja as informações do usuário acima."
-            btnText="Editar"
-            search={false}
-            btnHref={tour?.tourEditLink || '/'}
-         />
-         <TourDisplay tour={tour} />
+         {query.isLoading ? (
+            <Loading />
+         ) : (
+            <>
+               <PageHeader
+                  title={tour?.name}
+                  subtitle="Veja as informações do usuário acima."
+                  btnText="Editar"
+                  search={false}
+                  btnHref={tour?.tourEditLink || ''}
+               />
+               <TourDisplay tour={tour} />
+            </>
+         )}
       </Menu>
    );
 }

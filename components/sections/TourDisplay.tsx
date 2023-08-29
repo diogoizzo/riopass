@@ -6,7 +6,6 @@ interface TourDisplayProps {
 }
 
 function TourDisplay({ tour }: TourDisplayProps) {
-   console.log(tour);
    return (
       <section className="py-3 mt-3">
          <div className="container px-4 mx-auto">

@@ -2,10 +2,14 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  "/admin/tours": "pages/admin/tours.js",
+  "/api/tour/[id]": "pages/api/tour/[id].js",
+  "/admin/tours/[id]": "pages/admin/tours/[id].js",
+  "/admin/tours/editar/[id]": "pages/admin/tours/editar/[id].js",
   "/admin/usuarios": "pages/admin/usuarios.js",
-  "/auth/signup": "pages/auth/signup.js",
+  "/api/categorias": "pages/api/categorias.js",
   "/api/usuarios": "pages/api/usuarios.js",
-  "/api/register": "pages/api/register.js"
+  "/api/tour": "pages/api/tour.js",
+  "/api/imagem/upload": "pages/api/imagem/upload.js",
+  "/api/imagem": "pages/api/imagem.js"
 }

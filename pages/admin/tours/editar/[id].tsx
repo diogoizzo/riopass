@@ -5,6 +5,7 @@ import { useQuery } from 'react-query';
 import TourServices from '../../../../services/TourServices';
 import Tour from '../../../../entities/Tour';
 import TourForm from '../../../../components/sections/TourForm';
+import Loading from '../../../../components/sections/loading';
 
 export default function EditTour() {
    const router = useRouter();
@@ -17,11 +18,17 @@ export default function EditTour() {
 
    return (
       <Menu>
-         <FormPageHeader
-            title={tour?.name}
-            subtitle="Edite as informações do tour acima."
-         />
-         {tour ? <TourForm tour={tour} /> : null}
+         {query.isLoading ? (
+            <Loading />
+         ) : (
+            <>
+               <FormPageHeader
+                  title={tour?.name}
+                  subtitle="Edite as informações do tour acima."
+               />
+               {tour ? <TourForm tour={tour} /> : null}
+            </>
+         )}
       </Menu>
    );
 }
