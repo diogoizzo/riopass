@@ -16,8 +16,6 @@ import SuccessMsg from './SuccessMsg';
 
 export interface IItineraryForm {
    name: string;
-   description: string;
-   time: string;
    order?: string;
 }
 
@@ -35,8 +33,6 @@ function ItineraryForm({ steps, tourId }: ItineraryFormProps) {
 
    const [form, setForm] = useState<IItineraryForm>({
       name: '',
-      description: '',
-      time: '',
       order: undefined
    });
 
@@ -114,8 +110,6 @@ function ItineraryForm({ steps, tourId }: ItineraryFormProps) {
    function clearForm() {
       setForm({
          name: '',
-         description: '',
-         time: '',
          order: undefined
       });
    }
@@ -136,8 +130,6 @@ function ItineraryForm({ steps, tourId }: ItineraryFormProps) {
       setSelectedStep(step);
       setForm({
          name: step.name || '',
-         description: step.description || '',
-         time: step.time || '',
          order: String(step.order) || ''
       });
    }
@@ -217,14 +209,6 @@ function ItineraryForm({ steps, tourId }: ItineraryFormProps) {
                      type="text"
                      placeHolder="Digite o nome da nova etapa do itinerário..."
                   />
-                  <FormInputLine
-                     state={form.time}
-                     setState={setForm}
-                     name="time"
-                     label="Horário"
-                     type="time"
-                     placeHolder="Digite o horário da nova etapa do itinerário."
-                  />
                   <StringSelectInput
                      title="Ordem"
                      placeholder="Selecione o número de ordem dessa etapa"
@@ -249,15 +233,6 @@ function ItineraryForm({ steps, tourId }: ItineraryFormProps) {
                         '15'
                      ]}
                   />
-
-                  <FormTextareaLine
-                     state={form.description}
-                     setState={setForm}
-                     name="description"
-                     label="Descrição da Etapa"
-                     placeHolder="Digite a descrição da nova etapa do itinerário..."
-                  />
-
                   <div className="text-right space-x-6">
                      <PrimaryBtn text={'Salvar Etapa'} clickHandle={save} />
 
@@ -302,10 +277,6 @@ function ItineraryForm({ steps, tourId }: ItineraryFormProps) {
                            <h3 className="text-cool-gray-500 font-medium text-xl">
                               {step.name}
                            </h3>
-                           <p className="text-carolina-blue">{step.time}</p>
-                           <p className="mt-2 text-cool-gray-900">
-                              {step.description}
-                           </p>
                         </div>
                      </div>
                   ))}

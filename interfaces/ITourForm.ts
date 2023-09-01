@@ -13,6 +13,7 @@ export default interface ITourForm {
    durationHours?: number;
    price: number;
    finalPrice: number;
+   moreInfo?: string;
    obs?: string;
    languages?: string;
    restrictions?: string;

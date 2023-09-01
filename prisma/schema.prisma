@@ -52,13 +52,11 @@ model Tour {
   durationHours    Int?
   price            Float
   finalPrice       Float
+  moreInfo         String?
   obs              String?
   languages        String?
   restrictions     String?
   placeOfDeparture String?
-  placeOfReturn    String?
-  timeOfDeparture  String?
-  timeOfReturn     String?
   belongsTobring   String?
   availability     String?
   include          String?
@@ -81,15 +79,13 @@ model TourCategory {
 }
 
 model ItineraryStep {
-  id          String   @id @default(cuid())
-  name        String
-  time        String?
-  description String
-  order       Int
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  partOfTour  Tour     @relation(fields: [tourId], references: [id])
-  tourId      String
+  id         String   @id @default(cuid())
+  name       String
+  order      Int
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  partOfTour Tour     @relation(fields: [tourId], references: [id])
+  tourId     String
 }
 
 model Photo {

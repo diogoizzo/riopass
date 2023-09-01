@@ -36,6 +36,10 @@ function TourDisplay({ tour }: TourDisplayProps) {
                   content={tour?.textLanguage}
                />
                <DisplayLine label="Parceiro" content={tour?.partner} />
+               <DisplayLine
+                  label="Mais Informações(URL)"
+                  content={tour?.moreInfo}
+               />
                <div className="flex flex-wrap items-center justify-between -mx-4 mb-8 pb-6 border-b border-gray-400 border-opacity-20">
                   <div className="w-full sm:w-auto px-4 mb-6 sm:mb-0">
                      <h4 className="text-2xl font-bold tracking-wide text-cool-gray-200 mb-1">
@@ -65,20 +69,8 @@ function TourDisplay({ tour }: TourDisplayProps) {
                   content={tour?.languages}
                />
                <DisplayLine
-                  label="Local de Partida"
+                  label="Local de Partida/Retorno"
                   content={tour?.placeOfDeparture}
-               />
-               <DisplayLine
-                  label="Horário de Partida"
-                  content={tour?.timeOfDeparture}
-               />
-               <DisplayLine
-                  label="Local de Retorno"
-                  content={tour?.placeOfReturn}
-               />
-               <DisplayLine
-                  label="Horário de Retorno"
-                  content={tour?.timeOfReturn}
                />
                <DisplayLine
                   label="Disponibilidade"

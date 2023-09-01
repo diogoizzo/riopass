@@ -107,6 +107,14 @@ function InfoForm({
                   type="text"
                   placeHolder="Digite os idiomas que o tour atende..."
                />
+               <FormInputLine
+                  state={form.moreInfo}
+                  setState={setForm}
+                  name="partner"
+                  label="URL para mais Informações Sobre o Tour"
+                  type="text"
+                  placeHolder="Digite a URL das informações do tour no site do parceiro.."
+               />
                <div className="flex flex-wrap items-center justify-between -mx-4 mb-8 pb-6 border-b border-gray-400 border-opacity-20">
                   <div className="w-full sm:w-auto px-4 mb-6 sm:mb-0">
                      <h4 className="text-2xl font-bold tracking-wide text-cool-gray-200 mb-1">
@@ -183,34 +191,9 @@ function InfoForm({
                   state={form.placeOfDeparture}
                   setState={setForm}
                   name="placeOfDeparture"
-                  label="Local de Partida"
+                  label="Local de Partida/Retorno"
                   type="text"
                   placeHolder="Digite o local de partida do tour..."
-               />
-               <FormInputLine
-                  state={form.timeOfDeparture}
-                  setState={setForm}
-                  name="timeOfDeparture"
-                  label="Horário de Partida"
-                  type="time"
-                  placeHolder="Digite o horário de partida do tour..."
-               />
-               <FormInputLine
-                  state={form.placeOfReturn}
-                  setState={setForm}
-                  name="placeOfReturn"
-                  label="Local de Retorno"
-                  type="text"
-                  placeHolder="Digite o local de retorno do tour..."
-               />
-
-               <FormInputLine
-                  state={form.timeOfReturn}
-                  setState={setForm}
-                  name="timeOfReturn"
-                  label="Horário de Retorno"
-                  type="time"
-                  placeHolder="Digite o horário de retorno do tour..."
                />
 
                <FormInputLine
@@ -253,7 +236,7 @@ function InfoForm({
                   name="include"
                   label="O que esta Incluso"
                   type="text"
-                  placeHolder="Digite o que está incluído no tour..."
+                  placeHolder="Digite o que está incluído no tour (separando por vírgulas)..."
                />
                <FormInputLine
                   state={form.notInclude}
@@ -261,7 +244,7 @@ function InfoForm({
                   name="notInclude"
                   label="O que não esta Incluso"
                   type="text"
-                  placeHolder="Digite o que não está incluído no tour..."
+                  placeHolder="Digite o que não está incluído no tour (separando por vírgulas)..."
                />
                <FormInputLine
                   state={form.belongsTobring}

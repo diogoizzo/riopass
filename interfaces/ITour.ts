@@ -12,13 +12,11 @@ export default interface ITour {
    durationHours?: number;
    price: number;
    finalPrice: number;
+   moreInfo?: string;
    obs?: string;
    languages?: string;
    restrictions?: string;
    placeOfDeparture?: string;
-   placeOfReturn?: string;
-   timeOfDeparture?: string;
-   timeOfReturn?: string;
    belongsTobring?: string;
    availability?: string;
    include?: string;
