@@ -110,7 +110,7 @@ function InfoForm({
                <FormInputLine
                   state={form.moreInfo}
                   setState={setForm}
-                  name="partner"
+                  name="moreInfo"
                   label="URL para mais Informações Sobre o Tour"
                   type="text"
                   placeHolder="Digite a URL das informações do tour no site do parceiro.."

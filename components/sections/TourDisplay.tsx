@@ -37,7 +37,7 @@ function TourDisplay({ tour }: TourDisplayProps) {
                />
                <DisplayLine label="Parceiro" content={tour?.partner} />
                <DisplayLine
-                  label="Mais Informações(URL)"
+                  label="Mais Informações (URL)"
                   content={tour?.moreInfo}
                />
                <div className="flex flex-wrap items-center justify-between -mx-4 mb-8 pb-6 border-b border-gray-400 border-opacity-20">
