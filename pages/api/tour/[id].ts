@@ -31,6 +31,7 @@ export default async function handler(
       const token = await getToken({ req });
       const id = String(req.query.id);
       const data = req.body;
+      const { price, finalPrice } = req.body;
       delete data.featuredPhoto;
       delete data.categories;
       delete data.itinerary;
@@ -42,7 +43,9 @@ export default async function handler(
                id: id
             },
             data: {
-               ...req.body
+               ...req.body,
+               price: Number(price),
+               finalPrice: Number(finalPrice)
             }
          });
          if (tour) {

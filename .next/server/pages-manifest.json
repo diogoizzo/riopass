@@ -2,11 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/admin/tours/novo": "pages/admin/tours/novo.js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/api/categorias": "pages/api/categorias.js",
-  "/api/tour": "pages/api/tour.js",
   "/admin/tours": "pages/admin/tours.js",
   "/admin/tours/[id]": "pages/admin/tours/[id].js",
-  "/api/tour/[id]": "pages/api/tour/[id].js"
+  "/admin/tours/editar/[id]": "pages/admin/tours/editar/[id].js"
 }

@@ -27,15 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/admin/tours.js"
     ],
-    "/admin/tours/[id]": [
+    "/admin/tours/editar/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/admin/tours/[id].js"
-    ],
-    "/admin/tours/novo": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/admin/tours/novo.js"
+      "static/chunks/pages/admin/tours/editar/[id].js"
     ]
   },
   "ampFirstPages": []
