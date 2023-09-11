@@ -32,4 +32,10 @@
       border: 1px solid #16161f;
       background-color: #2c3041;
    }
+   .text-shadow {
+      text-shadow: 1px 1px 3px rgb(27, 27, 27);
+   }
+   .text-shadow-light {
+      text-shadow: 1px 1px 3px rgb(61, 61, 61);
+   }
 }

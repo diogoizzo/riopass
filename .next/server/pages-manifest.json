@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/admin/tours": "pages/admin/tours.js",
-  "/admin/tours/[id]": "pages/admin/tours/[id].js",
-  "/admin/tours/editar/[id]": "pages/admin/tours/editar/[id].js"
+  "/": "pages/index.js"
 }
