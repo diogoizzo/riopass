@@ -12,6 +12,7 @@ import DetailDisplayLine from '../components/atoms/DetailDisplayLine';
 import TourTag from '../components/atoms/TourTag';
 import PriceCard from '../components/parts/PriceCard';
 import CallToAction from '../components/parts/CallToAction';
+import Info from '../components/parts/Info';
 
 export default function Homepage<NextPage>() {
    return (
@@ -80,9 +81,37 @@ export default function Homepage<NextPage>() {
                            value="detalhes"
                            className="bg-white  border-t-4 border-t-why-blue-600 shadow-sm rounded-b-md  z-30 relative "
                         >
-                           <div className="w-full h-full px-8 py-6 border border-why-gray-100 rounded-b-md">
+                           <Info />
+                           <div className="w-full h-full px-8 py-6 rounded-b-md">
                               <div className="py-4">
                                  <TourTag text="City Tour" />
+                              </div>
+                              <div className="space-y-2 mb-10 text-lg text-why-gray-900">
+                                 <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Fuga est nesciunt soluta
+                                    nam! Ipsum velit placeat, repellat nulla
+                                    culpa harum ipsam consectetur beatae non
+                                    iure dolorem odio optio sunt? Esse enim at
+                                    ratione similique culpa animi eveniet
+                                    tenetur ipsum quis! Eaque odio tempora natus
+                                    rem, inventore possimus temporibus deleniti
+                                    tenetur.
+                                 </p>
+                                 <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Fuga est nesciunt soluta
+                                    nam! Ipsum velit placeat, repellat nulla
+                                    culpa harum ipsam consectetur beatae non
+                                    iure dolorem odio optio sunt? Esse enim at
+                                    ratione similique culpa animi eveniet
+                                    tenetur ipsum quis! Eaque odio tempora natus
+                                    rem, inventore possimus temporibus deleniti
+                                    tenetur. Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Totam dolore
+                                    quo odio suscipit eveniet neque voluptatem
+                                    corporis accusantium unde est?
+                                 </p>
                               </div>
 
                               <DetailDisplayLine
