@@ -1,7 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 
-function Info() {
+interface infoProps {
+   durationHours?: string;
+   destination?: string;
+   partner?: string;
+}
+
+function Info({ durationHours, destination, partner }: infoProps) {
    return (
       <div className="w-full  flex  ">
          <div className="w-1/3 border-b border-why-black border-r flex justify-center items-center">
@@ -20,7 +26,9 @@ function Info() {
                   </svg>
                </div>
                <div>
-                  <p className="text-lg text-why-gray-900 ">10 horas</p>
+                  <p className="text-lg text-why-gray-900 ">
+                     {durationHours} horas
+                  </p>
                   <h3 className="text-gray-400">Duração</h3>
                </div>
             </div>
@@ -41,7 +49,7 @@ function Info() {
                   </svg>
                </div>
                <div>
-                  <p className="text-lg text-why-gray-900 ">Rio de Janeiro</p>
+                  <p className="text-lg text-why-gray-900 ">{destination}</p>
                   <h3 className="text-gray-400">Destino</h3>
                </div>
             </div>
@@ -57,7 +65,7 @@ function Info() {
                   />
                </div>
                <div>
-                  <p className="text-lg text-why-gray-900 ">Rio 40 Graus</p>
+                  <p className="text-lg text-why-gray-900 ">{partner} </p>
                   <h3 className="text-gray-400">Parceiro</h3>
                </div>
             </div>

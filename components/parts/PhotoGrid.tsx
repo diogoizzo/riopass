@@ -1,7 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import IImage from '../../interfaces/IImage';
 
-function PhotoGrid() {
+interface PhotoGaleryProps {
+   featuredPhoto: IImage;
+   photoGallery: IImage[];
+}
+
+function PhotoGrid({ featuredPhoto, photoGallery }: PhotoGaleryProps) {
    return (
       <div>
          <div className="w-full px-4 relative h-96 text-center rounded-md overflow-hidden">

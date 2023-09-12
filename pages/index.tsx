@@ -18,6 +18,7 @@ import DetailMarkLine from '../components/atoms/DetailMarkLine';
 import TourCard from '../components/atoms/TourCard';
 import PhotoGrid from '../components/parts/PhotoGrid';
 import Intinerary from '../components/parts/Intinerary';
+import { NextPageContext } from 'next';
 
 export default function Homepage<NextPage>() {
    return (
