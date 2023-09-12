@@ -16,6 +16,8 @@ import Info from '../components/parts/Info';
 import DetailCheckLine from '../components/atoms/DetailChecklLine';
 import DetailMarkLine from '../components/atoms/DetailMarkLine';
 import TourCard from '../components/atoms/TourCard';
+import PhotoGrid from '../components/parts/PhotoGrid';
+import Intinerary from '../components/parts/Intinerary';
 
 export default function Homepage<NextPage>() {
    return (
@@ -228,16 +230,16 @@ export default function Homepage<NextPage>() {
                         </div>
                      </TabsContent>
                      <TabsContent
-                        className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100 h-[600px] border-t-4 border-t-why-blue-600  z-30 relative"
+                        className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100  border-t-4 border-t-why-blue-600  z-30 relative"
                         value="fotos"
                      >
-                        fotos
+                        <PhotoGrid />
                      </TabsContent>
                      <TabsContent
                         className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100 h-[600px] border-t-4 border-t-why-blue-600  z-30 relative"
                         value="itinerario"
                      >
-                        itinerário
+                        <Intinerary />
                      </TabsContent>
                   </Tabs>
                </div>
