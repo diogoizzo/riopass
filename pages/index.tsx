@@ -13,10 +13,13 @@ import TourTag from '../components/atoms/TourTag';
 import PriceCard from '../components/parts/PriceCard';
 import CallToAction from '../components/parts/CallToAction';
 import Info from '../components/parts/Info';
+import DetailCheckLine from '../components/atoms/DetailChecklLine';
+import DetailMarkLine from '../components/atoms/DetailMarkLine';
+import TourCard from '../components/atoms/TourCard';
 
 export default function Homepage<NextPage>() {
    return (
-      <div>
+      <div className="bg-why-gray-50 relative">
          <div className="sticky top-0 bg-why-gray-100 shadow-md z-50">
             <header className="container mx-auto flex justify-between items-center py-6 font-medium">
                <div className="">
@@ -47,152 +50,215 @@ export default function Homepage<NextPage>() {
             </header>
          </div>
 
-         <main className="bg-why-gray-50 relative">
+         <main className="bg-why-gray-50 ">
             <div className="w-full py-72 text-center bg-[url('/img/cristo.jpg')]  bg-cover bg-center">
                <h1 className="text-7xl text-shadow text-white font-bold relative -top-16">
                   City Tour Experiência ErreJota Premium
                </h1>
             </div>
-            <div className="container ">
-               <div className=" w-full flex flex-wrap -mt-40 mb-10 ">
-                  <div className="w-3/4">
-                     <Tabs defaultValue="detalhes" className="w-full">
-                        <TabsList className=" space-x-6">
-                           <TabsTrigger
-                              value="detalhes"
-                              className="data-[state=active]:bg-why-blue-600 data-[state=active]:text-why-gray-100 text-why-blue-600 bg-white text-xl uppercase rounded-b-none  py-3  px-7 inline-flex font-semibold"
-                           >
-                              Detalhes
-                           </TabsTrigger>
-                           <TabsTrigger
-                              value="fotos"
-                              className="bg-white text-xl uppercase rounded-b-none data-[state=active]:bg-why-blue-600 data-[state=active]:text-why-gray-100  py-3 text-why-blue-600 px-7 inline-flex font-semibold"
-                           >
-                              Fotos
-                           </TabsTrigger>
-                           <TabsTrigger
-                              value="itinerario"
-                              className="bg-white data-[state=active]:bg-why-blue-600 data-[state=active]:text-why-gray-100 text-xl uppercase rounded-b-none  py-3 text-why-blue-600 px-7 inline-flex font-semibold"
-                           >
-                              Itinerário
-                           </TabsTrigger>
-                        </TabsList>
-                        <TabsContent
-                           value="detalhes"
-                           className="bg-white  border-t-4 border-t-why-blue-600 shadow-sm rounded-b-md  z-30 relative "
-                        >
-                           <Info />
-                           <div className="w-full h-full px-8 py-6 rounded-b-md">
-                              <div className="py-4">
-                                 <TourTag text="City Tour" />
-                              </div>
-                              <div className="space-y-2 mb-10 text-lg text-why-gray-900">
-                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Fuga est nesciunt soluta
-                                    nam! Ipsum velit placeat, repellat nulla
-                                    culpa harum ipsam consectetur beatae non
-                                    iure dolorem odio optio sunt? Esse enim at
-                                    ratione similique culpa animi eveniet
-                                    tenetur ipsum quis! Eaque odio tempora natus
-                                    rem, inventore possimus temporibus deleniti
-                                    tenetur.
-                                 </p>
-                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Fuga est nesciunt soluta
-                                    nam! Ipsum velit placeat, repellat nulla
-                                    culpa harum ipsam consectetur beatae non
-                                    iure dolorem odio optio sunt? Esse enim at
-                                    ratione similique culpa animi eveniet
-                                    tenetur ipsum quis! Eaque odio tempora natus
-                                    rem, inventore possimus temporibus deleniti
-                                    tenetur. Lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit. Totam dolore
-                                    quo odio suscipit eveniet neque voluptatem
-                                    corporis accusantium unde est?
-                                 </p>
-                              </div>
 
-                              <DetailDisplayLine
-                                 label="Observações"
-                                 content="detalhe Lorem ipsum dolor sit, amet consectetur
-                              adipisicing elit. Aspernatur, itaque. Aspernatur,
-                              iure eius facilis soluta, voluptatum incidunt
-                              obcaecati ex corrupti optio voluptate ut officiis
-                              modi neque suscipit expedita odio repellat
-                              distinctio natus dicta perferendis! Sequi
-                              voluptatum cupiditate, unde repellat porro nulla
-                              natus neque ipsum in eos pariatur esse corrupti
-                              itaque recusandae fuga! Molestias tempora omnis
-                              culpa quia cupiditate aperiam id nobis totam
-                              quaerat tenetur officia repellat iure voluptate
-                              quas amet, beatae maiores. Excepturi, fugit! Eum
-                              tenetur, quibusdam, voluptatibus dicta quaerat
-                              debitis blanditiis dolores sapiente distinctio
-                              accusantium rerum ipsa consequatur, assumenda"
-                              />
-                              <DetailDisplayLine
-                                 label="Observações"
-                                 content="detalhe Lorem ipsum dolor sit, amet consectetur
-                              adipisicing elit. Aspernatur, itaque. Aspernatur,
-                              iure eius facilis soluta, voluptatum incidunt
-                              obcaecati ex corrupti optio voluptate ut officiis
-                              modi neque suscipit expedita odio repellat
-                              distinctio natus dicta perferendis! Sequi
-                              voluptatum cupiditate, unde repellat porro nulla
-                              natus neque ipsum in eos pariatur esse corrupti
-                              itaque recusandae fuga! Molestias tempora omnis
-                              culpa quia cupiditate aperiam id nobis totam
-                              quaerat tenetur officia repellat iure voluptate
-                              quas amet, beatae maiores. Excepturi, fugit! Eum
-                              tenetur, quibusdam, voluptatibus dicta quaerat
-                              debitis blanditiis dolores sapiente distinctio
-                              accusantium rerum ipsa consequatur, assumenda"
-                              />
-                              <DetailDisplayLine
-                                 label="Observações"
-                                 content="detalhe Lorem ipsum dolor sit, amet consectetur
-                              adipisicing elit. Aspernatur, itaque. Aspernatur,
-                              iure eius facilis soluta, voluptatum incidunt
-                              obcaecati ex corrupti optio voluptate ut officiis
-                              modi neque suscipit expedita odio repellat
-                              distinctio natus dicta perferendis! Sequi
-                              voluptatum cupiditate, unde repellat porro nulla
-                              natus neque ipsum in eos pariatur esse corrupti
-                              itaque recusandae fuga! Molestias tempora omnis
-                              culpa quia cupiditate aperiam id nobis totam
-                              quaerat tenetur officia repellat iure voluptate
-                              quas amet, beatae maiores. Excepturi, fugit! Eum
-                              tenetur, quibusdam, voluptatibus dicta quaerat
-                              debitis blanditiis dolores sapiente distinctio
-                              accusantium rerum ipsa consequatur, assumenda"
-                              />
-                           </div>
-                        </TabsContent>
-                        <TabsContent
-                           className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100 h-[600px] border-t-4 border-t-why-blue-600  z-30 relative"
+            <div className=" container relative w-full flex flex-wrap -mt-40  ">
+               <div className="w-3/4">
+                  <Tabs defaultValue="detalhes" className="w-full">
+                     <TabsList className=" space-x-6">
+                        <TabsTrigger
+                           value="detalhes"
+                           className="data-[state=active]:bg-why-blue-600 data-[state=active]:text-why-gray-100 text-why-blue-600 bg-white text-xl uppercase rounded-b-none  py-3  px-7 inline-flex font-semibold"
+                        >
+                           Detalhes
+                        </TabsTrigger>
+                        <TabsTrigger
                            value="fotos"
+                           className="bg-white text-xl uppercase rounded-b-none data-[state=active]:bg-why-blue-600 data-[state=active]:text-why-gray-100  py-3 text-why-blue-600 px-7 inline-flex font-semibold"
                         >
-                           fotos
-                        </TabsContent>
-                        <TabsContent
-                           className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100 h-[600px] border-t-4 border-t-why-blue-600  z-30 relative"
+                           Fotos
+                        </TabsTrigger>
+                        <TabsTrigger
                            value="itinerario"
+                           className="bg-white data-[state=active]:bg-why-blue-600 data-[state=active]:text-why-gray-100 text-xl uppercase rounded-b-none  py-3 text-why-blue-600 px-7 inline-flex font-semibold"
                         >
-                           itinerário
-                        </TabsContent>
-                     </Tabs>
+                           Itinerário
+                        </TabsTrigger>
+                     </TabsList>
+                     <TabsContent
+                        value="detalhes"
+                        className="bg-white  border-t-4 border-t-why-blue-600 shadow-sm rounded-b-md  z-30 relative "
+                     >
+                        <Info />
+                        <div className="w-full h-full px-8 py-6 rounded-b-md">
+                           <div className="py-4">
+                              <TourTag text="City Tour" />
+                           </div>
+                           <div className="space-y-2 mb-10 text-lg text-why-gray-900">
+                              <p>
+                                 Lorem ipsum dolor sit amet consectetur
+                                 adipisicing elit. Fuga est nesciunt soluta nam!
+                                 Ipsum velit placeat, repellat nulla culpa harum
+                                 ipsam consectetur beatae non iure dolorem odio
+                                 optio sunt? Esse enim at ratione similique
+                                 culpa animi eveniet tenetur ipsum quis! Eaque
+                                 odio tempora natus rem, inventore possimus
+                                 temporibus deleniti tenetur.
+                              </p>
+                              <p>
+                                 Lorem ipsum dolor sit amet consectetur
+                                 adipisicing elit. Fuga est nesciunt soluta nam!
+                                 Ipsum velit placeat, repellat nulla culpa harum
+                                 ipsam consectetur beatae non iure dolorem odio
+                                 optio sunt? Esse enim at ratione similique
+                                 culpa animi eveniet tenetur ipsum quis! Eaque
+                                 odio tempora natus rem, inventore possimus
+                                 temporibus deleniti tenetur. Lorem ipsum dolor
+                                 sit amet consectetur adipisicing elit. Totam
+                                 dolore quo odio suscipit eveniet neque
+                                 voluptatem corporis accusantium unde est?
+                              </p>
+                           </div>
+
+                           <DetailDisplayLine
+                              label="Observações"
+                              content="detalhe Lorem ipsum dolor sit, amet consectetur
+                              adipisicing elit. Aspernatur, itaque. Aspernatur,
+                              iure eius facilis soluta, voluptatum incidunt
+                              obcaecati ex corrupti optio voluptate ut officiis
+                              modi neque suscipit expedita odio repellat
+                              distinctio natus dicta perferendis! Sequi
+                              voluptatum cupiditate, unde repellat porro nulla
+                              natus neque ipsum in eos pariatur esse corrupti
+                              itaque recusandae fuga! Molestias tempora omnis
+                              culpa quia cupiditate aperiam id nobis totam
+                              quaerat tenetur officia repellat iure voluptate
+                              quas amet, beatae maiores. Excepturi, fugit! Eum
+                              tenetur, quibusdam, voluptatibus dicta quaerat
+                              debitis blanditiis dolores sapiente distinctio
+                              accusantium rerum ipsa consequatur, assumenda"
+                           />
+                           <DetailDisplayLine
+                              label="Observações"
+                              content="detalhe Lorem ipsum dolor sit, amet consectetur
+                              adipisicing elit. Aspernatur, itaque. Aspernatur,
+                              iure eius facilis soluta, voluptatum incidunt
+                              obcaecati ex corrupti optio voluptate ut officiis
+                              modi neque suscipit expedita odio repellat
+                              distinctio natus dicta perferendis! Sequi
+                              voluptatum cupiditate, unde repellat porro nulla
+                              natus neque ipsum in eos pariatur esse corrupti
+                              itaque recusandae fuga! Molestias tempora omnis
+                              culpa quia cupiditate aperiam id nobis totam
+                              quaerat tenetur officia repellat iure voluptate
+                              quas amet, beatae maiores. Excepturi, fugit! Eum
+                              tenetur, quibusdam, voluptatibus dicta quaerat
+                              debitis blanditiis dolores sapiente distinctio
+                              accusantium rerum ipsa consequatur, assumenda"
+                           />
+                           <DetailDisplayLine
+                              label="Observações"
+                              content="detalhe Lorem ipsum dolor sit, amet consectetur
+                              adipisicing elit. Aspernatur, itaque. Aspernatur,
+                              iure eius facilis soluta, voluptatum incidunt
+                              obcaecati ex corrupti optio voluptate ut officiis
+                              modi neque suscipit expedita odio repellat
+                              distinctio natus dicta perferendis! Sequi
+                              voluptatum cupiditate, unde repellat porro nulla
+                              natus neque ipsum in eos pariatur esse corrupti
+                              itaque recusandae fuga! Molestias tempora omnis
+                              culpa quia cupiditate aperiam id nobis totam
+                              quaerat tenetur officia repellat iure voluptate
+                              quas amet, beatae maiores. Excepturi, fugit! Eum
+                              tenetur, quibusdam, voluptatibus dicta quaerat
+                              debitis blanditiis dolores sapiente distinctio
+                              accusantium rerum ipsa consequatur, assumenda"
+                           />
+                           <DetailDisplayLine
+                              label="Observações"
+                              content="detalhe Lorem ipsum dolor sit, amet consectetur
+                              adipisicing elit. Aspernatur, itaque. Aspernatur,
+                              iure eius facilis soluta, voluptatum incidunt
+                              obcaecati ex corrupti optio voluptate ut officiis
+                              modi neque suscipit expedita odio repellat
+                              distinctio natus dicta perferendis! Sequi
+                              voluptatum cupiditate, unde repellat porro nulla
+                              natus neque ipsum in eos pariatur esse corrupti
+                              itaque recusandae fuga! Molestias tempora omnis
+                              culpa quia cupiditate aperiam id nobis totam
+                              quaerat tenetur officia repellat iure voluptate
+                              quas amet, beatae maiores. Excepturi, fugit! Eum
+                              tenetur, quibusdam, voluptatibus dicta quaerat
+                              debitis blanditiis dolores sapiente distinctio
+                              accusantium rerum ipsa consequatur, assumenda"
+                           />
+                           <DetailDisplayLine
+                              label="Observações"
+                              content="detalhe Lorem ipsum dolor sit, amet consectetur
+                              adipisicing elit. Aspernatur, itaque. Aspernatur,
+                              iure eius facilis soluta, voluptatum incidunt
+                              obcaecati ex corrupti optio voluptate ut officiis
+                              modi neque suscipit expedita odio repellat
+                              distinctio natus dicta perferendis! Sequi
+                              voluptatum cupiditate, unde repellat porro nulla
+                              natus neque ipsum in eos pariatur esse corrupti
+                              itaque recusandae fuga! Molestias tempora omnis
+                              culpa quia cupiditate aperiam id nobis totam
+                              quaerat tenetur officia repellat iure voluptate
+                              quas amet, beatae maiores. Excepturi, fugit! Eum
+                              tenetur, quibusdam, voluptatibus dicta quaerat
+                              debitis blanditiis dolores sapiente distinctio
+                              accusantium rerum ipsa consequatur, assumenda"
+                           />
+                           <DetailCheckLine
+                              label="O que inlcui"
+                              content={[
+                                 'Almoço',
+                                 'Ingressos',
+                                 'Bebidas',
+                                 'Guia',
+                                 'Transporte'
+                              ]}
+                           />
+                           <DetailMarkLine
+                              label="O que não inclui"
+                              content={[
+                                 'Almoço',
+                                 'Ingressos',
+                                 'Bebidas',
+                                 'Guia',
+                                 'Transporte'
+                              ]}
+                           />
+                        </div>
+                     </TabsContent>
+                     <TabsContent
+                        className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100 h-[600px] border-t-4 border-t-why-blue-600  z-30 relative"
+                        value="fotos"
+                     >
+                        fotos
+                     </TabsContent>
+                     <TabsContent
+                        className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100 h-[600px] border-t-4 border-t-why-blue-600  z-30 relative"
+                        value="itinerario"
+                     >
+                        itinerário
+                     </TabsContent>
+                  </Tabs>
+               </div>
+               <div className=" w-1/4  mt-14 pl-2">
+                  <PriceCard />
+                  <CallToAction />
+               </div>
+               <div className=" w-full mt-3  py-10">
+                  <h2 className=" text-4xl text-why-gray-900 mb-6 font-medium">
+                     Você Também deve Gostar
+                  </h2>
+                  <div className="flex space-x-3">
+                     <TourCard />
+                     <TourCard />
+                     <TourCard />
+                     <TourCard />
                   </div>
-                  <div className=" w-1/4  mt-14 pl-2">
-                     <PriceCard />
-                     <CallToAction />
-                  </div>
-                  <div className="bg-yellow-500 w-3/4 h-60 mt-3"></div>
                </div>
             </div>
          </main>
-         <footer className=" w-full bg-why-blue h-10 bg-why-blue-600 "></footer>
+         <footer className=" w-full  bg-why-blue  bg-why-blue-600 "></footer>
       </div>
    );
 }

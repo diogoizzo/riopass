@@ -3,7 +3,7 @@ import React from 'react';
 
 function CallToAction() {
    return (
-      <div className="mt-3 relative bg-why-blue-600 rounded-md shadow-md  p-4 text-center text-why-gray-100">
+      <div className="mt-3 sticky top-28 bg-why-blue-600 rounded-md shadow-md  p-4 text-center text-why-gray-100">
          <h2 className="text-3xl mt-4 font-semibold text-why-yellow-400">
             <span className="block text-4xl mb-1 uppercase text-shadow-light text-why-yellow-600">
                Compre agora
