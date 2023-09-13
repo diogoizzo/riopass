@@ -4,7 +4,7 @@ import IImage from '../../interfaces/IImage';
 
 interface PhotoGaleryProps {
    featuredPhoto: IImage;
-   photoGallery: IImage[];
+   photoGallery?: IImage[];
 }
 
 function PhotoGrid({ featuredPhoto, photoGallery }: PhotoGaleryProps) {
@@ -13,67 +13,28 @@ function PhotoGrid({ featuredPhoto, photoGallery }: PhotoGaleryProps) {
          <div className="w-full px-4 relative h-96 text-center rounded-md overflow-hidden">
             <Image
                className="rounded-md inline-block"
-               src={'/img/cristo.jpg'}
+               src={featuredPhoto?.src}
                fill={true}
                alt="imagem do cristo redentor"
                style={{ objectFit: 'contain' }}
             />
          </div>
          <div className="w-full mt-3 grid gap-3 grid-cols-4">
-            <div className="relative h-48">
-               <Image
-                  className="rounded-sm"
-                  src={'/img/cristo.jpg'}
-                  fill={true}
-                  alt="imagem do cristo redentor"
-                  style={{ objectFit: 'cover' }}
-               />
-            </div>
-            <div className="relative h-48">
-               <Image
-                  className="rounded-sm"
-                  src={'/img/cristo.jpg'}
-                  fill={true}
-                  alt="imagem do cristo redentor"
-                  style={{ objectFit: 'cover' }}
-               />
-            </div>
-            <div className="relative h-48">
-               <Image
-                  className="rounded-sm"
-                  src={'/img/cristo.jpg'}
-                  fill={true}
-                  alt="imagem do cristo redentor"
-                  style={{ objectFit: 'cover' }}
-               />
-            </div>
-            <div className="relative h-48">
-               <Image
-                  className="rounded-sm"
-                  src={'/img/cristo.jpg'}
-                  fill={true}
-                  alt="imagem do cristo redentor"
-                  style={{ objectFit: 'cover' }}
-               />
-            </div>
-            <div className="relative h-48">
-               <Image
-                  className="rounded-sm"
-                  src={'/img/cristo.jpg'}
-                  fill={true}
-                  alt="imagem do cristo redentor"
-                  style={{ objectFit: 'cover' }}
-               />
-            </div>
-            <div className="relative h-48">
-               <Image
-                  className="rounded-sm"
-                  src={'/img/cristo.jpg'}
-                  fill={true}
-                  alt="imagem do cristo redentor"
-                  style={{ objectFit: 'cover' }}
-               />
-            </div>
+            {photoGallery?.map((photo) => (
+               <div key={photo.name} className="relative h-48">
+                  <Image
+                     className="rounded-sm"
+                     src={photo.src}
+                     fill={true}
+                     alt={
+                        photo.description ||
+                        photo.name ||
+                        'nenhuma descrição fornecida'
+                     }
+                     style={{ objectFit: 'contain' }}
+                  />
+               </div>
+            ))}
          </div>
       </div>
    );

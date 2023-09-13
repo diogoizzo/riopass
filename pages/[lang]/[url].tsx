@@ -87,6 +87,7 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                <div className="">
                   <Image
                      src={'/img/travelclub.svg'}
+                     quality={100}
                      height={990}
                      width={220}
                      alt="Logo em svg do brasil travel club"
@@ -143,53 +144,53 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                         className="bg-white  border-t-4 border-t-why-blue-600 shadow-sm rounded-b-md  z-30 relative "
                      >
                         <Info
-                           destination={tour.destination}
-                           durationHours={String(tour.durationHours)}
-                           partner={tour.partner}
+                           destination={tour?.destination}
+                           durationHours={String(tour?.durationHours)}
+                           partner={tour?.partner}
                         />
                         <div className="w-full h-full px-8 py-6 rounded-b-md">
                            <div className="py-4 flex space-x-3">
-                              {tour.categories?.map((cat) => (
+                              {tour?.categories?.map((cat) => (
                                  <TourTag key={cat.name} text={cat.name} />
                               ))}
                            </div>
                            <div className="space-y-2 mb-10 text-lg text-why-gray-900">
-                              {tour.longDescription}
+                              {tour?.longDescription}
                            </div>
 
                            <DetailDisplayLine
                               label="Observações"
-                              content={tour.obs}
+                              content={tour?.obs}
                            />
                            <DetailDisplayLine
                               label="Línguas"
-                              content={tour.languages}
+                              content={tour?.languages}
                            />
                            <DetailDisplayLine
                               label="Restrições"
-                              content={tour.restrictions}
+                              content={tour?.restrictions}
                            />
                            <DetailDisplayLine
                               label="Local de partida/retorno"
-                              content={tour.placeOfDeparture}
+                              content={tour?.placeOfDeparture}
                            />
                            <DetailDisplayLine
                               label="O que levar"
-                              content={tour.belongsTobring}
+                              content={tour?.belongsTobring}
                            />
                            <DetailDisplayLine
                               label="Disponibilidade"
-                              content={tour.availability}
+                              content={tour?.availability}
                            />
                            <DetailCheckLine
                               label="O que inclui"
-                              content={tour.include
+                              content={tour?.include
                                  ?.split(',')
                                  .map((item) => item.trim())}
                            />
                            <DetailMarkLine
                               label="O que não inclui"
-                              content={tour.notInclude
+                              content={tour?.notInclude
                                  ?.split(',')
                                  .map((item) => item.trim())}
                            />
@@ -203,7 +204,10 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                         className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100  border-t-4 border-t-why-blue-600  z-30 relative"
                         value="fotos"
                      >
-                        {/* <PhotoGrid /> */}
+                        <PhotoGrid
+                           featuredPhoto={tour?.featuredPhoto}
+                           photoGallery={tour?.photoGallery}
+                        />
                      </TabsContent>
                      <TabsContent
                         className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100 h-[600px] border-t-4 border-t-why-blue-600  z-30 relative"
@@ -214,7 +218,10 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                   </Tabs>
                </div>
                <div className=" w-1/4  mt-14 pl-2">
-                  <PriceCard price={tour.price} finalPrice={tour.finalPrice} />
+                  <PriceCard
+                     price={tour?.price}
+                     finalPrice={tour?.finalPrice}
+                  />
                   <CallToAction />
                </div>
                <div className=" w-full mt-3  py-10">
