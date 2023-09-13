@@ -22,6 +22,7 @@ import ITour from '../../interfaces/ITour';
 import TourTitle from '../../components/atoms/TourTitle';
 import DetailLinkLine from '../../components/atoms/DetailLinkLine';
 import prisma from '../../lib/prisma';
+import Itinerary from '../../components/parts/Intinerary';
 
 export async function getServerSideProps(context: any) {
    const { url } = context.params;
@@ -210,10 +211,10 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                         />
                      </TabsContent>
                      <TabsContent
-                        className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100 h-[600px] border-t-4 border-t-why-blue-600  z-30 relative"
+                        className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100  border-t-4 border-t-why-blue-600  z-30 relative"
                         value="itinerario"
                      >
-                        <Intinerary />
+                        <Itinerary itinerary={tour?.itinerary} />
                      </TabsContent>
                   </Tabs>
                </div>
