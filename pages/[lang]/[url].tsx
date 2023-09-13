@@ -139,6 +139,12 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                         >
                            Itinerário
                         </TabsTrigger>
+                        <TabsTrigger
+                           value="reserva"
+                           className="bg-white data-[state=active]:bg-why-blue-600 data-[state=active]:text-why-gray-100 text-xl uppercase rounded-b-none  py-3 text-why-blue-600 px-7 inline-flex font-semibold"
+                        >
+                           Como reservar
+                        </TabsTrigger>
                      </TabsList>
                      <TabsContent
                         value="detalhes"
@@ -215,6 +221,12 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                         value="itinerario"
                      >
                         <Itinerary itinerary={tour?.itinerary} />
+                     </TabsContent>
+                     <TabsContent
+                        className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100  border-t-4 border-t-why-blue-600  z-30 relative"
+                        value="reserva"
+                     >
+                        Informações sobre como reservar
                      </TabsContent>
                   </Tabs>
                </div>

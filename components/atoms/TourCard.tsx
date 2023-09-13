@@ -13,7 +13,10 @@ function TourCard() {
                style={{ objectFit: 'cover' }}
             />
             <div className="absolute bottom-0 right-0 px-6 rounded-tl-sm py-2 bg-why-blue-600 text-why-gray-100 font-semibold text-2xl">
-               R$320,00
+               <div className="flex items-baseline space-x-1">
+                  <p className="line-through text-base">R$420</p>
+                  <p>R$320,00</p>
+               </div>
             </div>
          </div>
          <div className="p-5">
