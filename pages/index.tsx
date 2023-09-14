@@ -43,10 +43,10 @@ export default function Homepage<NextPage>() {
          <section className="bg-gray-200 py-20">
             <div className="container mx-auto px-4">
                <div className="max-w-2xl mx-auto text-center">
-                  <h2 className="text-3xl font-bold text-wh mb-6">
+                  <h2 className="text-3xl font-bold text-why-gray-900 text-wh mb-6">
                      O que você pode esperar
                   </h2>
-                  <p className="text-gray-600 mb-12">
+                  <p className="text-why-gray-800 mb-12">
                      Um club de descontos exclusivo, onde você irá pagar um
                      valor fixo para obter um cupom de desconto para todas as
                      atrações dos nossos parceiros. Compra uma vez e utilize em
