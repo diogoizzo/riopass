@@ -36,6 +36,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/admin/tours/[id].js"
+    ],
+    "/admin/tours/editar/[id]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/admin/tours/editar/[id].js"
     ]
   },
   "ampFirstPages": []

@@ -25,6 +25,19 @@ import prisma from '../../lib/prisma';
 import Itinerary from '../../components/parts/Intinerary';
 import { useState } from 'react';
 import PhotoModal from '../../components/modals/PhotoModal';
+import IImage from '../../interfaces/IImage';
+
+export interface Related {
+   id: string;
+   name: string;
+   description: string;
+   price: number;
+   finalPrice: number;
+   destination: string | null;
+   durationHours: number | null;
+   featuredPhoto: IImage;
+   url: string;
+}
 
 export async function getServerSideProps(context: any) {
    const { url } = context.params;
@@ -33,6 +46,7 @@ export async function getServerSideProps(context: any) {
          url
       },
       select: {
+         id: true,
          name: true,
          destination: true,
          description: true,
@@ -51,7 +65,30 @@ export async function getServerSideProps(context: any) {
          notInclude: true,
          textLanguage: true,
          partner: true,
-         categories: true,
+         categories: {
+            select: {
+               name: true,
+               tours: {
+                  select: {
+                     id: true,
+                     name: true,
+                     url: true,
+                     destination: true,
+                     description: true,
+                     price: true,
+                     finalPrice: true,
+                     durationHours: true,
+                     featuredPhoto: {
+                        select: {
+                           name: true,
+                           description: true,
+                           src: true
+                        }
+                     }
+                  }
+               }
+            }
+         },
          itinerary: {
             select: {
                name: true,
@@ -78,10 +115,36 @@ export async function getServerSideProps(context: any) {
          updatedAt: false
       }
    });
+
    return { props: { tour } };
 }
 
 export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
+   const relatedTours: Related[] = tour?.categories?.reduce(
+      (acc: any, current) => acc.concat(current?.tours),
+      []
+   );
+
+   let relatedUniqueTours: Related[] = [];
+
+   for (let tour of relatedTours) {
+      if (relatedUniqueTours.length === 0) {
+         let filteredArray = relatedTours.filter((item) => item.id !== tour.id);
+         relatedUniqueTours = filteredArray;
+         relatedUniqueTours.push(tour);
+      } else {
+         let filteredArray = relatedUniqueTours.filter(
+            (item) => item.id !== tour.id
+         );
+         relatedUniqueTours = filteredArray;
+         relatedUniqueTours.push(tour);
+      }
+   }
+
+   const finalRelatedTours = relatedUniqueTours.filter(
+      (item) => item.id !== tour.id
+   );
+
    let [isOpen, setIsOpen] = useState(false);
    let [img, setImg] = useState('');
 
@@ -92,7 +155,7 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
    function openModal() {
       setIsOpen(true);
    }
-   console.log(tour);
+
    return (
       <>
          <PhotoModal isOpen={isOpen} closeModal={closeModal} img={img} />
@@ -274,10 +337,20 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                         Você Também deve Gostar
                      </h2>
                      <div className="flex space-x-3">
-                        <TourCard />
-                        <TourCard />
-                        <TourCard />
-                        <TourCard />
+                        {finalRelatedTours?.map((tour) => (
+                           <TourCard
+                              key={tour.id}
+                              url={tour.url}
+                              id={tour.id}
+                              name={tour.name}
+                              description={tour.description}
+                              price={tour.price}
+                              finalPrice={tour.finalPrice}
+                              destination={tour.destination}
+                              durationHours={tour.durationHours}
+                              featuredPhoto={tour.featuredPhoto}
+                           />
+                        ))}
                      </div>
                   </div>
                </div>

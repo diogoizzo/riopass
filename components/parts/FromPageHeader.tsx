@@ -8,7 +8,7 @@ export default function FormPageHeader({
    subtitle
 }: FormPageHeaderProps) {
    return (
-      <div className=" pt-8 pb-2">
+      <div className=" pt-8 px-8 pb-2">
          <div className="pb-6 border-b border-cool-gray-900">
             <div className="flex flex-wrap items-center justify-between -mx-4">
                <div className="w-full md:w-1/2 lg:w-auto px-4 mb-6 md:mb-0">

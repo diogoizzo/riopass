@@ -119,7 +119,7 @@ function TourForm({ tour }: TourFormProps) {
       setIsOpen(true);
    }
    return (
-      <div className="w-full pb-6">
+      <div className="w-full pb-6 px-8">
          <ConfirmationModal
             text={'Tem certeza que deseja apagar o tour?'}
             isOpen={isOpen}
