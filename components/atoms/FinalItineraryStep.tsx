@@ -14,7 +14,7 @@ function FinalItineraryStep({ order, name }: ItineraryStepProps) {
                   {order}
                </div>
             </div>
-            <h2 className="relative pl-4  text-2xl font-medium text-why-gray-900">
+            <h2 className="relative pl-2  text-2xl font-medium text-why-gray-900">
                {name}
             </h2>
          </div>

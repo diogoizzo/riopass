@@ -44,7 +44,7 @@ model Client {
 model Tour {
   id               String          @id @default(cuid())
   name             String
-  url              String
+  url              String          @unique
   categories       TourCategory[]
   destination      String?
   description      String
@@ -68,6 +68,8 @@ model Tour {
   itinerary        ItineraryStep[]
   photoGallery     Photo[]         @relation("gallery")
   featuredPhoto    Photo?
+
+  @@index([url])
 }
 
 model TourCategory {
