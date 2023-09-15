@@ -5,7 +5,8 @@ function BrazilFlag({ className }: { className: string }) {
    return (
       <div className={className}>
          <Image
-            fill={true}
+            width={1060}
+            height={742}
             src={'/img/Flag_of_Brazil.svg'}
             alt="Icone de bandeira do brasil"
          />

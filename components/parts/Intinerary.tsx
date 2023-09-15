@@ -4,9 +4,10 @@ import IItineraryStep from '../../interfaces/IItineraryStep';
 import FinalItineraryStep from '../atoms/FinalItineraryStep';
 
 function Itinerary({ itinerary }: { itinerary: IItineraryStep[] }) {
+   const orderedItinerary = itinerary.sort((a, b) => a.order - b.order);
    return (
       <div className="pt-3 pb-6">
-         {itinerary?.map((step, idx, arr) => {
+         {orderedItinerary?.map((step, idx, arr) => {
             if (idx === arr.length - 1) {
                return (
                   <FinalItineraryStep

@@ -16,7 +16,7 @@ export default function DetailCheckLine({
          </div>
          <div className="w-full sm:w-2/3 px-4">
             <div className="max-w-xl">
-               <div className="grid grid-cols-2">
+               <div className="grid grid-cols-1 md:grid-cols-2">
                   {content?.map((item) => (
                      <div key={item} className="flex space-x-1">
                         <svg

@@ -26,6 +26,7 @@ import Itinerary from '../../components/parts/Intinerary';
 import { useState } from 'react';
 import PhotoModal from '../../components/modals/PhotoModal';
 import IImage from '../../interfaces/IImage';
+import { BoolEnum } from 'sharp';
 
 export interface Related {
    id: string;
@@ -124,7 +125,7 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
       (acc: any, current) => acc.concat(current?.tours),
       []
    );
-
+   const [menuOpen, setMenuOpen] = useState<boolean>(false);
    let relatedUniqueTours: Related[] = [];
 
    for (let tour of relatedTours) {
@@ -160,25 +161,9 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
       <>
          <PhotoModal isOpen={isOpen} closeModal={closeModal} img={img} />
          <div className="bg-why-gray-50 relative">
-            {/* <div className="h-[100vh] w-[100%] bg-black bg-opacity-80 inline-flex items-center justify-center fixed z-40 overflow-y-scroll overscroll-y-none ">
-               <div className="absolute top-4 right-4 text-white font-bold text-2xl">
-                  X
-               </div>
-               <div className="w-[90%] h-[90%] relative">
-                  <Image
-                     className="rounded-sm"
-                     src={
-                        'https://riopass-bucket.s3.sa-east-1.amazonaws.com/00511406-8bb4-4311-b053-3b79dd940c0e'
-                     }
-                     fill={true}
-                     alt={'nenhuma descrição fornecida'}
-                     style={{ objectFit: 'contain' }}
-                  />
-               </div>
-            </div> */}
             <div className="sticky top-0 bg-why-gray-100 shadow-md z-50">
-               <header className="container mx-auto flex justify-between items-center py-6 font-medium">
-                  <div className="">
+               <header className="container mx-auto flex flex-col md:flex-row justify-between items-center py-4 md:py-6 font-medium">
+                  <div className=" flex justify-between items-center w-full md:w-auto">
                      <Image
                         src={'/img/travelclub.svg'}
                         quality={100}
@@ -186,18 +171,62 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                         width={220}
                         alt="Logo em svg do brasil travel club"
                      />
+                     <button onClick={() => setMenuOpen((prev) => !prev)}>
+                        {menuOpen ? (
+                           <svg
+                              className="w-7 h-7 text-why-gray-900 cursor-pointer md:hidden"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              id="times"
+                           >
+                              <path
+                                 fill="currentcolor"
+                                 d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"
+                              ></path>
+                           </svg>
+                        ) : (
+                           <svg
+                              className="w-6 h-6 text-why-gray-900 cursor-pointer md:hidden"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              id="bars"
+                           >
+                              <path
+                                 fill="currentcolor"
+                                 d="M3,8H21a1,1,0,0,0,0-2H3A1,1,0,0,0,3,8Zm18,8H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Zm0-5H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z"
+                              ></path>
+                           </svg>
+                        )}
+                     </button>
                   </div>
-                  <nav>
-                     <ul className="flex space-x-10 uppercase items-center text-why-gray-900">
-                        <li>como funciona</li>
-                        <li>atrações</li>
-                        <li>como reservar</li>
-                        <li>preços</li>
-                        <li>FAQ</li>
-                        <li>Contato</li>
 
-                        <li className="relative">
-                           <BrazilFlag className="w-8 h-8" />
+                  <nav
+                     className={`mt-5 md:mt-0  text-center w-full md:w-auto  ${
+                        menuOpen ? null : 'hidden md:flex'
+                     } `}
+                  >
+                     <ul className="flex md:w-auto w-full flex-col  md:flex-row md:space-x-10 uppercase md:items-center md:justify-center  text-why-gray-900">
+                        <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0 ">
+                           como funciona
+                        </li>
+                        <li className="border-b border-why-gray-200 md:border-none   py-3 md:py-0">
+                           atrações
+                        </li>
+                        <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
+                           como reservar
+                        </li>
+                        <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
+                           preços
+                        </li>
+                        <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
+                           FAQ
+                        </li>
+                        <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
+                           Contato
+                        </li>
+
+                        <li className="border-b border-why-gray-200 md:border-none   py-3 md:py-0 relative">
+                           <BrazilFlag className="w-12 h-12 md:h-10 md:w-10 inline-flex items-center justify-center " />
                         </li>
                         <li className="inline-flex items-center justify-center px-5 font-semibold  rounded-md  shadow-md shadow-why-blue-600/20 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-blue-600/30 text-why-gray-50 py-3 bg-why-blue-500 ">
                            Comprar Agora
@@ -210,31 +239,31 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
             <main className="bg-why-gray-50 ">
                <TourTitle title={tour.name} img={tour.featuredPhoto.src} />
 
-               <div className=" container relative w-full flex flex-wrap -mt-40  ">
-                  <div className="w-3/4">
+               <div className=" container relative w-full flex flex-wrap -mt-32 md:-mt-40  ">
+                  <div className="w-full md:w-3/4">
                      <Tabs defaultValue="detalhes" className="w-full">
-                        <TabsList className=" space-x-6">
+                        <TabsList className=" flex w-full md:w-auto flex-col md:flex-row justify-start md:space-x-6">
                            <TabsTrigger
                               value="detalhes"
-                              className="data-[state=active]:bg-why-blue-600 data-[state=active]:text-why-gray-100 text-why-blue-600 bg-white text-xl uppercase rounded-b-none  py-3  px-7 inline-flex font-semibold"
+                              className="data-[state=active]:bg-why-blue-600 w-full border-b border-why-gray-200 md:border-none md:w-auto data-[state=active]:text-why-gray-100 text-why-blue-600 bg-white text-xl uppercase rounded-b-none  py-3  px-7 inline-flex font-semibold"
                            >
                               Detalhes
                            </TabsTrigger>
                            <TabsTrigger
                               value="fotos"
-                              className="bg-white text-xl uppercase rounded-b-none data-[state=active]:bg-why-blue-600 data-[state=active]:text-why-gray-100  py-3 text-why-blue-600 px-7 inline-flex font-semibold"
+                              className="bg-white text-xl uppercase rounded-b-none border-b border-why-gray-200 md:border-none  w-full md:w-auto data-[state=active]:bg-why-blue-600 data-[state=active]:text-why-gray-100  py-3 text-why-blue-600 px-7 inline-flex font-semibold"
                            >
                               Fotos
                            </TabsTrigger>
                            <TabsTrigger
                               value="itinerario"
-                              className="bg-white data-[state=active]:bg-why-blue-600 data-[state=active]:text-why-gray-100 text-xl uppercase rounded-b-none  py-3 text-why-blue-600 px-7 inline-flex font-semibold"
+                              className="bg-white data-[state=active]:bg-why-blue-600 border-b border-why-gray-200 md:border-none  w-full md:w-auto data-[state=active]:text-why-gray-100 text-xl uppercase rounded-b-none  py-3 text-why-blue-600 px-7 inline-flex font-semibold"
                            >
                               Itinerário
                            </TabsTrigger>
                            <TabsTrigger
                               value="reserva"
-                              className="bg-white data-[state=active]:bg-why-blue-600 data-[state=active]:text-why-gray-100 text-xl uppercase rounded-b-none  py-3 text-why-blue-600 px-7 inline-flex font-semibold"
+                              className="bg-white data-[state=active]:bg-why-blue-600   w-full md:w-auto data-[state=active]:text-why-gray-100 text-xl uppercase rounded-b-none  py-3 text-why-blue-600 px-7 inline-flex font-semibold"
                            >
                               Como reservar
                            </TabsTrigger>
@@ -248,13 +277,13 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                               durationHours={String(tour?.durationHours)}
                               partner={tour?.partner}
                            />
-                           <div className="w-full h-full px-8 py-6 rounded-b-md">
+                           <div className="w-full h-full px-5 md:px-8 py-6 rounded-b-md">
                               <div className="py-4 flex space-x-3">
                                  {tour?.categories?.map((cat) => (
                                     <TourTag key={cat.name} text={cat.name} />
                                  ))}
                               </div>
-                              <div className="space-y-2 mb-10 text-lg text-why-gray-900">
+                              <div className="space-y-2 mb-10 text-base md:text-lg text-why-gray-900">
                                  {tour?.longDescription}
                               </div>
 
@@ -325,18 +354,18 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                         </TabsContent>
                      </Tabs>
                   </div>
-                  <div className=" w-1/4  mt-14 pl-2">
+                  <div className=" w-full md:w-1/4  mt-10 md:mt-14 pl-2">
                      <PriceCard
                         price={tour?.price}
                         finalPrice={tour?.finalPrice}
                      />
                      <CallToAction />
                   </div>
-                  <div className=" w-full mt-3  py-10">
+                  <div className=" w-full mt-6  py-10">
                      <h2 className=" text-4xl text-why-gray-900 mb-6 font-medium">
                         Você Também deve Gostar
                      </h2>
-                     <div className="flex space-x-3">
+                     <div className="flex flex-col md:flex-row md:space-x-3 space-y-3">
                         {finalRelatedTours?.map((tour) => (
                            <TourCard
                               key={tour.id}

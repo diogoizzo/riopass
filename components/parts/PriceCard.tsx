@@ -24,7 +24,7 @@ function PriceCard({ price, finalPrice }: PriceCardProps) {
          </div>
          <h2 className="w-full text-center text-4xl py-5 shadow-md  bg-why-blue-600 border-why-blue-600 text-why-gray-100 font-medium">
             Economize
-            <span className="font-bold text-6xl block text-why-yellow-600 text-shadow-light">
+            <span className="font-bold text-5xl md:text-6xl block text-why-yellow-600 text-shadow-light">
                R${(price - finalPrice)?.toFixed(2).toString().replace('.', ',')}
             </span>
          </h2>

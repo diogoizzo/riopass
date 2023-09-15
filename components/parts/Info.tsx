@@ -9,8 +9,8 @@ interface infoProps {
 
 function Info({ durationHours, destination, partner }: infoProps) {
    return (
-      <div className="w-full  flex  ">
-         <div className="w-1/3 border-b border-why-black border-r flex justify-center items-center">
+      <div className="w-full flex flex-col md:flex-row ">
+         <div className="w-full md:w-1/3 border-b border-why-black border-r flex justify-center items-center">
             <div className="flex space-x-3 py-12 items-center">
                <div>
                   <svg
@@ -33,7 +33,7 @@ function Info({ durationHours, destination, partner }: infoProps) {
                </div>
             </div>
          </div>
-         <div className="w-1/3 border-b border-why-black border-r flex justify-center items-center">
+         <div className="w-full md:w-1/3 border-b border-why-black border-r flex justify-center items-center">
             <div className="flex space-x-3 py-12 items-center">
                <div>
                   <svg
@@ -54,7 +54,7 @@ function Info({ durationHours, destination, partner }: infoProps) {
                </div>
             </div>
          </div>
-         <div className="w-1/3 border-b border-why-black flex justify-center items-center">
+         <div className="w-full md:w-1/3 border-b border-why-black flex justify-center items-center">
             <div className="flex space-x-4 py-12 items-center">
                <div>
                   <svg

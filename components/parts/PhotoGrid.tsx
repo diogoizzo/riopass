@@ -21,7 +21,7 @@ function PhotoGrid({
    }
    return (
       <div className="relative z-0">
-         <div className="w-full px-4 relative h-96 text-center rounded-md overflow-hidden">
+         <div className="w-full px-4 relative h-48 md:h-96 text-center rounded-md overflow-hidden">
             <Image
                className="rounded-md inline-block"
                src={featuredPhoto?.src}
@@ -35,7 +35,7 @@ function PhotoGrid({
                onClick={() => openPhotoInModal(featuredPhoto?.src)}
             />
          </div>
-         <div className="w-full mt-3 grid gap-3 grid-cols-4">
+         <div className="w-full mt-3 grid gap-3 grid-cols-1 md:grid-cols-4">
             {photoGallery?.map((photo) => (
                <button
                   key={photo?.awsFileName}
