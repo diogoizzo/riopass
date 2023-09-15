@@ -354,7 +354,7 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                         </TabsContent>
                      </Tabs>
                   </div>
-                  <div className=" w-full md:w-1/4  mt-10 md:mt-14 pl-2">
+                  <div className=" w-full md:w-1/4  mt-10 md:mt-14 md:pl-2">
                      <PriceCard
                         price={tour?.price}
                         finalPrice={tour?.finalPrice}
