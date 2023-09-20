@@ -3,7 +3,8 @@ import { useRouter } from 'next/router';
 import { Tooltip } from 'react-tooltip';
 import { Toaster } from '../ui/toaster';
 import { signOut } from 'next-auth/react';
-import { Bus } from 'lucide-react';
+import { Title } from '@radix-ui/react-toast';
+import Head from 'next/head';
 
 export default function Menu({ children }: any) {
    const router = useRouter();

@@ -27,6 +27,7 @@ import { useState } from 'react';
 import PhotoModal from '../../components/modals/PhotoModal';
 import IImage from '../../interfaces/IImage';
 import { BoolEnum } from 'sharp';
+import Head from 'next/head';
 
 export interface Related {
    id: string;
@@ -86,7 +87,8 @@ export async function getServerSideProps(context: any) {
                            src: true
                         }
                      }
-                  }
+                  },
+                  take: 5
                }
             }
          },
@@ -142,9 +144,9 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
       }
    }
 
-   const finalRelatedTours = relatedUniqueTours.filter(
-      (item) => item.id !== tour.id
-   );
+   const finalRelatedTours = relatedUniqueTours
+      .filter((item) => item.id !== tour.id)
+      .slice(0, 4);
 
    let [isOpen, setIsOpen] = useState(false);
    let [img, setImg] = useState('');
@@ -159,10 +161,19 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
 
    return (
       <>
+         <Head>
+            <title>{tour.name}</title>
+            <meta name="description" content={tour.description} />
+            <meta
+               name="keywords"
+               content="tour, turismo, guia, trilhas, praias, aventuras, club de desconto, descontos, passeios, viagem, férias, agência de turismo, passeios de barco, experiências"
+            ></meta>
+            <meta name="author" content="Diogo Izzo"></meta>
+         </Head>
          <PhotoModal isOpen={isOpen} closeModal={closeModal} img={img} />
          <div className="bg-why-gray-50 relative">
-            <div className="sticky top-0 bg-why-gray-100 shadow-md z-50">
-               <header className="container mx-auto flex flex-col md:flex-row justify-between items-center py-4 md:py-6 font-medium">
+            <div className="fixed w-full top-0 bg-why-gray-100 shadow-md z-50 overflow-visible">
+               <header className="container  overflow-visible mx-auto flex flex-col md:flex-row justify-between items-center py-4  font-medium">
                   <div className=" flex justify-between items-center w-full md:w-auto">
                      <Image
                         src={'/img/travelclub.svg'}
@@ -201,7 +212,7 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                   </div>
 
                   <nav
-                     className={`mt-5 md:mt-0  text-center w-full md:w-auto  ${
+                     className={`mt-5 md:mt-0  text-center w-full md:w-auto relative ${
                         menuOpen ? null : 'hidden md:flex'
                      } `}
                   >
@@ -365,7 +376,7 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                      <h2 className=" text-4xl text-why-gray-900 mb-6 font-medium">
                         Você Também deve Gostar
                      </h2>
-                     <div className="flex flex-col md:flex-row md:space-x-3 space-y-3">
+                     <div className="flex flex-col md:flex-row md:space-x-3 md:space-y-0 space-y-3">
                         {finalRelatedTours?.map((tour) => (
                            <TourCard
                               key={tour.id}
