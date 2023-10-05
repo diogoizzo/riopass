@@ -2,9 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/[lang]/[url]": "pages/[lang]/[url].js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/admin/tours": "pages/admin/tours.js",
-  "/admin/tours/novo": "pages/admin/tours/novo.js",
-  "/api/tour": "pages/api/tour.js"
+  "/": "pages/index.js",
+  "/atracoes": "pages/atracoes.js",
+  "/comofunciona": "pages/comofunciona.js",
+  "/home": "pages/home.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
 }

@@ -36,7 +36,7 @@ export default function Homepage<NextPage>() {
                            />
                            <button
                               type="submit"
-                              className="bg-why-blue-600 text-why-gray-100 py-2 px-4 rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50"
+                              className="bg-why-blue-600 text-why-gray-100 py-2 px-4 rounded-md hover:bg-why-blue-400 focus:outline-none focus:ring-2 focus:ring-why-blue-500 focus:ring-opacity-50"
                            >
                               Cadastrar
                            </button>
