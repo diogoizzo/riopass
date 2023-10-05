@@ -3,52 +3,18 @@ import SectionTitle from '../../components/atoms/SectionTitle';
 import MenuFront from '../../components/parts/MenuFront';
 import PageHero from '../../components/parts/PageHero';
 import TourFilter from '../../components/parts/TourFilter';
-import TourGrid from '../../components/sections/TourGrid';
 import ITour from '../../interfaces/ITour';
-import prisma from '../../lib/prisma';
+import { useQuery } from 'react-query';
+import axios from 'axios';
+import LoadingFront from '../../components/sections/LoadingFront';
+import TourGrid from '../../components/sections/TourGrid';
 
-export async function getServerSideProps() {
-   try {
-      const tours = await prisma.tour.findMany({
-         select: {
-            id: true,
-            name: true,
-            description: true,
-            price: true,
-            finalPrice: true,
-            destination: true,
-            durationHours: true,
-            featuredPhoto: {
-               select: {
-                  name: true,
-                  description: true,
-                  awsFileName: true,
-                  src: true
-               }
-            },
-            categories: {
-               select: {
-                  name: true
-               }
-            },
-            url: true
-         }
-      });
-      return {
-         props: {
-            tours
-         }
-      };
-   } catch (error) {
-      console.log(error);
-   }
-}
-
-interface ToursProps {
-   tours: ITour[];
-}
-
-export default function Tours({ tours }: ToursProps) {
+export default function Tours() {
+   const toursQuery = useQuery(['tours'], async () => {
+      const res = await axios.get('/api/front/tours');
+      return res.data;
+   });
+   const tours: ITour[] = toursQuery.data;
    const toursCategories = tours
       ?.map((tour) => tour.categories?.map((category) => category.name))
       .reduce((acc: any, item: any) => {
@@ -78,7 +44,10 @@ export default function Tours({ tours }: ToursProps) {
                   tours={tours}
                   setSearchTours={setSearchTours}
                />
-               {searchTours ? (
+
+               {toursQuery.isLoading ? (
+                  <LoadingFront />
+               ) : searchTours ? (
                   <TourGrid tours={searchTours} />
                ) : (
                   <TourGrid tours={filteredTours || tours} />

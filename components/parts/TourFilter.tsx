@@ -26,7 +26,7 @@ function TourFilter({
    setSearchTours
 }: TourFilterProps) {
    const toursTest: ITour[] = filteredTours || tours;
-   const workingTours = [...toursTest];
+   const workingTours = toursTest && [...toursTest];
 
    return (
       <div className=" w-full flex justify-between items-center  pt-4 pb-12">
