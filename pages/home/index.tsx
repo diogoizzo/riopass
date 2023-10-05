@@ -18,7 +18,9 @@ export default function Homepage<NextPage>() {
             img="/img/home-banner.jpg"
          />
          <Highlights />
-         <HowItWork />
+         <HowItWork>
+            <h2>O titulo vai aqui</h2>
+         </HowItWork>
          <TourHighlights />
          <div className="h-60"></div>
       </>
