@@ -8,36 +8,40 @@ import ITour from '../../interfaces/ITour';
 import prisma from '../../lib/prisma';
 
 export async function getServerSideProps() {
-   const tours = await prisma.tour.findMany({
-      select: {
-         id: true,
-         name: true,
-         description: true,
-         price: true,
-         finalPrice: true,
-         destination: true,
-         durationHours: true,
-         featuredPhoto: {
-            select: {
-               name: true,
-               description: true,
-               awsFileName: true,
-               src: true
-            }
-         },
-         categories: {
-            select: {
-               name: true
-            }
-         },
-         url: true
-      }
-   });
-   return {
-      props: {
-         tours
-      }
-   };
+   try {
+      const tours = await prisma.tour.findMany({
+         select: {
+            id: true,
+            name: true,
+            description: true,
+            price: true,
+            finalPrice: true,
+            destination: true,
+            durationHours: true,
+            featuredPhoto: {
+               select: {
+                  name: true,
+                  description: true,
+                  awsFileName: true,
+                  src: true
+               }
+            },
+            categories: {
+               select: {
+                  name: true
+               }
+            },
+            url: true
+         }
+      });
+      return {
+         props: {
+            tours
+         }
+      };
+   } catch (error) {
+      console.log(error);
+   }
 }
 
 interface ToursProps {
