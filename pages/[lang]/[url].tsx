@@ -118,10 +118,11 @@ export async function getServerSideProps(context: any) {
 }
 
 export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
-   const relatedTours: Related[] = tour?.categories?.reduce(
-      (acc: any, current) => acc.concat(current?.tours),
-      []
-   );
+   const relatedTours: Related[] =
+      tour?.categories?.reduce(
+         (acc: any, current) => acc.concat(current?.tours),
+         []
+      ) || [];
    let relatedUniqueTours: Related[] = [];
 
    for (let tour of relatedTours) {
@@ -156,8 +157,8 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
    return (
       <>
          <Head>
-            <title>{tour.name}</title>
-            <meta name="description" content={tour.description} />
+            <title>{tour?.name}</title>
+            <meta name="description" content={tour?.description} />
             <meta
                name="keywords"
                content="tour, turismo, guia, trilhas, praias, aventuras, club de desconto, descontos, passeios, viagem, férias, agência de turismo, passeios de barco, experiências"
@@ -168,7 +169,7 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
          <div className="bg-why-gray-50 relative">
             <MenuFront />
             <main className="bg-why-gray-50 ">
-               <TourTitle title={tour.name} img={tour.featuredPhoto.src} />
+               <TourTitle title={tour?.name} img={tour?.featuredPhoto.src} />
 
                <div className=" container relative w-full flex flex-wrap -mt-32 md:-mt-40  ">
                   <div className="w-full md:w-3/4">
@@ -256,7 +257,7 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                               />
                               <DetailLinkLine
                                  label="Mais informações"
-                                 link={tour.moreInfo}
+                                 link={tour?.moreInfo}
                               />
                            </div>
                         </TabsContent>

@@ -2,7 +2,7 @@ import HowItWorkStep from '../atoms/HowItWorkStep';
 
 function HowItWork({ children }: { children: any }) {
    return (
-      <section className="bg-why-gray-50 py-14">
+      <section className="bg-why-gray-50 pt-12 pb-20">
          <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
                <div className="w-1/2">{children}</div>

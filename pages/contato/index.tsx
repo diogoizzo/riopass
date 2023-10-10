@@ -9,13 +9,15 @@ function Contact() {
          <Head>
             <title>Contato</title>
          </Head>
-         <MenuFront />
-         <PageHero
-            title={'Contato'}
-            subtitle="Entre em Contato Conosco"
-            img="/img/water.jpg"
-         />
-         <ContactForm />
+         <main>
+            <MenuFront />
+            <PageHero
+               title={'Contato'}
+               subtitle="Entre em Contato Conosco"
+               img="/img/water.jpg"
+            />
+            <ContactForm />
+         </main>
       </>
    );
 }
