@@ -57,38 +57,33 @@ function MenuFront({ shadow }: { shadow?: boolean }) {
                } `}
             >
                <ul className="flex md:w-auto w-full flex-col  md:flex-row md:space-x-10 uppercase md:items-center md:justify-center  text-why-gray-900">
+                  <Link href={'/atracoes'}>
+                     <li className="border-b border-why-gray-200 md:border-none   py-3 md:py-0">
+                        atrações
+                     </li>
+                  </Link>
                   <Link href={'/comofunciona'}>
                      <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0 ">
                         como funciona
                      </li>
                   </Link>
 
-                  <Link href={'/atracoes'}>
-                     <li className="border-b border-why-gray-200 md:border-none   py-3 md:py-0">
-                        atrações
-                     </li>
-                  </Link>
-                  <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
-                     como reservar
-                  </li>
-                  <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
-                     preços
-                  </li>
                   <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
                      FAQ
                   </li>
                   <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
-                     Contato
+                     Sobre
                   </li>
-
-                  <li className="border-b border-why-gray-200 md:border-none   py-3 md:py-0 relative">
-                     <BrazilFlag className="w-12 h-12 md:h-10 md:w-10 inline-flex items-center justify-center " />
-                  </li>
-                  <li className="inline-flex items-center justify-center px-5 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 ">
-                     Comprar Agora
-                  </li>
+                  <Link href={'/contato'}>
+                     <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
+                        Contato
+                     </li>
+                  </Link>
                </ul>
             </nav>
+            <li className="inline-flex items-center justify-center px-8 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 ">
+               Comprar Agora
+            </li>
          </header>
       </div>
    );

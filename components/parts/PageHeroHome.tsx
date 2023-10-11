@@ -18,11 +18,11 @@ function PageHero({
             <p>OFERTA DE BAIXA TEMPORADA DE R$150,00 POR R$99,00</p>
          </div>
          <div className="relative">
-            <h1 className="text-5xl md:text-8xl tracking-wider text-white font-bold ">
+            <h1 className="text-5xl md:text-8xl tracking-wider text-white font-bold text-shadow-blue ">
                {title}
             </h1>
             <p className="text-white/90 text-xl mt-4 ">{subtitle}</p>
-            <button className="mt-12 inline-flex items-center justify-center px-12 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/60 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/60 text-why-gray-50 py-3 bg-why-yellow-500 ">
+            <button className="mt-12 inline-flex items-center justify-center px-12 font-semibold  rounded-md  shadow-sm shadow-why-yellow-600/30 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 ">
                Saiba Mais
             </button>
          </div>

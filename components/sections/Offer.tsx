@@ -1,7 +1,8 @@
+import Image from 'next/image';
 function Offer() {
    return (
       <section className="py-16 font-medium bg-why-gray-50">
-         <div className="max-w-5xl mx-auto text-center">
+         <div className="max-w-6xl mx-auto text-center">
             <span className="inline-block py-3 px-7 mb-10 font-medium text-xl leading-5 text-why-blue-900/80 border border-why-blue-900/80 rounded-3xl">
                Promoção de Baixa Temporada
             </span>
@@ -10,7 +11,7 @@ function Offer() {
                Você compra agora e usa quando quiser!
             </h2>
          </div>
-         <div className="bg-gradient-to-r from-why-yellow-400 via-why-green-500 to-why-blue-400 flex items-center justify-center py-14 rounded-t-[300px]">
+         <div className="bg-gradient-to-r from-why-yellow-400 via-why-green-500 to-why-blue-400 flex items-center justify-center py-16 rounded-t-[300px]">
             <div className="text-center">
                <p className="mb-8 font-semibold text-lg text-why-gray-200">
                   <span className="block text-4xl mb-1">De R$150,00</span> por
@@ -29,10 +30,16 @@ function Offer() {
                <button className="mt-12 inline-flex items-center justify-center px-12 font-semibold  rounded-md  shadow-md  hover:scale-105 hover:shadow-lg transition-all ease-in-out  hover:bg-why-yellow-400 text-why-gray-50 py-3 bg-why-yellow-500 ">
                   COMPRAR AGORA
                </button>
+               <div className="max-w-[450px] mt-5 drop-shadow mx-auto">
+                  <Image
+                     src={'/img/selo-mercadopago.png'}
+                     width={1722}
+                     height={560}
+                     alt="Selo de compra garantida do mercado pago"
+                  />
+               </div>
             </div>
          </div>
-         {/* <div className="w-full h-6 bg-why-blue-900"></div>
-            <div className="w-full h-6 bg-why-yellow-500"></div> */}
       </section>
    );
 }

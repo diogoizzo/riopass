@@ -2,11 +2,11 @@ import Image from 'next/image';
 
 function Highlights() {
    return (
-      <section className="bg-why-gray-50 pb-14 pt-24">
+      <section className="bg-why-gray-50 pb-14 pt-28">
          <div className="container px-4 mx-auto">
             <div className="flex flex-wrap -m-3">
                <div className="w-full md:w-1/2 xl:w-1/4 p-3">
-                  <div className="bg-why-card-green-300/70 rounded-md">
+                  <div className="bg-[#00877a] rounded-md shadow-md">
                      <div className="flex flex-col justify-center items-center px-4 pt-8 pb-6">
                         <Image
                            className="mb-4 h-52"
@@ -22,8 +22,8 @@ function Highlights() {
                   </div>
                </div>
                <div className="w-full md:w-1/2 xl:w-1/4 p-3">
-                  <div className="bg-why-card-blue-300/70 border border-coolGray-100 shadow-dashboard rounded-md">
-                     <div className="flex flex-col justify-center items-center px-4 pt-8 pb-6 border-b border-coolGray-100">
+                  <div className="bg-[#008a9f]  rounded-md shadow-md">
+                     <div className="flex flex-col justify-center items-center px-4 pt-8 pb-6 ">
                         <Image
                            className="mb-4 h-52"
                            src="/img/pin.svg"
@@ -32,14 +32,14 @@ function Highlights() {
                            alt=""
                         />
                         <p className="text-3xl text-center text-why-gray-50">
-                           Passeios e <br /> Atrações
+                           +30 Passeios e <br /> Atrações
                         </p>
                      </div>
                   </div>
                </div>
                <div className="w-full md:w-1/2 xl:w-1/4 p-3">
-                  <div className="bg-why-card-green-300/70  rounded-md">
-                     <div className="flex flex-col justify-center items-center px-4 pt-8 pb-6 border-b border-coolGray-100">
+                  <div className="bg-[#00877a]  rounded-md shadow-md">
+                     <div className="flex flex-col justify-center items-center px-4 pt-8 pb-6">
                         <Image
                            className="mb-4 h-52"
                            src="/img/save.svg"
@@ -48,14 +48,14 @@ function Highlights() {
                            alt=""
                         />
                         <p className="text-3xl text-center text-why-gray-50">
-                           Garantia e <br /> Economia
+                           Garantia de <br /> Economia
                         </p>
                      </div>
                   </div>
                </div>
                <div className="w-full md:w-1/2 xl:w-1/4 p-3">
-                  <div className="bg-why-card-blue-300/70  rounded-md">
-                     <div className="flex flex-col justify-center items-center px-4 pt-8 pb-6 border-b border-coolGray-100">
+                  <div className="bg-[#008a9f]  rounded-md shadow-md">
+                     <div className="flex flex-col justify-center items-center px-4 pt-8 pb-6">
                         <Image
                            className="mb-4 h-52"
                            width={266}
@@ -63,8 +63,8 @@ function Highlights() {
                            src="/img/partners.svg"
                            alt=""
                         />
-                        <p className="text-3xl text-center text-why-gray-50 pb-9">
-                           Parceiros
+                        <p className="text-3xl text-center text-why-gray-50 ">
+                           Parceiros Bem Avaliados
                         </p>
                      </div>
                   </div>

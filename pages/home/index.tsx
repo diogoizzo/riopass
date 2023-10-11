@@ -8,6 +8,10 @@ import Footer from '../../components/sections/Footer';
 import Image from 'next/image';
 import Offer from '../../components/sections/Offer';
 import EconomyTable from '../../components/parts/EconomyTable';
+import ReviewsSlider from '../../components/parts/ReviewsSlider';
+import ReviewsSection from '../../components/sections/ReviewsSection';
+import About from '../../components/sections/About';
+import Doubts from '../../components/sections/Doubts';
 
 export default function Homepage<NextPage>() {
    return (
@@ -24,6 +28,7 @@ export default function Homepage<NextPage>() {
             />
             <Highlights />
             <Offer />
+            <TourHighlights />
             <HowItWork>
                <h2 className=" text-5xl text-why-card-blue-300 font-semibold leading-[60px]">
                   Como o
@@ -35,7 +40,7 @@ export default function Homepage<NextPage>() {
                   />
                   funciona?
                </h2>
-               <p className="pr-12 mt-5 text-why-gray-900">
+               <p className="pr-12 mt-5 text-why-gray-900 leading-7">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Cumque nesciunt cum officiis repellat nostrum repellendus nam
                   explicabo labore aspernatur eveniet ipsum a iste natus
@@ -47,7 +52,10 @@ export default function Homepage<NextPage>() {
                </p>
             </HowItWork>
             <EconomyTable />
-            <TourHighlights />
+            <Offer />
+            <ReviewsSection />
+            <About />
+            <Doubts />
          </main>
          <Footer />
       </>

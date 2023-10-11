@@ -4,8 +4,8 @@ function EconomyTable() {
          <section className="py-3 bg-why-gray-50">
             <div className="container px-4 mx-auto">
                <div className="w-full mt-6 pb-6 overflow-x-auto">
-                  <div className="h-6 bg-why-blue-900 w-full "></div>
-                  <div className="h-6 bg-why-yellow-600 w-full "></div>
+                  <div className="h-5 bg-why-blue-900 w-full "></div>
+                  <div className="h-5 bg-why-yellow-600 w-full "></div>
                   <table className="w-full min-w-max">
                      <thead>
                         <tr className="text-left">
