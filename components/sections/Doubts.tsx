@@ -13,7 +13,7 @@ function Doubts() {
                <br />
                Estaremos aguardando o seu contato.
             </p>
-            <button className=" mt-12 mx-auto flex space-x-3 items-center justify-center px-8 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 s">
+            <button className=" mt-12 mx-auto flex space-x-3 items-center justify-center px-12 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 s">
                <Image
                   className="w-10"
                   src={'/img/ballon.svg'}

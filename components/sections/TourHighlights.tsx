@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 function TourHighlights() {
    return (
-      <section className="bg-why-gray-50 py-10">
+      <section className="bg-why-gray-50 pb-2 pt-20">
          <div className="container mx-auto px-4 ">
             <h2 className="max-w-4xl text-why-blue-900 text-5xl leading-tight font-medium text-center mx-auto mb-14">
                Explore os Principais Passeios e Pontos Turísticos com o Travel
@@ -79,7 +79,7 @@ function TourHighlights() {
                </div>
             </div>
             <div className="text-center mt-6 mb-6">
-               <button className=" inline-flex items-center justify-center px-5 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 s">
+               <button className=" inline-flex items-center justify-center px-12 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 s">
                   Veja Todas as Atrações
                </button>
             </div>

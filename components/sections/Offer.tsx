@@ -1,7 +1,7 @@
 import Image from 'next/image';
 function Offer() {
    return (
-      <section className="py-16 font-medium bg-why-gray-50">
+      <section className="pt-16 font-medium bg-why-gray-50">
          <div className="max-w-6xl mx-auto text-center">
             <span className="inline-block py-3 px-7 mb-10 font-medium text-xl leading-5 text-why-blue-900/80 border border-why-blue-900/80 rounded-3xl">
                Promoção de Baixa Temporada

@@ -8,6 +8,7 @@ import { useQuery } from 'react-query';
 import axios from 'axios';
 import LoadingFront from '../../components/sections/LoadingFront';
 import TourGrid from '../../components/sections/TourGrid';
+import Footer from '../../components/sections/Footer';
 
 export default function Tours() {
    const toursQuery = useQuery(['tours'], async () => {
@@ -26,7 +27,7 @@ export default function Tours() {
    return (
       <>
          <MenuFront />
-         <main>
+         <main className="pb-20">
             <PageHero
                title="Atrações"
                subtitle="The best places for you"
@@ -54,6 +55,7 @@ export default function Tours() {
                )}
             </div>
          </main>
+         <Footer />
       </>
    );
 }
