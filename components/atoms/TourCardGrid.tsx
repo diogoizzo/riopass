@@ -17,7 +17,7 @@ function TourCardGrid({
       <div className="w-full relative  border border-why-gray-100 shadow-sm  rounded-md bg-white">
          <Link href={`/pt/${url}`}>
             <div className="h-full flex flex-col items-stretch">
-               <div className="w-full relative h-96 border-b-4 border-why-blue-600 overflow-hidden  ">
+               <div className="w-full relative h-72 md:h-96 border-b-4 border-why-blue-600 overflow-hidden  ">
                   <Image
                      className="rounded-t-sm"
                      src={featuredPhoto?.src}

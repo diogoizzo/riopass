@@ -11,7 +11,7 @@ function PageHero({
 }) {
    return (
       <div
-         className={`w-full py-52 md:py-56 text-center   bg-cover bg-center`}
+         className={`w-full py-40 md:py-56 text-center   bg-cover bg-center`}
          style={{ backgroundImage: `url("${img}")` }}
       >
          <div className="relative">

@@ -1,17 +1,17 @@
 import Image from 'next/image';
 function Offer() {
    return (
-      <section className="pt-16 font-medium bg-why-gray-50">
-         <div className="max-w-6xl mx-auto text-center">
-            <span className="inline-block py-3 px-7 mb-10 font-semibold text-3xl leading-5 text-why-blue-900/80 underline underline-offset-[1rem] decoration-2">
+      <section className="pt-8 md:pt-16 font-medium bg-why-gray-50">
+         <div className="max-w-6xl mx-auto text-center px-4 md:px-0">
+            <span className="inline-block py-3 px-7 mb-3 md:mb-10 font-semibold text-2xl md:leading-5 text-why-blue-900/80 underline underline-offset-4  md:underline-offset-[1rem] decoration-2">
                Promoção de Baixa Temporada
             </span>
-            <h2 className="mb-14 xl:mb-16 text-why-blue-900 text-5xl leading-tight ">
+            <h2 className="mb-16 xl:mb-16 text-why-blue-900 text-3xl md:text-5xl leading-tight ">
                Não perca nossa promoção de baixa temporada, <br />
                Você compra agora e usa quando quiser!
             </h2>
          </div>
-         <div className="bg-gradient-to-r from-why-yellow-400 via-why-green-500 to-why-blue-400 flex items-center justify-center py-16 rounded-t-[300px]">
+         <div className="bg-gradient-to-r from-why-yellow-400 via-why-green-500 to-why-blue-400 flex items-center justify-center pt-24 pb-16  md:py-16 rounded-t-[300px]">
             <div className="text-center">
                <p className="mb-8 font-semibold text-lg text-why-gray-200">
                   <span className="block text-4xl mb-1">De R$150,00</span> por
@@ -21,7 +21,7 @@ function Offer() {
                   </span>
                </p>
                <p className="text-lg text-why-gray-200">
-                  <span className="block text-3xl mb-1">
+                  <span className="block text-2xl md:text-3xl mb-2">
                      Promoção por tempo limitado!
                   </span>
                   Corra e garanta descontos incríveis em passeios no Rio de

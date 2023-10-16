@@ -16,7 +16,15 @@ export default function ReviewsSlider() {
          spaceBetween={50}
          loop={true}
          modules={[Autoplay, Pagination]}
-         slidesPerView={3}
+         slidesPerView={1}
+         breakpoints={{
+            768: {
+               slidesPerView: 2
+            },
+            1024: {
+               slidesPerView: 3
+            }
+         }}
          pagination={{ clickable: true }}
          autoplay={{
             delay: 2500,

@@ -2,8 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/sobre": "pages/sobre.js",
   "/home": "pages/home.js",
-  "/": "pages/index.js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/comofunciona": "pages/comofunciona.js"
+  "/contato": "pages/contato.js",
+  "/comofunciona": "pages/comofunciona.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
 }

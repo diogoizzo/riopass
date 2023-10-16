@@ -22,7 +22,7 @@ export default function Homepage<NextPage>() {
          <MenuFront shadow={false} />
          <main>
             <PageHeroHome
-               title="Travel Club"
+               title="Rio Travel Club"
                subtitle="Explore o Rio de Janeiro com descontos exclusivos para quem é do clube."
                img="/img/home-banner.jpg"
             />
@@ -30,9 +30,10 @@ export default function Homepage<NextPage>() {
             <Offer />
             <TourHighlights />
             <HowItWork>
-               <h2 className=" text-5xl text-why-blue-900 font-medium leading-[70px]">
+               <h2 className=" text-3xl md:text-5xl text-why-blue-900 font-medium leading-[70px]">
                   Como o
                   <Image
+                     className="w-54"
                      src={'/img/travel-text.svg'}
                      width={304}
                      height={60}
@@ -40,7 +41,7 @@ export default function Homepage<NextPage>() {
                   />
                   Funciona?
                </h2>
-               <p className="pr-12 mt-5 text-why-gray-900 leading-7">
+               <p className="md:pr-12 mt-5 text-why-gray-900 leading-7">
                   Imagine explorar as belezas e a cultura vibrante do Rio de
                   Janeiro de uma maneira que é tão econômica quanto emocionante.
                   O Rio Travel Club introduz uma revolução no turismo. Ao invés
@@ -52,7 +53,7 @@ export default function Homepage<NextPage>() {
                   casos podem chegar a até 50% do valor total de passeios,
                   estadias em hotéis e atrações diversas.
                </p>
-               <p className="pr-12 mt-2 text-why-gray-900 leading-7">
+               <p className="md:pr-12 mt-2 text-why-gray-900 leading-7">
                   O funcionamento do Rio Travel Club é simples, mas as
                   experiências que ele proporciona são tudo, menos ordinárias.
                   Ao se tornar membro, você não só obtém descontos
@@ -67,11 +68,11 @@ export default function Homepage<NextPage>() {
                </p>
             </HowItWork>
             <div className="bg-why-gray-50  text-why-blue-900 leading-tight font-medium text-center pt-3">
-               <h3 className="max-w-5xl mx-auto pb-4">
-                  <span className="block text-5xl mb-4 font-medium">
-                     Com o Rio Travel Club É Muito Fácil Economizar!
+               <h3 className="max-w-5xl mx-auto pb-4 px-4">
+                  <span className="block text-3xl md:text-5xl mb-3 md:mb-4 font-medium">
+                     Com o Rio Travel Club é Muito Fácil Economizar!
                   </span>
-                  <span className="text-3xl text-why-blue-900/90 ">
+                  <span className="text-xl md:text-3xl text-why-blue-900/90 ">
                      Confira a simulação abaixo e veja como é simples.
                   </span>
                </h3>

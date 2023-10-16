@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 function Highlights() {
    return (
-      <section className="bg-why-gray-50 pb-14 pt-28">
+      <section className="bg-why-gray-50 pb-14 pt-36 md:pt-28">
          <div className="container px-4 mx-auto">
             <div className="flex flex-wrap -m-3">
                <div className="w-full md:w-1/2 xl:w-1/4 p-3">

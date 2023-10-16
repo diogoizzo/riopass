@@ -82,11 +82,19 @@ function MenuFront({ shadow }: { shadow?: boolean }) {
                         Contato
                      </li>
                   </Link>
+                  <Link href={'/'}>
+                     <li className=" inline-flex lg:hidden mt-5 justify-center px-8 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 ">
+                        Comprar Agora
+                     </li>
+                  </Link>
                </ul>
             </nav>
-            <li className="inline-flex items-center justify-center px-8 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 ">
+            <Link
+               href={'/'}
+               className=" hidden lg:inline-flex items-center justify-center px-8 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
+            >
                Comprar Agora
-            </li>
+            </Link>
          </header>
       </div>
    );

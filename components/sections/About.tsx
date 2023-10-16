@@ -4,12 +4,20 @@ import Link from 'next/link';
 function About() {
    return (
       <section className="bg-why-gray-50">
-         <div className="bg-why-card-blue-300 rounded-tr-[150px] py-20">
-            <div className="container mx-auto px-4 flex space-x-12 ">
-               <div className="w-1/2 flex flex-col">
-                  <h2 className="text-5xl leading-tight max-w-4xl font-medium text-why-gray-100 mb-7">
+         <div className="bg-why-card-blue-300 rounded-tr-[150px] pt-8 md:py-20">
+            <div className="container mx-auto px-4 flex space-x-12 flex-wrap md:flex-nowrap ">
+               <div className="w-full md:w-1/2 flex flex-col pb-12">
+                  <Image
+                     className=" lg:hidden rounded-tr-[150px] rounded-bl-md pr-3 mb-10 "
+                     src={'/img/about.jpg'}
+                     width={693}
+                     height={500}
+                     alt={'Imagem do rio de janeiro'}
+                  />
+                  <h2 className="text-3xl md:text-5xl leading-tight max-w-4xl font-medium text-why-gray-100 mb-7">
                      Quem Somos
                   </h2>
+
                   <p className="text-why-gray-200 leading-7">
                      Bem-vindo ao Rio Travel Club, a sua chave para desbloquear
                      uma viagem inesquecível pela deslumbrante cidade do Rio de
@@ -37,9 +45,9 @@ function About() {
                      preços acessíveis.
                   </p>
                </div>
-               <div className="w-1/2">
+               <div className="w-full md:w-1/2">
                   <Image
-                     className="rounded-tr-[150px] rounded-bl-[250px]"
+                     className="hidden lg:inline rounded-tr-[150px] rounded-bl-[250px]"
                      src={'/img/about.jpg'}
                      width={693}
                      height={500}

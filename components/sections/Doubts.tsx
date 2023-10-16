@@ -5,11 +5,11 @@ function Doubts() {
    return (
       <section className="bg-why-gray-50">
          <div className="container mx-auto px-4 py-24 text-center  ">
-            <h2 className="text-why-blue-900 text-5xl leading-tight font-medium  ">
+            <h2 className="text-why-blue-900 text-3xl md:text-5xl leading-tight font-medium  ">
                Ainda tem Dúvida?
             </h2>
             <div className="h-[1px] bg-why-yellow-600 w-[90%] mx-auto mt-3 mb-6 "></div>
-            <p className="text-2xl max-w-3xl text-why-gray-800 mx-auto">
+            <p className="text-lg md:text-2xl max-w-3xl text-why-gray-800 mx-auto">
                Entre em contato com a nossa equipe e tire todas as suas dúvidas.
                <br />
                Estaremos aguardando o seu contato.

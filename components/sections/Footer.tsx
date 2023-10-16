@@ -5,17 +5,18 @@ function Footer() {
    return (
       <footer className="bg-why-green-600  ">
          <div className="container px-4 mx-auto">
-            <div className="grid grid-cols-4 w-full">
-               <div className=" ">
+            <div className="grid gird-cols-1  lg:grid-cols-4 w-full">
+               <div className=" mx-auto">
                   <Image
                      src={'/img/logo-simbol.png'}
                      width={380}
                      height={287}
+                     className="w-64 md:w-auto"
                      alt="Logo do travel club na vertical"
                   />
                </div>
-               <div className="flex flex-col justify-start py-12  items-center">
-                  <div>
+               <div className="flex flex-col justify-start pb-10  md:py-12  items-center">
+                  <div className="text-center lg:text-left">
                      <h3 className="uppercase font-medium text-why-gray-50 text-xl text-left ">
                         Categorias
                      </h3>
@@ -49,8 +50,8 @@ function Footer() {
                      </p>
                   </div>
                </div>
-               <div className="flex flex-col justify-start py-12  items-center">
-                  <div>
+               <div className="flex flex-col justify-start pb-10 md:py-12  items-center">
+                  <div className="text-center lg:text-left">
                      <h3 className="uppercase font-medium text-why-gray-50 text-xl mb-3  ">
                         Links Úteis
                      </h3>
@@ -64,8 +65,8 @@ function Footer() {
                      <p className=" text-why-gray-200 mt-1 text-lg">Contato</p>
                   </div>
                </div>
-               <div className="flex flex-col justify-start py-12  items-center">
-                  <div>
+               <div className="flex flex-col justify-start md:py-12  items-center">
+                  <div className="text-center lg:text-left">
                      <h3 className="uppercase font-medium text-why-gray-50 text-xl  ">
                         Contato
                      </h3>
@@ -74,10 +75,10 @@ function Footer() {
                         Barra do Piraí - RJ <br />
                         CEP 27113-265
                      </p>
-                     <h3 className="uppercase font-medium text-why-gray-50 text-xl mt-6  ">
+                     <h3 className="uppercase font-medium text-why-gray-50 text-xl mt-10 md:mt-6  ">
                         Social Media
                      </h3>
-                     <div className="flex items-center w-full mt-3 space-x-2">
+                     <div className="flex items-center md:justify-start justify-center w-full pb-10 md:pb-0 mt-3 space-x-2">
                         <Image
                            src={'/img/Instagram.svg'}
                            width={40}
