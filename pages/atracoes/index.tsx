@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SectionTitle from '../../components/atoms/SectionTitle';
 import MenuFront from '../../components/parts/MenuFront';
 import PageHero from '../../components/parts/PageHero';
@@ -9,6 +9,8 @@ import axios from 'axios';
 import LoadingFront from '../../components/sections/LoadingFront';
 import TourGrid from '../../components/sections/TourGrid';
 import Footer from '../../components/sections/Footer';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 export default function Tours() {
    const toursQuery = useQuery(['tours'], async () => {
@@ -21,11 +23,28 @@ export default function Tours() {
       .reduce((acc: any, item: any) => {
          return acc?.concat(item);
       }, []);
+
+   const router = useRouter();
+   const urlQuery = router.query.categoria;
+   console.log(urlQuery);
    const uniqueToursCategories = [...new Set<string>(toursCategories)];
    const [filteredTours, setFilteredTours] = useState<ITour[] | null>(null);
    const [searchTours, setSearchTours] = useState<ITour[] | null>(null);
+
+   useEffect(() => {
+      if (urlQuery) {
+         setFilteredTours(
+            tours?.filter((tour) =>
+               tour.categories?.some((cat) => cat.name === urlQuery)
+            )
+         );
+      }
+   }, [urlQuery, toursQuery.data]);
    return (
       <>
+         <Head>
+            <title>Atrações</title>
+         </Head>
          <MenuFront />
          <main className="pb-20">
             <PageHero
@@ -48,10 +67,16 @@ export default function Tours() {
 
                {toursQuery.isLoading ? (
                   <LoadingFront />
-               ) : searchTours ? (
+               ) : searchTours && searchTours.length > 0 ? (
                   <TourGrid tours={searchTours} />
+               ) : filteredTours && filteredTours.length > 0 ? (
+                  <TourGrid tours={filteredTours} />
+               ) : filteredTours || searchTours ? (
+                  <p className="text-center mt-10 text-why-gray-800">
+                     Não foi encontrada nenhuma atração para essa pesquisa
+                  </p>
                ) : (
-                  <TourGrid tours={filteredTours || tours} />
+                  <TourGrid tours={tours} />
                )}
             </div>
          </main>

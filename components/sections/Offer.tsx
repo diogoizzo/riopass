@@ -3,7 +3,7 @@ function Offer() {
    return (
       <section className="pt-16 font-medium bg-why-gray-50">
          <div className="max-w-6xl mx-auto text-center">
-            <span className="inline-block py-3 px-7 mb-10 font-medium text-xl leading-5 text-why-blue-900/80 border border-why-blue-900/80 rounded-3xl">
+            <span className="inline-block py-3 px-7 mb-10 font-semibold text-3xl leading-5 text-why-blue-900/80 underline underline-offset-[1rem] decoration-2">
                Promoção de Baixa Temporada
             </span>
             <h2 className="mb-14 xl:mb-16 text-why-blue-900 text-5xl leading-tight ">
@@ -24,10 +24,10 @@ function Offer() {
                   <span className="block text-3xl mb-1">
                      Promoção por tempo limitado!
                   </span>
-                  Corra e garanta descontos incríveis para a viagem dos seus
-                  sonhos.
+                  Corra e garanta descontos incríveis em passeios no Rio de
+                  Janeiro.
                </p>
-               <button className="mt-12 inline-flex items-center justify-center px-12 font-semibold  rounded-md  shadow-md  hover:scale-105 hover:shadow-lg transition-all ease-in-out  hover:bg-why-yellow-400 text-why-gray-50 py-3 bg-why-yellow-500 ">
+               <button className="mt-12 inline-flex items-center justify-center px-12 font-semibold  rounded-md  shadow-md  hover:scale-105 hover:shadow-lg transition-all ease-in-out   text-why-gray-50 py-3 bg-why-yellow-500 ">
                   COMPRAR AGORA
                </button>
                <div className="max-w-[450px] mt-5 drop-shadow mx-auto">

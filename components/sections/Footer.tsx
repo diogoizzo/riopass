@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Footer() {
    return (
@@ -16,41 +17,49 @@ function Footer() {
                <div className="flex flex-col justify-start py-12  items-center">
                   <div>
                      <h3 className="uppercase font-medium text-why-gray-50 text-xl text-left ">
-                        Destinos
+                        Categorias
                      </h3>
-                     <p className=" text-why-gray-200 mt-3 text-lg">
-                        Rio de Janeiro
-                     </p>
+                     <Link
+                        href={{
+                           pathname: '/atracoes',
+                           query: {
+                              categoria: 'City Tour'
+                           }
+                        }}
+                     >
+                        <p className=" text-why-gray-200 mt-3 text-lg">
+                           City Tour
+                        </p>
+                     </Link>
+                     <Link
+                        href={{
+                           pathname: '/atracoes',
+                           query: {
+                              categoria: 'Trilha'
+                           }
+                        }}
+                     >
+                        <p className=" text-why-gray-200 mt-1 text-lg">
+                           Trilha
+                        </p>
+                     </Link>
+
                      <p className=" text-why-gray-200 mt-1 text-lg">
-                        Rio de Janeiro
-                     </p>
-                     <p className=" text-why-gray-200 mt-1 text-lg">
-                        Rio de Janeiro
-                     </p>
-                     <p className=" text-why-gray-200 mt-1 text-lg">
-                        Rio de Janeiro
-                     </p>
-                     <p className=" text-why-gray-200 mt-1 text-lg">
-                        Rio de Janeiro
-                     </p>
-                     <p className=" text-why-gray-200 mt-1 text-lg">
-                        Rio de Janeiro
+                        Tour em Grupo
                      </p>
                   </div>
                </div>
                <div className="flex flex-col justify-start py-12  items-center">
                   <div>
-                     <h3 className="uppercase font-medium text-why-gray-50 text-xl  ">
+                     <h3 className="uppercase font-medium text-why-gray-50 text-xl mb-3  ">
                         Links Úteis
                      </h3>
-                     <p className=" text-why-gray-200 mt-3 text-lg">
+                     <p className=" text-why-gray-200 mt-1 text-lg">Home</p>
+                     <p className=" text-why-gray-200 mt-1 text-lg">
                         Como Funciona
                      </p>
+
                      <p className=" text-why-gray-200 mt-1 text-lg">Atrações</p>
-                     <p className=" text-why-gray-200 mt-1 text-lg">
-                        Como reservar
-                     </p>
-                     <p className=" text-why-gray-200 mt-1 text-lg">Preços</p>
                      <p className=" text-why-gray-200 mt-1 text-lg">FAQ</p>
                      <p className=" text-why-gray-200 mt-1 text-lg">Contato</p>
                   </div>

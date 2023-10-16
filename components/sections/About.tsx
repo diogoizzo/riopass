@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 function About() {
    return (
@@ -10,17 +11,30 @@ function About() {
                      Quem Somos
                   </h2>
                   <p className="text-why-gray-200 leading-7">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Optio minima sunt ipsam quos illo quod et magnam culpa
-                     velit possimus facere molestiae eius nobis doloremque
-                     ratione recusandae quae, incidunt esse quidem nulla iure.
-                     Accusantium ex est architecto, in possimus nemo illum
-                     veritatis, provident nihil rerum ratione ipsum ducimus
-                     sapiente fuga reprehenderit dolorum amet dolor sit suscipit
-                     tempora! Eius, repellat corporis! Lorem ipsum dolor sit
-                     amet consectetur adipisicing elit. Fuga harum quod atque
-                     obcaecati reprehenderit perspiciatis qui exercitationem.
-                     Minima, ipsum consequuntur?
+                     Bem-vindo ao Rio Travel Club, a sua chave para desbloquear
+                     uma viagem inesquecível pela deslumbrante cidade do Rio de
+                     Janeiro. Nossa jornada nasce do espírito da agência{' '}
+                     <Link
+                        href={'https://whynotbrasil.com/'}
+                        className=" underline underline-offset-4"
+                     >
+                        Why Not Brasil
+                     </Link>{' '}
+                     de explorar e celebrar a beleza e a cultura do Rio de uma
+                     maneira acessível e empolgante. Juntamos nossa expertise,
+                     altamente avaliada e reconhecida com uma pontuação
+                     impecável e avaliações{' '}
+                     <Link
+                        href={
+                           'https://www.tripadvisor.com.br/Attraction_Review-g303506-d10795877-Reviews-Why_Not_Brasil-Rio_de_Janeiro_State_of_Rio_de_Janeiro.html'
+                        }
+                        className="underline underline-offset-4"
+                     >
+                        5 estrelas no TripAdvisor
+                     </Link>
+                     , e nossa rede de networking, para te oferecer passeios e
+                     atrativos turísticos no Rio de Janeiro de qualidade, com
+                     preços acessíveis.
                   </p>
                </div>
                <div className="w-1/2">

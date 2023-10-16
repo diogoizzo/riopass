@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Doubts() {
    return (
@@ -21,7 +22,7 @@ function Doubts() {
                   height={56}
                   alt="ilustração de balões de fala"
                />
-               <span>Entrar em Contato</span>
+               <Link href={'/contato'}>Entrar em Contato</Link>
             </button>
          </div>
       </section>

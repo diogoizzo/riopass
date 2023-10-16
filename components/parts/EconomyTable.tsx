@@ -1,7 +1,7 @@
 function EconomyTable() {
    return (
       <div>
-         <section className="py-3 bg-why-gray-50">
+         <section className="pt-3 pb-10  bg-why-gray-50">
             <div className="container px-4 mx-auto">
                <div className="w-full mt-6 pb-6 overflow-x-auto">
                   <div className="h-5 bg-why-blue-900 w-full "></div>
@@ -14,14 +14,14 @@ function EconomyTable() {
                            </th>
                            <th className="p-0">
                               <div className="py-3 px-6 border-x border-why-yellow-400 bg-why-gray-50 text-center ">
-                                 <span className="text-lg text-why-gray-900 font-semibold">
+                                 <span className="text-lg text-why-gray-900 font-bold">
                                     Sem Travel Club
                                  </span>
                               </div>
                            </th>
                            <th className="p-0">
                               <div className="py-3 px-6 bg-why-gray-50 text-center ">
-                                 <span className="text-lg text-why-gray-900 font-semibold">
+                                 <span className="text-lg text-why-gray-900 font-bold">
                                     Com Travel Club
                                  </span>
                               </div>
@@ -32,7 +32,7 @@ function EconomyTable() {
                         <tr className="bg-why-gray-200">
                            <td className="p-0 ">
                               <div className="flex items-center h-14 px-6">
-                                 <span className="text-base text-why-gray-900 font-medium">
+                                 <span className="text-base text-why-gray-900 font-bold">
                                     Dia 1: City Tour
                                  </span>
                               </div>
@@ -54,19 +54,19 @@ function EconomyTable() {
                         </tr>
                         <tr>
                            <td className="p-0 bg-why-gray-50">
-                              <div className="flex items-center h-14 px-6 "></div>
+                              <div className="flex items-center h-6 px-6 "></div>
                            </td>
                            <td className="p-0">
-                              <div className="flex items-center border-x border-why-yellow-400 h-14 px-6"></div>
+                              <div className="flex items-center border-x border-why-yellow-400 h-6 px-6"></div>
                            </td>
                            <td className="p-0">
-                              <div className="flex items-center h-14 px-6"></div>
+                              <div className="flex items-center h-6 px-6"></div>
                            </td>
                         </tr>
                         <tr className=" bg-why-gray-200">
                            <td className="p-0">
                               <div className="flex items-center h-14 px-6">
-                                 <span className="text-base text-why-gray-900 font-medium">
+                                 <span className="text-base text-why-gray-900 font-bold">
                                     Dia 2: Aluguel de Stand Up Paddle
                                  </span>
                               </div>
@@ -88,19 +88,19 @@ function EconomyTable() {
                         </tr>
                         <tr>
                            <td className="p-0 bg-why-gray-50">
-                              <div className="flex items-center h-14 px-6 "></div>
+                              <div className="flex items-center h-6 px-6 "></div>
                            </td>
                            <td className="p-0">
-                              <div className="flex items-center border-x border-why-yellow-400 h-14 px-6"></div>
+                              <div className="flex items-center border-x border-why-yellow-400 h-6 px-6"></div>
                            </td>
                            <td className="p-0">
-                              <div className="flex items-center h-14 px-6"></div>
+                              <div className="flex items-center h-6 px-6"></div>
                            </td>
                         </tr>
                         <tr className=" bg-why-gray-200">
                            <td className="p-0 ">
                               <div className="flex items-center h-14 px-6 ">
-                                 <span className="text-base text-why-gray-900 font-medium">
+                                 <span className="text-base text-why-gray-900 font-bold">
                                     Dia 3: Voo de Asa Delta
                                  </span>
                               </div>
@@ -122,19 +122,19 @@ function EconomyTable() {
                         </tr>
                         <tr>
                            <td className="p-0 bg-why-gray-50">
-                              <div className="flex items-center h-14 px-6 "></div>
+                              <div className="flex items-center h-6 px-6 "></div>
                            </td>
                            <td className="p-0">
-                              <div className="flex items-center border-x border-why-yellow-400 h-14 px-6"></div>
+                              <div className="flex items-center border-x border-why-yellow-400 h-6 px-6"></div>
                            </td>
                            <td className="p-0">
-                              <div className="flex items-center h-14 px-6"></div>
+                              <div className="flex items-center h-6 px-6"></div>
                            </td>
                         </tr>
                         <tr className=" bg-why-gray-200">
                            <td className="p-0 ">
                               <div className="flex items-center h-14 px-6 ">
-                                 <span className="text-base text-why-gray-900 font-medium">
+                                 <span className="text-base text-why-gray-900 font-bold">
                                     Total
                                  </span>
                               </div>
@@ -156,26 +156,26 @@ function EconomyTable() {
                         </tr>
                         <tr>
                            <td className="p-0 bg-why-gray-50">
-                              <div className="flex items-center h-14 px-6 "></div>
+                              <div className="flex items-center h-6 px-6 "></div>
                            </td>
                            <td className="p-0">
-                              <div className="flex items-center  h-14 px-6"></div>
+                              <div className="flex items-center  h-6 px-6"></div>
                            </td>
                            <td className="p-0">
-                              <div className="flex items-center h-14 px-6"></div>
+                              <div className="flex items-center h-6 px-6"></div>
                            </td>
                         </tr>
                         <tr className=" bg-why-gray-200">
                            <td className="p-0 ">
                               <div className="flex items-center h-14 px-6 ">
-                                 <span className="text-base text-why-gray-900 font-medium">
+                                 <span className="text-xl text-why-gray-900 font-bold">
                                     Economia Total
                                  </span>
                               </div>
                            </td>
                            <td colSpan={2} className="p-0 text-center">
                               <div className="flex w-full items-center justify-center h-14 px-6 ce">
-                                 <span className="text-base text-why-gray-900 font-medium ">
+                                 <span className="text-xl text-why-gray-900 font-bold ">
                                     R$ 290,00
                                  </span>
                               </div>

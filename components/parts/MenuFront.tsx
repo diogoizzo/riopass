@@ -71,9 +71,12 @@ function MenuFront({ shadow }: { shadow?: boolean }) {
                   <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
                      FAQ
                   </li>
-                  <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
-                     Sobre
-                  </li>
+                  <Link href={'/sobre'}>
+                     <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
+                        Sobre
+                     </li>
+                  </Link>
+
                   <Link href={'/contato'}>
                      <li className="border-b border-why-gray-200 md:border-none  py-3 md:py-0">
                         Contato
