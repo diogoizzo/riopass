@@ -55,6 +55,16 @@ function HowItWorks() {
                ricas, acessíveis e emocionantes com o Rio Travel Club!
             </p>
          </HowItWork>
+         <div className="bg-why-gray-50  text-why-blue-900 leading-tight font-medium text-center pt-3">
+            <h3 className="max-w-5xl mx-auto pb-4">
+               <span className="block text-5xl mb-4 font-medium">
+                  Com o Rio Travel Club É Muito Fácil Economizar!
+               </span>
+               <span className="text-3xl text-why-blue-900/90 ">
+                  Confira a simulação abaixo e veja como é simples.
+               </span>
+            </h3>
+         </div>
          <EconomyTable />
          <Offer />
          <Footer />
