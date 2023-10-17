@@ -11,7 +11,7 @@ function Offer() {
                Você compra agora e usa quando quiser!
             </h2>
          </div>
-         <div className="bg-gradient-to-r from-why-yellow-400 via-why-green-500 to-why-blue-400 flex items-center justify-center pt-24 pb-16  md:py-16 rounded-t-[300px]">
+         <div className="bg-gradient-to-r from-[#c8af44] via-why-green-500 to-why-blue-400 md:from-why-yellow-400 md:via-why-green-500 md:to-why-blue-400 flex items-center justify-center pt-24 pb-16  md:py-16 rounded-t-[300px]">
             <div className="text-center">
                <p className="mb-8 font-semibold text-lg text-why-gray-200">
                   <span className="block text-4xl mb-1">De R$150,00</span> por

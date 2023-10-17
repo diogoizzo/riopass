@@ -71,7 +71,7 @@ function Footer() {
                         Contato
                      </h3>
                      <p className=" text-why-gray-200 mt-3 text-lg">
-                        <a href="mailto:info@brasiltravelclub.com.br">
+                        <a href="mailto:info@brasiltravelclub.com">
                            info@brasiltravelclub.com
                         </a>
                      </p>
