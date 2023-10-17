@@ -32,7 +32,7 @@ function Offer() {
                </button>
                <div className="max-w-[450px] mt-5 drop-shadow mx-auto">
                   <Image
-                     src={'/img/selo-mercadopago.png'}
+                     src={'/img/selo-mercadopago.webp'}
                      width={1722}
                      height={560}
                      alt="Selo de compra garantida do mercado pago"
