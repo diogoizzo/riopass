@@ -10,7 +10,7 @@ function TourHighlights() {
                Travel Club
             </h2>
             <div className="flex w-full flex-wrap relative ">
-               <div className="flex flex-col w-1/2 pb-[1px] pr-[1px] md:pb-3 md:pr-3">
+               <div className="flex flex-col group w-1/2 pb-[1px] pr-[1px] md:pb-3 md:pr-3">
                   <h3 className="text-xl text-why-blue-900 leading-5 font-medium">
                      City Tour Experiência
                   </h3>
@@ -25,12 +25,12 @@ function TourHighlights() {
                      <Image
                         src={'/img/teste1.jpg'}
                         fill={true}
-                        className="object-cover"
+                        className="object-cover group-hover:scale-110 transition-all ease-in-out duration-500 "
                         alt=""
                      />
                   </div>
                </div>
-               <div className="flex flex-col text-right w-1/2 pb-[1px] pl-[1px] md:pb-3  md:pl-3">
+               <div className="flex group flex-col text-right w-1/2 pb-[1px] pl-[1px] md:pb-3  md:pl-3">
                   <h3 className="text-xl text-why-blue-900 leading-5 font-medium">
                      City Tour Experiência
                   </h3>
@@ -46,17 +46,17 @@ function TourHighlights() {
                         src={'/img/teste2.jpg'}
                         fill={true}
                         alt=""
-                        className="object-cover"
+                        className="object-cover group-hover:scale-110 transition-all ease-in-out duration-500 "
                      />
                   </div>
                </div>
-               <div className="flex flex-col w-1/2 pt-[1px] pr-[1px]  md:pt-3 md:pr-3 ">
+               <div className="flex group flex-col w-1/2 pt-[1px] pr-[1px]  md:pt-3 md:pr-3 ">
                   <div className="h-64 md:h-96 w-full relative rounded-tr-[70px]  md:rounded-tr-[250px] rounded-bl-lg overflow-hidden border-b-[6px] border-why-blue-600 ">
                      <Image
                         src={'/img/teste3.jpg'}
                         fill={true}
                         alt=""
-                        className="object-cover"
+                        className="object-cover group-hover:scale-110 transition-all ease-in-out duration-500 "
                      />
                      <div className="absolute left-0 px-6 bottom-0 w-full md:w-fit py-2 md:py-3 rounded-tr-md text-why-gray-50 bg-why-blue-600 z-30 ">
                         <div className="flex items-start justify-center font-medium space-x-2">
@@ -70,7 +70,7 @@ function TourHighlights() {
                   </h3>
                   <p className="mt-0 text-gray-500">Guia, Transporte</p>
                </div>
-               <div className="flex flex-col w-1/2 pt-[1px] pl-[1px]  md:pt-3  md:pl-3 text-right">
+               <div className="flex group flex-col w-1/2 pt-[1px] pl-[1px]  md:pt-3  md:pl-3 text-right">
                   <div className="h-64 md:h-96 w-full relative md:rounded-tl-[250px] rounded-tl-[70px] rounded-br-lg  overflow-hidden border-b-[6px] border-why-blue-600">
                      <div className="absolute right-0 px-6 bottom-0 w-full md:w-fit py-2 md:py-3 rounded-tl-md text-why-gray-50 bg-why-blue-600 z-30 ">
                         <div className="flex items-start justify-center font-medium space-x-2">
@@ -82,7 +82,7 @@ function TourHighlights() {
                         src={'/img/teste4.jpg'}
                         fill={true}
                         alt=""
-                        className="object-cover"
+                        className="object-cover group-hover:scale-110 transition-all ease-in-out duration-500 "
                      />
                   </div>
                   <h3 className="text-xl text-why-blue-900 leading-5 font-medium mt-3">

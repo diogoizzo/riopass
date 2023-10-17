@@ -16,11 +16,11 @@ function HowItWorks() {
          <MenuFront />
          <PageHero
             title={'Como Funciona'}
-            subtitle="TravelBuddy The best service travel"
+            subtitle="Aprenda como economizar em sua viagem ao Rio de Janeiro "
             img="/img/water.jpg"
          />
          <HowItWork>
-            <h2 className=" text-5xl text-why-blue-900 font-medium leading-[60px]">
+            <h2 className=" text-3xl mt-6 md:mt-0 md:text-5xl text-why-blue-900 font-medium leading-[60px]">
                Como o
                <Image
                   src={'/img/travel-text.svg'}
@@ -30,7 +30,7 @@ function HowItWorks() {
                />
                funciona?
             </h2>
-            <p className="pr-12 mt-5 text-why-gray-900 leading-7">
+            <p className="md:pr-12 mt-5 text-why-gray-900 leading-7">
                Imagine explorar as belezas e a cultura vibrante do Rio de
                Janeiro de uma maneira que é tão econômica quanto emocionante. O
                Rio Travel Club introduz uma revolução no turismo. Ao invés de
@@ -42,7 +42,7 @@ function HowItWorks() {
                50% do valor total de passeios, estadias em hotéis e atrações
                diversas.
             </p>
-            <p className="pr-12 mt-2 text-why-gray-900 leading-7">
+            <p className="md:pr-12 mt-2 text-why-gray-900 leading-7">
                O funcionamento do Rio Travel Club é simples, mas as experiências
                que ele proporciona são tudo, menos ordinárias. Ao se tornar
                membro, você não só obtém descontos impressionantes, mas também
@@ -56,11 +56,11 @@ function HowItWorks() {
             </p>
          </HowItWork>
          <div className="bg-why-gray-50  text-why-blue-900 leading-tight font-medium text-center pt-3">
-            <h3 className="max-w-5xl mx-auto pb-4">
-               <span className="block text-5xl mb-4 font-medium">
+            <h3 className="max-w-5xl mx-auto pb-4 px-4">
+               <span className="block text-3xl md:text-5xl mb-4 font-medium">
                   Com o Rio Travel Club É Muito Fácil Economizar!
                </span>
-               <span className="text-3xl text-why-blue-900/90 ">
+               <span className="text-xl md:text-3xl text-why-blue-900/90 ">
                   Confira a simulação abaixo e veja como é simples.
                </span>
             </h3>

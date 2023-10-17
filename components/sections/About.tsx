@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-function About() {
+function About({ withButton }: { withButton?: boolean }) {
    return (
       <section className="bg-why-gray-50">
          <div className="bg-why-card-blue-300 rounded-tr-[150px] pt-8 md:py-20">
@@ -44,10 +44,18 @@ function About() {
                      atrativos turísticos no Rio de Janeiro de qualidade, com
                      preços acessíveis.
                   </p>
+                  {withButton ? (
+                     <Link
+                        href="/sobre"
+                        className="mt-14 inline-flex mx-auto md:mx-0 w-fit items-center justify-center px-14 font-semibold  rounded-md  shadow-md  hover:scale-105 hover:shadow-lg transition-all ease-in-out   text-why-gray-50 py-3 bg-why-yellow-500 "
+                     >
+                        Saiba Mais
+                     </Link>
+                  ) : null}
                </div>
                <div className="w-full md:w-1/2">
                   <Image
-                     className="hidden lg:inline rounded-tr-[150px] rounded-bl-[250px]"
+                     className="hidden lg:inline md:pl-10 rounded-tr-[150px] rounded-bl-[250px]"
                      src={'/img/about.jpg'}
                      width={693}
                      height={500}

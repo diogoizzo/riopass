@@ -16,12 +16,12 @@ export default function Homepage<NextPage>() {
          <main>
             <PageHero
                title="Sobre Nós"
-               subtitle="The best places for you"
+               subtitle="Conheça a empresa que vai mudar o seu modo de viajar."
                img="/img/water.jpg"
             />
-            <section className="bg-why-gray-50 py-24">
+            <section className="bg-why-gray-50 py-14">
                <div className="container px-4 mx-auto">
-                  <h2 className="text-why-blue-900 underline underline-offset-[1rem] decoration-2 px-6 font-semibold text-3xl text-center mb-16 ">
+                  <h2 className="text-why-blue-900 underline underline-offset-4 md:underline-offset-[1rem] decoration-2 px-6 font-semibold text-3xl md:text-5xl text-center mb-16 ">
                      Veja o que Falam sobre o Rio Travel Club
                   </h2>
                   <ReviewsSlider />

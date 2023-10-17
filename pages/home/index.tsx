@@ -80,7 +80,7 @@ export default function Homepage<NextPage>() {
             <EconomyTable />
             <Offer />
             <ReviewsSection />
-            <About />
+            <About withButton={true} />
             <Doubts />
          </main>
          <Footer />

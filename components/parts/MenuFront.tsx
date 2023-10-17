@@ -57,6 +57,11 @@ function MenuFront({ shadow }: { shadow?: boolean }) {
                } `}
             >
                <ul className="flex md:w-auto w-full flex-col  md:flex-row md:space-x-10 uppercase md:items-center md:justify-center  text-why-gray-900">
+                  <Link href={'/'}>
+                     <li className="border-b border-why-gray-200 md:border-none   py-3 md:py-0">
+                        Home
+                     </li>
+                  </Link>
                   <Link href={'/atracoes'}>
                      <li className="border-b border-why-gray-200 md:border-none   py-3 md:py-0">
                         atrações

@@ -71,9 +71,9 @@ function Footer() {
                         Contato
                      </h3>
                      <p className=" text-why-gray-200 mt-3 text-lg">
-                        Rua Télcio Ventura da Silva, 141 <br /> Belvedere -
-                        Barra do Piraí - RJ <br />
-                        CEP 27113-265
+                        <a href="mailto:info@brasiltravelclub.com.br">
+                           info@brasiltravelclub.com
+                        </a>
                      </p>
                      <h3 className="uppercase font-medium text-why-gray-50 text-xl mt-10 md:mt-6  ">
                         Social Media

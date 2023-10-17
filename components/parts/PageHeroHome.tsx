@@ -22,11 +22,17 @@ function PageHero({
                {title}
             </h1>
             <p className="text-white/90 text-xl mt-4 ">{subtitle}</p>
-            <button className="mt-12 inline-flex items-center justify-center px-12 font-semibold  rounded-md  shadow-sm shadow-why-yellow-600/30 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 ">
+            <a
+               href="#details"
+               className="mt-12 inline-flex items-center justify-center px-12 font-semibold  rounded-md  shadow-sm shadow-why-yellow-600/30 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
+            >
                Saiba Mais
-            </button>
+            </a>
          </div>
-         <div className="absolute -bottom-20 md:-bottom-2 left-1/2 transform -translate-x-1/2 bg-why-gray-50 rounded-xl py-7 text-why-blue-900 underline underline-offset-4 md:underline-offset-[1rem] decoration-2 px-6 font-semibold text-3xl md:text-3xl w-[80%]">
+         <div
+            id="details"
+            className="absolute -bottom-20 md:-bottom-2 left-1/2 transform -translate-x-1/2 bg-why-gray-50 rounded-xl py-7 text-why-blue-900 underline underline-offset-4 md:underline-offset-[1rem] decoration-2 px-6 font-semibold text-3xl md:text-3xl w-[80%]"
+         >
             <p className="w-full">
                Economize até 50% em passeios e atrativos turísticos no Rio de
                Janeiro!

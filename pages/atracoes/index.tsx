@@ -49,13 +49,13 @@ export default function Tours() {
          <main className="pb-20">
             <PageHero
                title="Atrações"
-               subtitle="The best places for you"
+               subtitle="As melhores atrações, com preços imperdíveis."
                img="/img/water.jpg"
             />
             <div className="container mx-auto px-4">
                <SectionTitle
                   title="Atrações e Passeios pelo Rio de Janeiro"
-                  subtitle="The Best Places to Stay in Rio"
+                  subtitle="As melhores atrações com os menores preços."
                />
                <TourFilter
                   categories={uniqueToursCategories}

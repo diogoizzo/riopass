@@ -1,18 +1,18 @@
 function ContactForm() {
    return (
       <section className="bg-why-gray-50">
-         <div className="container mx-auto px-56 py-12">
-            <h2 className="text-why-blue-900 text-3xl py-6 font-medium">
+         <div className="container mx-auto md:px-56 py-12">
+            <h2 className="text-why-blue-900 text-3xl md:text-5xl py-6 font-medium">
                Nos escreva suas dúvidas
             </h2>
             <form className="mt-5">
                <textarea
                   placeholder="Envie sua mensagem"
                   rows={10}
-                  className="block text-md placeholder:text-gray-500 py-4 px-3 w-full text-base border border-why-gray-200 text-cool-gray-200 font-medium outline-none bg-transparent "
+                  className="block text-md placeholder:text-gray-500   py-4 px-3 w-full text-base border border-why-gray-200 text-cool-gray-200 font-medium outline-none bg-transparent "
                />
 
-               <div className="relative flex items-center space-x-5 mt-5">
+               <div className="relative flex flex-col md:flex-row items-center space-y-5 md:space-y-0 md:space-x-5 mt-5">
                   <input
                      placeholder="Seu Nome Completo"
                      type="text"
@@ -31,7 +31,7 @@ function ContactForm() {
                />
                <button
                   type="submit"
-                  className="inline-flex mt-10 items-center justify-center px-12 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
+                  className="inline-flex mt-10 w-full md:w-fit items-center justify-center px-12 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
                >
                   Enviar Mensagem
                </button>

@@ -29,8 +29,8 @@ function TourFilter({
    const workingTours = toursTest && [...toursTest];
 
    return (
-      <div className=" w-full flex justify-between items-center  pt-4 pb-12">
-         <div>
+      <div className=" w-full flex flex-wrap items-center justify-between  pb-8 relative">
+         <div className="order-2 md:order-none">
             <DropdownMenu>
                <DropdownMenuTrigger className="px-1  py-1">
                   <div className="flex items-center space-x-3 text-why-blue-900">
@@ -74,11 +74,11 @@ function TourFilter({
                </DropdownMenuContent>
             </DropdownMenu>
          </div>
-         <div className="flex-1">
+         <div className=" order-1 md:order-none w-full mb-4   md:flex-1">
             <Input
                type="text"
                placeholder="Pesquisar"
-               className="w-2/4 mx-auto "
+               className="w-full md:w-[500px]  mx-auto "
                onChange={(event) => {
                   if (event.target.value.length > 0) {
                      setSearchTours(
@@ -94,7 +94,7 @@ function TourFilter({
                }}
             />
          </div>
-         <div>
+         <div className="order-3 md:order-none">
             <DropdownMenu>
                <DropdownMenuTrigger className="px-1     py-1">
                   <div className="flex items-center space-x-3 text-why-blue-900">
