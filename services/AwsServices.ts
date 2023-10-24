@@ -1,5 +1,5 @@
 import { randomUUID } from 'crypto';
-import s3 from 'aws-sdk/clients/s3';
+import { S3 } from '@aws-sdk/client-s3';
 
 const region = process.env.REGION;
 const bucketName = process.env.BUCKET_NAME;

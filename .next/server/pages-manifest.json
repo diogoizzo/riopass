@@ -2,6 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/home": "pages/home.js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
+  "/admin/tours": "pages/admin/tours.js",
+  "/api/tour/[id]": "pages/api/tour/[id].js",
+  "/admin/tours/editar/[id]": "pages/admin/tours/editar/[id].js",
+  "/admin/tours/[id]": "pages/admin/tours/[id].js"
 }
