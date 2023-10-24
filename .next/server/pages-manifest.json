@@ -2,8 +2,16 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/admin/tours": "pages/admin/tours.js",
-  "/api/tour/[id]": "pages/api/tour/[id].js",
   "/admin/tours/editar/[id]": "pages/admin/tours/editar/[id].js",
-  "/admin/tours/[id]": "pages/admin/tours/[id].js"
+  "/api/tour/[id]": "pages/api/tour/[id].js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  "/api/categorias": "pages/api/categorias.js",
+  "/": "pages/index.js",
+  "/admin": "pages/admin.js",
+  "/auth/signin": "pages/auth/signin.js",
+  "/[lang]/[url]": "pages/[lang]/[url].js",
+  "/admin/tours": "pages/admin/tours.js",
+  "/api/tour": "pages/api/tour.js",
+  "/admin/tours/[id]": "pages/admin/tours/[id].js",
+  "/api/imagem/[id]/[awsFileName]": "pages/api/imagem/[id]/[awsFileName].js"
 }
