@@ -7,7 +7,7 @@ export default async function handler(
    res: NextApiResponse
 ) {
    if (req.method === 'POST') {
-      const { name, email, password, cpf, phone } = req.body;
+      const { name, email, password, cpf, phone, role } = req.body;
 
       try {
          const hash = await bcrypt.hash(password, 0);
@@ -18,7 +18,8 @@ export default async function handler(
                   email: email,
                   password: hash,
                   cpf: cpf,
-                  phone: phone
+                  phone: phone,
+                  role: role
                }
             });
          } catch (e) {

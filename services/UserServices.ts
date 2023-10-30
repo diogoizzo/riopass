@@ -1,11 +1,18 @@
 import axios from 'axios';
-import { signIn } from 'next-auth/react';
 import User from '../entities/User';
 import { UserFromData } from '../components/sections/UserForm';
-import IUser from '../interfaces/IUser';
 
 export default class UserServices {
    static async register(form: any) {
+      const sendForm = { ...form, role: 'ADMIN' };
+      const res = await axios.post('/api/register', sendForm);
+      if (res.status === 200) {
+         return true;
+      } else {
+         return false;
+      }
+   }
+   static async registerClient(form: any) {
       const res = await axios.post('/api/register', form);
       if (res.status === 200) {
          return true;

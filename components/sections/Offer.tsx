@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 function Offer() {
    return (
       <section className="pt-8 md:pt-16 font-medium bg-why-gray-50">
@@ -27,9 +28,12 @@ function Offer() {
                   Corra e garanta descontos incríveis em passeios no Rio de
                   Janeiro.
                </p>
-               <button className="mt-12 inline-flex items-center justify-center px-12 font-semibold  rounded-md  shadow-md  hover:scale-105 hover:shadow-lg transition-all ease-in-out   text-why-gray-50 py-3 bg-why-yellow-500 ">
+               <Link
+                  href={'/checkout'}
+                  className="mt-12 inline-flex items-center justify-center px-12 font-semibold  rounded-md  shadow-md  hover:scale-105 hover:shadow-lg transition-all ease-in-out   text-why-gray-50 py-3 bg-why-yellow-500 "
+               >
                   COMPRAR AGORA
-               </button>
+               </Link>
                <div className="max-w-[450px] mt-5 drop-shadow mx-auto">
                   <Image
                      src={'/img/selo-mercadopago.webp'}

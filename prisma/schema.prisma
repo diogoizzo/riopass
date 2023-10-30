@@ -16,29 +16,37 @@ datasource db {
 //   url      = env("DATABASE_URL")
 // }
 
+enum Role {
+  CLIENT
+  ADMIN
+}
+
 model User {
-  id        String   @id @default(cuid())
+  id        String     @id @default(cuid())
   password  String
   name      String
-  email     String   @unique
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  email     String     @unique
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
   cpf       String?
   phone     String?
+  role      Role       @default(CLIENT)
+  purchases Purchase[]
 
   @@index([name, cpf])
 }
 
-model Client {
-  id          String    @id @default(cuid())
-  name        String
-  email       String?
-  birthday    DateTime?
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-  location    String
-  phone       String
-  observation String?
+model Purchase {
+  id            String    @id @default(cuid())
+  amount        Int
+  price         Float
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  activationAt  DateTime?
+  expirationAt  DateTime?
+  mercadopagoId String?
+  buyer         User      @relation(fields: [buyerId], references: [id], onDelete: Cascade)
+  buyerId       String
 }
 
 model Tour {
@@ -86,7 +94,7 @@ model ItineraryStep {
   order      Int
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
-  partOfTour Tour     @relation(fields: [tourId], references: [id])
+  partOfTour Tour     @relation(fields: [tourId], references: [id], onDelete: Cascade)
   tourId     String
 }
 

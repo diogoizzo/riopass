@@ -31,7 +31,7 @@ function ContactForm() {
                />
                <button
                   type="submit"
-                  className="inline-flex mt-10 w-full md:w-fit items-center justify-center px-12 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
+                  className="inline-flex ml-auto mt-10 w-full md:w-fit items-center justify-center px-12 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
                >
                   Enviar Mensagem
                </button>
