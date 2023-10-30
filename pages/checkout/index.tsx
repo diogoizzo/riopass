@@ -254,6 +254,7 @@ function index() {
                                  />
                                  <div className="w-full flex justify-start mt-6 items-center space-x-3">
                                     <input
+                                       required
                                        id="terms"
                                        name="terms"
                                        className="h-5 w-5"
