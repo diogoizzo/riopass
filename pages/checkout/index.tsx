@@ -6,8 +6,7 @@ import Menu from '../../components/parts/Menu';
 import MenuFront from '../../components/parts/MenuFront';
 import PageHero from '../../components/parts/PageHero';
 import Footer from '../../components/sections/Footer';
-import { signIn, useSession } from 'next-auth/react';
-import { useRouter } from 'next/router';
+import { signIn } from 'next-auth/react';
 import ReactLoading from 'react-loading';
 import {
    AlertDialog,
@@ -23,18 +22,23 @@ import {
 function index() {
    const formRef = useRef<HTMLFormElement>(null);
    const [price, setPrice] = useState(99.0);
-   const router = useRouter();
    const [loading, setLoading] = useState(false);
-   const { data: session, status } = useSession();
    const [alertOpen, setAlertOpen] = useState(false);
-
-   console.log(session);
+   const passError = useRef<HTMLParagraphElement>(null);
 
    async function handleSubmit(e: any) {
       e.preventDefault();
       setLoading(true);
+      passError.current?.classList.add('hidden');
+      passError.current?.classList.remove('flex');
       if (!formRef.current) return;
       const formData = new FormData(formRef.current);
+      if (formData.get('password') !== formData.get('passwordRetry')) {
+         passError.current?.classList.add('flex');
+         passError.current?.classList.remove('hidden');
+         setLoading(false);
+         return;
+      }
       const form = {
          name: formData.get('name'),
          email: formData.get('email'),
@@ -46,12 +50,16 @@ function index() {
          passwordRetry: formData.get('passwordRetry'),
          terms: formData.get('terms')
       };
+
       let res;
       try {
          res = await MercadoPagoServices.getInitPoint(form);
       } catch (error: any) {
          console.log(error);
-         if (error.response.data.message === 'P2002') setAlertOpen(true);
+         if (error.response.data.message === 'P2002') {
+            setLoading(false);
+            setAlertOpen(true);
+         }
       }
 
       const email = form.email;
@@ -61,7 +69,8 @@ function index() {
          password,
          redirect: false
       });
-      router.push(res.initPoint);
+
+      res?.initPoint && location.assign(res.initPoint);
    }
 
    return (
@@ -122,6 +131,7 @@ function index() {
                                     Nome
                                  </p>
                                  <input
+                                    required
                                     name="name"
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
                                     type="text"
@@ -133,6 +143,7 @@ function index() {
                                     E-mail
                                  </p>
                                  <input
+                                    required
                                     name="email"
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
                                     type="email"
@@ -144,6 +155,7 @@ function index() {
                                     Telefone
                                  </p>
                                  <input
+                                    required
                                     name="phone"
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
                                     type="tel"
@@ -155,6 +167,7 @@ function index() {
                                     CPF
                                  </p>
                                  <input
+                                    required
                                     name="cpf"
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
                                     type="text"
@@ -166,6 +179,7 @@ function index() {
                                     Senha
                                  </p>
                                  <input
+                                    required
                                     name="password"
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
                                     type="password"
@@ -177,6 +191,7 @@ function index() {
                                     Repetir Senha
                                  </p>
                                  <input
+                                    required
                                     name="passwordRetry"
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
                                     type="password"
@@ -184,6 +199,28 @@ function index() {
                                  />
                               </div>
                            </div>
+                           <p
+                              ref={passError}
+                              className="items-center space-x-3 mt-2 hidden"
+                           >
+                              <span>
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="#ef4444"
+                                    className=" h-6"
+                                 >
+                                    <path
+                                       fillRule="evenodd"
+                                       d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                                       clipRule="evenodd"
+                                    />
+                                 </svg>
+                              </span>
+                              <span className="text-red-500">
+                                 As senhas precisam ser iguais.
+                              </span>
+                           </p>
                         </div>
                      </div>
                   </div>

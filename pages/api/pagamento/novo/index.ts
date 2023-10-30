@@ -26,7 +26,6 @@ export default async function handler(
             amount: Number(form.amount),
             purchaseId: purchase.id
          });
-         console.log(preference);
          res.status(200).json({ initPoint: preference.init_point });
       } catch (error) {
          console.log(error);
@@ -57,7 +56,6 @@ export default async function handler(
                }
             });
          } catch (error: any) {
-            console.log(error.code);
             if (error.code === 'P2002') {
                res.status(500).json({
                   message: 'P2002'
