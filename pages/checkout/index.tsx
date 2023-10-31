@@ -1,23 +1,20 @@
-import axios from 'axios';
 import React, { useRef, useState } from 'react';
 import MercadoPagoServices from '../../services/MercadoPagoServices';
 import Image from 'next/image';
-import Menu from '../../components/parts/Menu';
 import MenuFront from '../../components/parts/MenuFront';
-import PageHero from '../../components/parts/PageHero';
 import Footer from '../../components/sections/Footer';
 import { signIn } from 'next-auth/react';
 import ReactLoading from 'react-loading';
 import {
    AlertDialog,
    AlertDialogAction,
-   AlertDialogCancel,
    AlertDialogContent,
    AlertDialogDescription,
    AlertDialogFooter,
    AlertDialogHeader,
    AlertDialogTitle
 } from '../../components/ui/alert-dialog';
+import PageHeroCheckout from '../../components/parts/PageHeroCheckout';
 
 function index() {
    const formRef = useRef<HTMLFormElement>(null);
@@ -106,9 +103,9 @@ function index() {
             </AlertDialogContent>
          </AlertDialog>
          <MenuFront />
-         <PageHero
+         <PageHeroCheckout
             title="Checkout"
-            subtitle="A economia que você merece está a alguns cliques"
+            subtitle="A economia que você merece está a alguns cliques."
             img={'/img/rio.webp'}
          />
          <main className="bg-why-gray-50 min-h-[100vh] text-why-gray-800 py-24">

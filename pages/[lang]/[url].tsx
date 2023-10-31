@@ -34,6 +34,7 @@ export interface Related {
    durationHours: number | null;
    featuredPhoto: IImage;
    url: string;
+   authenticated?: boolean;
 }
 
 export async function getServerSideProps(context: any) {

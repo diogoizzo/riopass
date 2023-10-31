@@ -1,3 +1,4 @@
+import { useSession } from 'next-auth/react';
 import ITour from '../../interfaces/ITour';
 import TourCardGrid from '../atoms/TourCardGrid';
 
@@ -6,6 +7,9 @@ interface ToursProps {
 }
 
 function TourGrid({ tours }: ToursProps) {
+   const { status } = useSession();
+   const authenticated = status === 'authenticated' ? true : false;
+   console.log(status);
    return (
       <div className="w-full grid gap-8 gird-cols-1 md:grid-cols-2 py-6">
          {tours?.map((tour) => (
@@ -20,6 +24,7 @@ function TourGrid({ tours }: ToursProps) {
                durationHours={tour.durationHours || null}
                featuredPhoto={tour.featuredPhoto}
                url={tour.url}
+               authenticated={authenticated}
             />
          ))}
       </div>

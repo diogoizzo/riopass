@@ -10,8 +10,8 @@ function Contact() {
          <Head>
             <title>Contato</title>
          </Head>
+         <MenuFront />
          <main>
-            <MenuFront />
             <PageHero
                title={'Contato'}
                subtitle="Entre em Contato Conosco"

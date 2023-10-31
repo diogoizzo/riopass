@@ -26,7 +26,6 @@ export default function Tours() {
 
    const router = useRouter();
    const urlQuery = router.query.categoria;
-   console.log(urlQuery);
    const uniqueToursCategories = [...new Set<string>(toursCategories)];
    const [filteredTours, setFilteredTours] = useState<ITour[] | null>(null);
    const [searchTours, setSearchTours] = useState<ITour[] | null>(null);
