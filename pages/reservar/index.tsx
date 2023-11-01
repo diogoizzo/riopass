@@ -82,6 +82,7 @@ function Reservar() {
                                     E-mail
                                  </p>
                                  <input
+                                    required
                                     defaultValue={user?.email}
                                     name="email"
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
@@ -94,6 +95,7 @@ function Reservar() {
                                     Telefone
                                  </p>
                                  <input
+                                    required
                                     name="phone"
                                     defaultValue={user?.phone}
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
@@ -105,7 +107,7 @@ function Reservar() {
                         </div>
                      </div>
                   </div>
-                  <div className="flex flex-wrap -m-3">
+                  <div className="flex flex-wrap -m-3 mb-3">
                      <div className="w-full md:w-1/4 p-3">
                         <h2 className="text-coolGray-900 text-xl font-semibold">
                            Informações da Reserva
@@ -140,6 +142,7 @@ function Reservar() {
                                     Número de Pessoas
                                  </p>
                                  <input
+                                    required
                                     name="numberOfPeople"
                                     defaultValue={1}
                                     onChange={() => {}}
@@ -263,7 +266,7 @@ function Reservar() {
                                     name="phone"
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
                                     type="tel"
-                                    placeholder="Telefone para contato no momento do tour"
+                                    placeholder="Informações adicionais da localidade"
                                  />
                               </div>
                               <div className="w-full  p-3">
