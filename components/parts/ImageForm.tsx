@@ -156,7 +156,6 @@ function ImageForm({ images, tourId, featuredPhoto }: ImageFormProps) {
          description: img.description || '',
          isFeatured: Boolean(img.featuredOfTourId)
       });
-      console.log(selectedImageToEdit);
    }
    function cancelHandler() {
       clearSelect();

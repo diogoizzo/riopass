@@ -30,8 +30,10 @@ export default class UserServices {
    }
    static async getById(id: any) {
       try {
-         const res = await axios.get(`/api/usuarios/${id}`);
-         return res.data;
+         if (id) {
+            const res = await axios.get(`/api/usuarios/${id}`);
+            return res.data;
+         }
       } catch (e) {
          console.log(e);
       }

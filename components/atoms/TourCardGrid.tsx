@@ -4,6 +4,7 @@ import { Related } from '../../pages/[lang]/[url]';
 import Link from 'next/link';
 
 function TourCardGrid({
+   id,
    name,
    description,
    price,
@@ -77,12 +78,19 @@ function TourCardGrid({
                </div>
                {authenticated ? (
                   <div className="flex w-full justify-center items-center py-4 text-center border-t border-why-gray-200">
-                     <a
-                        href=""
+                     <Link
+                        as={'/reservar'}
+                        href={{
+                           pathname: '/reservar',
+                           query: {
+                              id,
+                              name
+                           }
+                        }}
                         className="  lg:inline-flex items-center justify-center px-16 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
                      >
                         Reservar
-                     </a>
+                     </Link>
                   </div>
                ) : null}
             </div>

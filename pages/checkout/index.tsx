@@ -15,9 +15,12 @@ import {
    AlertDialogTitle
 } from '../../components/ui/alert-dialog';
 import PageHeroCheckout from '../../components/parts/PageHeroCheckout';
+import togglePassword from '../../lib/togglePassword';
 
 function index() {
    const formRef = useRef<HTMLFormElement>(null);
+   const passwordRef = useRef<HTMLInputElement>(null);
+   const passwordRetryRef = useRef<HTMLInputElement>(null);
    const [price, setPrice] = useState(99.0);
    const [loading, setLoading] = useState(false);
    const [alertOpen, setAlertOpen] = useState(false);
@@ -175,25 +178,51 @@ function index() {
                                  <p className="mb-1.5 font-medium text-base text-coolGray-800">
                                     Senha
                                  </p>
-                                 <input
-                                    required
-                                    name="password"
-                                    className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
-                                    type="password"
-                                    placeholder="Sua nova senha"
-                                 />
+                                 <div className="relative">
+                                    <input
+                                       ref={passwordRef}
+                                       required
+                                       name="password"
+                                       className="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-why-yellow-400 focus:outline-why-yellow-400 rounded-lg"
+                                       type="password"
+                                       placeholder="Entre com a sua senha"
+                                    />
+                                    <button
+                                       type="button"
+                                       onClick={() => {
+                                          togglePassword(passwordRef.current);
+                                       }}
+                                       className="absolute top-1/2 right-0 mr-3 transform -translate-y-1/2 inline-block hover:scale-110 transition duration-100"
+                                    >
+                                       <img src="/img/icon-eye.svg" alt="" />
+                                    </button>
+                                 </div>
                               </div>
                               <div className="w-full md:w-1/2 p-3">
                                  <p className="mb-1.5 font-medium text-base text-coolGray-800">
                                     Repetir Senha
                                  </p>
-                                 <input
-                                    required
-                                    name="passwordRetry"
-                                    className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
-                                    type="password"
-                                    placeholder="Repita sua senha"
-                                 />
+                                 <div className="relative">
+                                    <input
+                                       ref={passwordRetryRef}
+                                       required
+                                       name="passwordRetry"
+                                       className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
+                                       type="password"
+                                       placeholder="Repita sua senha"
+                                    />
+                                    <button
+                                       type="button"
+                                       onClick={() => {
+                                          togglePassword(
+                                             passwordRetryRef.current
+                                          );
+                                       }}
+                                       className="absolute top-1/2 right-0 mr-3 transform -translate-y-1/2 inline-block hover:scale-110 transition duration-100"
+                                    >
+                                       <img src="/img/icon-eye.svg" alt="" />
+                                    </button>
+                                 </div>
                               </div>
                            </div>
                            <p

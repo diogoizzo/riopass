@@ -9,7 +9,6 @@ interface ToursProps {
 function TourGrid({ tours }: ToursProps) {
    const { status } = useSession();
    const authenticated = status === 'authenticated' ? true : false;
-   console.log(status);
    return (
       <div className="w-full grid gap-8 gird-cols-1 md:grid-cols-2 py-6">
          {tours?.map((tour) => (

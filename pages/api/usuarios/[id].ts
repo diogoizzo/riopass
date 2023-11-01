@@ -19,7 +19,9 @@ export default async function handler(
                createdAt: false,
                updatedAt: false,
                password: false,
-               id: true
+               id: true,
+               cpf: true,
+               purchases: true
             }
          });
          if (user) {
