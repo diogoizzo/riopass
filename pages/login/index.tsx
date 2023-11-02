@@ -107,7 +107,12 @@ function Login() {
                            Entre com as suas informações pessoais para acessar a
                            área de membros.
                         </p>
-                        <form ref={formRef} onSubmit={handleSubmit} action="">
+                        <form
+                           id="login"
+                           ref={formRef}
+                           onSubmit={handleSubmit}
+                           action=""
+                        >
                            <div className="mb-6">
                               <label
                                  className="block mb-1.5 text-sm text-gray-900 font-semibold"

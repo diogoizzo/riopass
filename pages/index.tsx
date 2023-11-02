@@ -27,7 +27,7 @@ export default function Homepage<NextPage>() {
                         quando lançarmos, para que você comece a economizar
                         imediatamente.
                      </p>
-                     <form className="max-w-md mx-auto">
+                     <form id="newsletter" className="max-w-md mx-auto">
                         <div className="flex items-center">
                            <input
                               type="email"

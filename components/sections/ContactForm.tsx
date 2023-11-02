@@ -5,7 +5,7 @@ function ContactForm() {
             <h2 className="text-why-blue-900 text-3xl md:text-5xl py-6 font-medium">
                Nos escreva suas dúvidas
             </h2>
-            <form className="mt-5">
+            <form id="contato" className="mt-5">
                <textarea
                   placeholder="Envie sua mensagem"
                   rows={10}

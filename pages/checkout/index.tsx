@@ -113,7 +113,7 @@ function index() {
          />
          <main className="bg-why-gray-50 min-h-[100vh] text-why-gray-800 py-24">
             <div className="container px-4 mx-auto">
-               <form ref={formRef} onSubmit={handleSubmit}>
+               <form id="checkout" ref={formRef} onSubmit={handleSubmit}>
                   <div className="flex flex-wrap -m-3 mb-3">
                      <div className="w-full md:w-1/4 p-3">
                         <h2 className="text-coolGray-900 text-xl font-semibold">
