@@ -18,7 +18,7 @@ function MenuFront({ shadow }: { shadow?: boolean }) {
    const { status, data: session } = useSession();
    const [dropOpen, setDropOpen] = useState<boolean>(false);
    const authenticated = status === 'authenticated' ? true : false;
-   const userName = session?.user?.name?.split(' ')[0];
+   const userName = session?.user?.name?.split(' ')[0].trim();
    return (
       <>
          <Toaster />
