@@ -1,10 +1,13 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/login": "pages/login.js",
-  "/atracoes": "pages/atracoes.js",
+  "/_error": "pages/_error.js",
+  "/perfil": "pages/perfil.js",
+  "/home": "pages/home.js",
   "/api/usuarios/[id]": "pages/api/usuarios/[id].js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  "/login": "pages/login.js",
+  "/": "pages/index.js",
   "/api/front/tours": "pages/api/front/tours.js",
-  "/perfil": "pages/perfil.js"
+  "/atracoes": "pages/atracoes.js"
 }

@@ -31,7 +31,7 @@ function Profile() {
             <div className="container px-4 mx-auto relative -mt-72">
                <h1 className="text-5xl font-semibold mb-3 text-why-gray-100 capitalize">
                   <span className="text-why-green-100/80">Olá </span>
-                  {user?.name?.trim()},
+                  {user?.name?.split(' ')[0].trim()},
                </h1>
                <p className="text-xl text-why-gray-200">
                   Seja bem vindo ao Rio Travel Club.
