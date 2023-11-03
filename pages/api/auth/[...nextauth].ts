@@ -24,6 +24,9 @@ export default NextAuth({
                const user = await prisma.user.findFirst({
                   where: {
                      email: credentials?.email
+                  },
+                  include: {
+                     purchases: true
                   }
                });
                if (user !== null) {
@@ -52,6 +55,12 @@ export default NextAuth({
             token.id = user.id;
             //@ts-ignore
             token.role = user.role;
+            //@ts-ignore
+            token.cpf = user.cpf;
+            //@ts-ignore
+            token.phone = user.phone;
+            //@ts-ignore
+            token.purchases = user.purchases;
          }
 
          return token;
@@ -63,6 +72,12 @@ export default NextAuth({
             session.id = token.id; // eslint-disable-line
             //@ts-ignore
             session.role = token.role;
+            //@ts-ignore
+            session.cpf = token.cpf;
+            //@ts-ignore
+            session.phone = token.phone;
+            //@ts-ignore
+            session.purchases = token.purchases;
          }
          return session;
       }

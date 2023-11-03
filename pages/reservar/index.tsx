@@ -14,8 +14,6 @@ import { Calendar } from '../../components/ui/calendar';
 import dayjs from 'dayjs';
 import pt from 'dayjs/locale/pt-br';
 import { useSession } from 'next-auth/react';
-import { useQuery } from 'react-query';
-import UserServices from '../../services/UserServices';
 import { useRouter } from 'next/router';
 
 function Reservar() {
@@ -25,10 +23,24 @@ function Reservar() {
    const [date, setDate] = React.useState<Date>();
    const [dayPickerOpen, setDayPickerOpen] = useState(false);
    const { data } = useSession();
+   const user = data?.user;
    //@ts-ignore
-   const userId = data?.id;
-   const query = useQuery(['user', userId], () => UserServices.getById(userId));
-   const user = query?.data;
+   const phone = data?.phone;
+   //@ts-ignore
+   const cpf = data?.cpf;
+   //@ts-ignore
+
+   const purchases = data?.purchases;
+
+   //todo essa função precisa ser melhorada para somar apenas as quantidades de comprar ativas (que ainda não espiraram)
+   const quantity = purchases?.reduce(
+      (acc: any, item: any) => acc + item.amount,
+      0
+   );
+
+   console.log(quantity);
+
+   console.log(purchases);
    async function handleSubmit() {}
    return (
       <>
@@ -59,7 +71,7 @@ function Reservar() {
                                  </p>
                                  <input
                                     disabled
-                                    defaultValue={user?.name}
+                                    defaultValue={user?.name || undefined}
                                     name="name"
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
                                     type="text"
@@ -70,7 +82,7 @@ function Reservar() {
                                     CPF
                                  </p>
                                  <input
-                                    defaultValue={user?.cpf}
+                                    defaultValue={cpf}
                                     disabled
                                     name="cpf"
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
@@ -83,7 +95,7 @@ function Reservar() {
                                  </p>
                                  <input
                                     required
-                                    defaultValue={user?.email}
+                                    defaultValue={user?.email || undefined}
                                     name="email"
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
                                     type="email"
@@ -97,7 +109,7 @@ function Reservar() {
                                  <input
                                     required
                                     name="phone"
-                                    defaultValue={user?.phone}
+                                    defaultValue={phone}
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
                                     type="tel"
                                     placeholder="Telefone para contato no momento do tour"
@@ -145,12 +157,10 @@ function Reservar() {
                                     required
                                     name="numberOfPeople"
                                     defaultValue={1}
-                                    onChange={() => {}}
                                     className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-why-yellow-400 border border-coolGray-200 rounded-lg shadow-input"
                                     type="number"
                                     min={1}
-                                    //todo fazer com que o máximo seja o numero de quantidade da compra
-                                    max={200}
+                                    max={quantity}
                                     placeholder="Informe a quantidade desejada"
                                  />
                               </div>

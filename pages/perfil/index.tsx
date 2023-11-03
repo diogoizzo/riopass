@@ -10,9 +10,11 @@ import Image from 'next/image';
 function Profile() {
    const { data } = useSession();
    //@ts-ignore
-   const userId = data?.id;
-   const query = useQuery(['user', userId], () => UserServices.getById(userId));
-   const user = query?.data;
+   const user = data?.user;
+   //@ts-ignore
+   const phone = data?.phone;
+   //@ts-ignore
+   const cpf = data?.cpf;
    return (
       <>
          <Head>
@@ -120,9 +122,7 @@ function Profile() {
                            </label>
                            <label className="text-xs block text-gray-400">
                               CPF
-                              <p className=" text-base text-gray-500">
-                                 {user?.cpf}
-                              </p>
+                              <p className=" text-base text-gray-500">{cpf}</p>
                            </label>
                            <label className="text-xs block text-gray-400">
                               E-mail
@@ -133,7 +133,7 @@ function Profile() {
                            <label className="text-xs block text-gray-400">
                               Telefone
                               <p className=" text-base text-gray-500">
-                                 {user?.phone}
+                                 {phone}
                               </p>
                            </label>
                         </div>

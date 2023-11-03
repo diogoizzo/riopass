@@ -88,10 +88,11 @@ function MenuFront({ shadow }: { shadow?: boolean }) {
                            como funciona
                         </li>
                      </Link>
-
-                     <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
-                        FAQ
-                     </li>
+                     <Link href={'perguntas'}>
+                        <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
+                           FAQ
+                        </li>
+                     </Link>
                      <Link href={'/sobre'}>
                         <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
                            Sobre
@@ -117,35 +118,38 @@ function MenuFront({ shadow }: { shadow?: boolean }) {
                            </Link>
                         </>
                      ) : (
-                        //todo link para o perfil, apenas no mobile
-                        <div className="bg-gradient-to-r lg:hidden w-fit mt-5 mx-auto  from-why-yellow-400 via-why-green-500 p-[2px] rounded-full  to-why-blue-400 shadow-sm">
-                           <div className="rounded-full px-6 text-lg py-1 bg-why-gray-100  hover:bg-white cursor-pointer transition-all ease-in-out duration-200 ">
-                              <div className="flex space-x-3 items-center bg-gradient-to-r  from-why-yellow-400 via-why-green-500 to-why-blue-400 bg-clip-text">
-                                 <Image
-                                    src={'/img/profile.svg'}
-                                    width={24}
-                                    height={24}
-                                    alt="ícone de perfil"
-                                 />
-
-                                 <p className=" text-transparent">{userName}</p>
-                                 <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth={1.5}
-                                    stroke="currentColor"
-                                    className="w-6 h-6 text-why-blue-400"
-                                 >
-                                    <path
-                                       strokeLinecap="round"
-                                       strokeLinejoin="round"
-                                       d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                        <Link href={'/perfil'}>
+                           <div className="bg-gradient-to-r lg:hidden w-fit mt-5 mx-auto  from-why-yellow-400 via-why-green-500 p-[2px] rounded-full  to-why-blue-400 shadow-sm">
+                              <div className="rounded-full px-6 text-lg py-1 bg-why-gray-100  hover:bg-white cursor-pointer transition-all ease-in-out duration-200 ">
+                                 <div className="flex space-x-3 items-center bg-gradient-to-r  from-why-yellow-400 via-why-green-500 to-why-blue-400 bg-clip-text">
+                                    <Image
+                                       src={'/img/profile.svg'}
+                                       width={24}
+                                       height={24}
+                                       alt="ícone de perfil"
                                     />
-                                 </svg>
+
+                                    <p className=" text-transparent">
+                                       {userName}
+                                    </p>
+                                    <svg
+                                       xmlns="http://www.w3.org/2000/svg"
+                                       fill="none"
+                                       viewBox="0 0 24 24"
+                                       strokeWidth={1.5}
+                                       stroke="currentColor"
+                                       className="w-6 h-6 text-why-blue-400"
+                                    >
+                                       <path
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                                       />
+                                    </svg>
+                                 </div>
                               </div>
                            </div>
-                        </div>
+                        </Link>
                      )}
                   </ul>
                </nav>
@@ -218,7 +222,12 @@ function MenuFront({ shadow }: { shadow?: boolean }) {
                         <DropdownMenuSeparator className="bg-why-gray-200" />
                         <DropdownMenuItem>
                            <button
-                              onClick={() => signOut()}
+                              //todo alterar para / depois
+                              onClick={() =>
+                                 signOut({
+                                    callbackUrl: '/home'
+                                 })
+                              }
                               className="block w-full text-left text-why-gray-900"
                            >
                               Sair

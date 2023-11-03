@@ -79,7 +79,6 @@ function TourCardGrid({
                {authenticated ? (
                   <div className="flex w-full justify-center items-center py-4 text-center border-t border-why-gray-200">
                      <Link
-                        as={'/reservar'}
                         href={{
                            pathname: '/reservar',
                            query: {
