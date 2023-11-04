@@ -39,9 +39,9 @@ export default class MercadoPagoServices {
                }
             ],
             back_urls: {
-               success: 'https://www.brasiltravelclub.com/atracoes',
-               pending: 'https://www.brasiltravelclub.com/atracoes',
-               failure: 'https://www.brasiltravelclub.com/atracoes'
+               success: 'https://www.brasiltravelclub.com/perfil',
+               pending: 'https://www.brasiltravelclub.com/perfil',
+               failure: 'https://www.brasiltravelclub.com/perfil'
             }
          }
       );

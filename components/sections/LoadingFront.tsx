@@ -7,8 +7,8 @@ export default function LoadingFront() {
          <ReactLoading
             type={'spinningBubbles'}
             color={'#E0E0E0'}
-            height={160}
-            width={160}
+            height={100}
+            width={100}
          />
       </div>
    );

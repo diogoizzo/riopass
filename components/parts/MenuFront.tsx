@@ -13,7 +13,7 @@ import {
    DropdownMenuTrigger
 } from '../ui/dropdown-menu';
 
-function MenuFront({ shadow }: { shadow?: boolean }) {
+function MenuFront() {
    const [menuOpen, setMenuOpen] = useState<boolean>(false);
    const { status, data: session } = useSession();
    const [dropOpen, setDropOpen] = useState<boolean>(false);
@@ -23,9 +23,8 @@ function MenuFront({ shadow }: { shadow?: boolean }) {
       <>
          <Toaster />
          <div
-            className={`fixed w-full top-0 bg-why-gray-100 ${
-               shadow !== false ? 'shadow-md' : null
-            } z-50 overflow-visible`}
+            className={`fixed w-full top-0 bg-why-gray-100
+               shadow-md z-50 overflow-visible`}
          >
             <header className="container  overflow-visible mx-auto flex flex-col lg:flex-row justify-between items-center py-4  font-medium">
                <div className=" flex justify-between items-center w-full lg:w-auto ">

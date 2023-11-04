@@ -18,7 +18,7 @@ function Faq() {
          <main className="bg-why-gray-100 py-16">
             <div className="container px-4 mx-auto">
                <div className="max-w-5xl mx-auto ">
-                  <h2 className="text-why-blue-900 text-3xl md:text-5xl mb-3  font-medium">
+                  <h2 className="text-why-blue-900 text-4xl  mb-3  font-medium">
                      Dúvidas Gerais
                   </h2>
                   <div className="h-[1px] bg-why-blue-900 mb-8 opacity-30"></div>
@@ -138,7 +138,7 @@ function Faq() {
                         Janeiro.
                      </p>
                   </details>
-                  <h2 className="text-why-blue-900 block text-3xl md:text-5xl mt-12 mb-3   font-medium">
+                  <h2 className="text-why-blue-900 block text-4xl  mt-12 mb-3   font-medium">
                      Pagamento
                   </h2>
                   <div className="h-[1px] bg-why-blue-900 mb-8 opacity-30"></div>
@@ -252,7 +252,7 @@ function Faq() {
                         compra.
                      </p>
                   </details>
-                  <h2 className="text-why-blue-900 block text-3xl md:text-5xl mt-12 mb-3   font-medium">
+                  <h2 className="text-why-blue-900 block text-4xl  mt-12 mb-3   font-medium">
                      Dúvidas de Uso
                   </h2>
                   <div className="h-[1px] bg-why-blue-900 mb-8 opacity-30"></div>

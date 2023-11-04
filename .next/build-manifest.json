@@ -12,6 +12,16 @@
   ],
   "rootMainFiles": [],
   "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
+    "/[lang]/[url]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/[lang]/[url].js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -22,15 +32,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/contato": [
+    "/atracoes": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/contato.js"
+      "static/chunks/pages/atracoes.js"
     ],
-    "/perguntas": [
+    "/comofunciona": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/perguntas.js"
+      "static/chunks/pages/comofunciona.js"
+    ],
+    "/home": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/home.js"
     ]
   },
   "ampFirstPages": []

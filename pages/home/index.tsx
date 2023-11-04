@@ -19,7 +19,7 @@ export default function Homepage<NextPage>() {
          <Head>
             <title>Home</title>
          </Head>
-         <MenuFront shadow={false} />
+         <MenuFront />
          <main>
             <PageHeroHome
                title="Rio Travel Club"
