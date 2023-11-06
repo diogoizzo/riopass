@@ -6,14 +6,19 @@ function Footer() {
       <footer className="bg-why-green-600  ">
          <div className="container px-4 mx-auto">
             <div className="grid gird-cols-1  lg:grid-cols-4 w-full">
-               <div className=" mx-auto">
+               <div className=" mx-auto pb-10 pt-12  md:py-12 ">
                   <Image
                      src={'/img/logo-simbol.png'}
-                     width={380}
-                     height={287}
-                     className="w-64 md:w-auto"
+                     width={480}
+                     height={411}
+                     className="w-32 mx-auto"
                      alt="Logo do travel club na vertical"
                   />
+                  <p className="text-center mt-6 text-why-gray-200  text-lg">
+                     Brasil Travel Club, um produto oferecido por Why Not
+                     Creative Tours. <br />
+                     CNPJ 24.538.473/0001-05
+                  </p>
                </div>
                <div className="flex flex-col justify-start pb-10  md:py-12  items-center">
                   <div className="text-center lg:text-left">

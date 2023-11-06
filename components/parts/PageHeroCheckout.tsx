@@ -11,7 +11,7 @@ function PageHeroCheckout({
 }) {
    return (
       <div
-         className={`w-full py-36 md:py-40 text-center   bg-cover bg-center`}
+         className={`w-full pt-36 pb-24 md:py-40 text-center  bg-cover bg-center`}
          style={{ backgroundImage: `url("${img}")` }}
       >
          <div className="relative">

@@ -23,6 +23,7 @@ import PhotoModal from '../../components/modals/PhotoModal';
 import IImage from '../../interfaces/IImage';
 import Head from 'next/head';
 import MenuFront from '../../components/parts/MenuFront';
+import Footer from '../../components/sections/Footer';
 
 export interface Related {
    id: string;
@@ -198,7 +199,7 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                               value="reserva"
                               className="bg-white data-[state=active]:bg-why-blue-600   w-full md:w-auto data-[state=active]:text-why-gray-100 text-xl uppercase rounded-b-none  py-3 text-why-blue-600 px-7 inline-flex font-semibold"
                            >
-                              Como reservar
+                              Informações Importantes
                            </TabsTrigger>
                         </TabsList>
                         <TabsContent
@@ -219,11 +220,6 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                               <div className="space-y-2 mb-10 text-base md:text-lg text-why-gray-900">
                                  {tour?.longDescription}
                               </div>
-
-                              <DetailDisplayLine
-                                 label="Observações"
-                                 content={tour?.obs}
-                              />
                               <DetailDisplayLine
                                  label="Línguas"
                                  content={tour?.languages}
@@ -280,10 +276,62 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                            <Itinerary itinerary={tour?.itinerary} />
                         </TabsContent>
                         <TabsContent
-                           className="bg-white px-8 py-6 border-l border-r border-l-why-gray-100 border-r-why-gray-100  border-t-4 border-t-why-blue-600  z-30 relative"
+                           className="bg-white px-8 py-10 border-l border-r border-l-why-gray-100 border-r-why-gray-100  border-t-4 border-t-why-blue-600  z-30 relative"
                            value="reserva"
                         >
-                           Informações sobre como reservar
+                           <h3 className="text-why-gray-900 mb-3 text-xl font-semibold">
+                              COMO RESERVAR?
+                           </h3>
+                           <p className="text-why-gray-800 mb-2">
+                              Ao entrar para o Rio Travel Club você será
+                              redirecionado para nossa área de membros onde você
+                              poderá realizar a reserva do seu passeio escolhido
+                              diretamente com o nosso suporte dedicado. Todos os
+                              pedidos de reserva passam pela nossa equipe, como
+                              forma de garantir o seu desconto final junto ao
+                              nosso parceiro.
+                           </p>
+                           <p className="text-why-gray-800 mb-6">
+                              As reservas para os passeios dependem de
+                              disponibilidade dos nossos parceiros para os dias
+                              escolhidos.
+                           </p>
+                           <h3 className="text-why-gray-900 mb-3 text-xl font-semibold">
+                              COMO REALIZAR O PAGAMENTO DO PASSEIO?
+                           </h3>
+                           <p className="text-why-gray-800 mb-2">
+                              Ao entrar para o Rio Travel Club você será
+                              redirecionado para nossa área de membros onde você
+                              poderá realizar a reserva do seu passeio escolhido
+                              diretamente com o nosso suporte dedicado. Todos os
+                              pedidos de reserva passam pela nossa equipe, como
+                              forma de garantir o seu desconto final junto ao
+                              nosso parceiro.
+                           </p>
+                           <p className="text-why-gray-800 mb-6">
+                              Alguns parceiro e passeios podem exigir o
+                              pagamento de um sinal para realizar a reserva.
+                           </p>
+                           <h3 className="text-why-gray-900 mb-3 text-xl font-semibold">
+                              PREÇOS PARA CRIANÇAS
+                           </h3>
+                           <p className="text-why-gray-800 mb-6">
+                              Muitos passeios possuem desconto para crianças de
+                              3 a 11 anos e gratuidade para crianças de colo até
+                              2 anos. Entre em contato com nosso suporte para
+                              mais informações.
+                           </p>
+                           <h3 className="text-why-gray-900 mb-3 text-xl font-semibold">
+                              POLÍTICAS DE CANCELAMENTO
+                           </h3>
+                           <p className="text-why-gray-800 mb-6">
+                              Todos os passeios são oferecidos por parceiros
+                              credenciados, sendo que cada um tem suas próprias
+                              políticas de reserva, operação, pagamento e
+                              cancelamento. Para saber mais informações sobre
+                              algum passeio ou parceiro, entre em contato com
+                              nosso suporte ou diretamente com o parceiro.
+                           </p>
                         </TabsContent>
                      </Tabs>
                   </div>
@@ -294,8 +342,8 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                      />
                      <CallToAction />
                   </div>
-                  <div className=" w-full mt-6  py-10">
-                     <h2 className=" text-4xl text-why-gray-900 mb-6 font-medium">
+                  <div className=" w-full mt-6  pt-10 pb-24">
+                     <h2 className=" text-4xl text-why-gray-900 mb-10 font-medium">
                         Você Também deve Gostar
                      </h2>
                      <div className="flex flex-col md:flex-row md:space-x-3 md:space-y-0 space-y-3">
@@ -317,7 +365,7 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                   </div>
                </div>
             </main>
-            <footer className=" w-full  bg-why-blue  bg-why-blue-600 "></footer>
+            <Footer />
          </div>
       </>
    );

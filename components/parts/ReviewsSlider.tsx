@@ -27,360 +27,442 @@ export default function ReviewsSlider() {
          }}
          pagination={{ clickable: true }}
          autoplay={{
-            delay: 2500,
+            delay: 3500,
             pauseOnMouseEnter: true,
             disableOnInteraction: false
          }}
       >
-         <SwiperSlide className="bg-[#03877a] p-7 shadow-md rounded-md relative">
-            <div className="flex flex-col justify-stretch h-full">
-               <div className="flex">
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
+         <div className="relative h-full">
+            <SwiperSlide className="bg-[#03877a] p-7 shadow-md rounded-md h-full ">
+               <div className="flex flex-col justify-stretch h-full">
+                  <div className="flex">
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                  </div>
+                  <p className="text-why-gray-50 mt-8 flex-1">
+                     O Rio Travel Club foi um achado incrível para a minha
+                     viagem ao Rio de Janeiro! A facilidade de reservar
+                     experiências e a economia que tive foram surpreendentes. A
+                     equipe sempre esteve pronta para me ajudar a planejar cada
+                     detalhe!
+                  </p>
+                  <p className="text-why-gray-200 mt-8">Ana Carolina</p>
                </div>
-               <p className="text-why-gray-50 mt-8 flex-1">
-                  O Rio Travel Club foi um achado incrível para as minhas
-                  viagens! A facilidade de reservar experiências e a economia
-                  real que tive foram surpreendentes. A equipe sempre esteve
-                  pronta para me ajudar a planejar cada detalhe. Uma jornada
-                  verdadeiramente inesquecível!
-               </p>
-               <p className="text-why-gray-200 mt-8">Ana Carolina</p>
-            </div>
-         </SwiperSlide>
-         <SwiperSlide className="bg-[#008a9f] p-7 shadow-md rounded-md">
-            <div className="flex flex-col justify-stretch h-full">
-               <div className="flex">
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
+            </SwiperSlide>
+            <SwiperSlide className="bg-[#008a9f] p-7 shadow-md rounded-md">
+               <div className="flex flex-col justify-stretch h-full">
+                  <div className="flex">
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                  </div>
+                  <p className="text-why-gray-50 mt-8 flex-1">
+                     Comprar o Rio Travel Club foi uma das melhores decisões que
+                     tomei! A economia me surpreendeu e as experiências foram
+                     incríveis. A equipe de suporte para reservas é super
+                     atenciosa e fez toda a diferença na minha viagem ao Rio.
+                     Recomendo muito!
+                  </p>
+                  <p className="text-why-gray-200 mt-8">Roberto Silva</p>
                </div>
-               <p className="text-why-gray-50 mt-8 flex-1">
-                  Viajar com o Rio Travel Club foi uma das melhores decisões que
-                  tomei! A economia é real e as experiências são incríveis. A
-                  equipe de suporte para reservas é super atenciosa e fez toda a
-                  diferença na minha viagem ao Rio. Recomendo muito!
-               </p>
-               <p className="text-why-gray-200 mt-8">Roberto Silva</p>
-            </div>
-         </SwiperSlide>
-         <SwiperSlide className="bg-[#03877a] p-7 shadow-md rounded-md">
-            <div className="flex flex-col justify-stretch h-full">
-               <div className="flex">
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
+            </SwiperSlide>
+            <SwiperSlide className="bg-[#03877a] p-7 shadow-md rounded-md">
+               <div className="flex flex-col justify-stretch h-full">
+                  <div className="flex">
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                  </div>
+                  <p className="text-why-gray-50 mt-8 flex-1">
+                     Para nós, o Rio Travel Club foi uma verdadeira ajuda em
+                     nossa viagem ao Rio de Janeiro. A facilidade de uso e os
+                     descontos tornaram a nossa viagem ao Rio não muito melhor
+                     do que poderíamos imaginar!
+                  </p>
+                  <p className="text-why-gray-200 mt-8">Mariana e João</p>
                </div>
-               <p className="text-why-gray-50 mt-8 flex-1">
-                  Para nós, o Rio Travel Club foi uma verdadeira revolução em
-                  nossas aventuras de viagem. A facilidade de uso e os descontos
-                  significativos tornaram nossa viagem ao Rio não apenas
-                  acessível, mas também mais emocionante e luxuosa do que
-                  poderíamos imaginar!
-               </p>
-               <p className="text-why-gray-200 mt-8">Mariana e João</p>
-            </div>
-         </SwiperSlide>
-
-         <SwiperSlide className="bg-[#008a9f] p-7 shadow-md rounded-md">
-            <div className="flex flex-col justify-stretch h-full">
-               <div className="flex">
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
+            </SwiperSlide>
+            <SwiperSlide className="bg-[#008a9f] p-7 shadow-md rounded-md">
+               <div className="flex flex-col justify-stretch h-full">
+                  <div className="flex">
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                  </div>
+                  <p className="text-why-gray-50 mt-8 flex-1">
+                     Estou absolutamente encantado com as experiências que o Rio
+                     Travel Club me proporcionou. A equipe me ajudou a reservar
+                     passeios incríveis com facilidade e os descontos foram
+                     realmente impressionantes!
+                  </p>
+                  <p className="text-why-gray-200 mt-8">Lucas Pereira</p>
                </div>
-               <p className="text-why-gray-50 mt-8 flex-1">
-                  Viajar com o Rio Travel Club foi uma experiência sem
-                  complicações e repleta de momentos memoráveis. A facilidade de
-                  reservar experiências e a real economia que fiz foram
-                  simplesmente fenomenais. Mal posso esperar para explorar mais
-                  destinos com eles!
-               </p>
-               <p className="text-why-gray-200 mt-8">Felipe Costa</p>
-            </div>
-         </SwiperSlide>
-         <SwiperSlide className="bg-[#03877a] p-7 shadow-md rounded-md">
-            <div className="flex flex-col justify-stretch h-full">
-               <div className="flex">
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
+            </SwiperSlide>
+            <SwiperSlide className="bg-[#03877a]  p-7 shadow-md rounded-md">
+               <div className="flex flex-col justify-stretch h-full">
+                  <div className="flex">
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                  </div>
+                  <p className="text-why-gray-50 mt-8 flex-1">
+                     O Rio Travel Club foi simplesmente incrível! A economia que
+                     tive em minha viagem ao Rio foi maior do que imaginei e os
+                     passeios foram de tirar o fôlego. A equipe é super
+                     prestativa e fez todo o processo de reserva ser uma brisa!
+                  </p>
+                  <p className="text-why-gray-200 mt-8">Gabriela M.</p>
                </div>
-               <p className="text-why-gray-50 mt-8 flex-1">
-                  O Rio Travel Club transformou minha viagem ao Rio em uma
-                  experiência mágica e acessível. A equipe de suporte foi além
-                  para garantir que cada reserva fosse perfeita e os descontos
-                  oferecidos são genuínos e significativos. Uma verdadeira joia
-                  para os amantes de viagens!
-               </p>
-               <p className="text-why-gray-200 mt-8">Fernanda Oliveira</p>
-            </div>
-         </SwiperSlide>
-         <SwiperSlide className="bg-[#008a9f] p-7 shadow-md rounded-md">
-            <div className="flex flex-col justify-stretch h-full">
-               <div className="flex">
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
+            </SwiperSlide>
+            <SwiperSlide className="bg-[#008a9f] p-7 shadow-md rounded-md">
+               <div className="flex flex-col justify-stretch h-full">
+                  <div className="flex">
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                  </div>
+                  <p className="text-why-gray-50 mt-8 flex-1">
+                     Simplesmente fantástico! Economizei mais de R$ 500 reais e
+                     fiz vários passeios incríveis pelo Rio. Super recomendo"
+                  </p>
+                  <p className="text-why-gray-200 mt-8">Felipe Costa</p>
                </div>
-               <p className="text-why-gray-50 mt-8 flex-1">
-                  Como uma família de viajantes, o Rio Travel Club nos ofereceu
-                  uma maneira incrivelmente econômica e fácil de explorar o Rio.
-                  Cada experiência foi única e a equipe nos ajudou a navegar por
-                  cada reserva com facilidade e confiança!
-               </p>
-               <p className="text-why-gray-200 mt-8">Carlos e Família</p>
-            </div>
-         </SwiperSlide>
-         <SwiperSlide className="bg-[#03877a] p-7 shadow-md rounded-md">
-            <div className="flex flex-col justify-stretch h-full">
-               <div className="flex">
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
+            </SwiperSlide>
+            <SwiperSlide className="bg-[#03877a] p-7 shadow-md rounded-md">
+               <div className="flex flex-col justify-stretch h-full">
+                  <div className="flex">
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                  </div>
+                  <p className="text-why-gray-50 mt-8 flex-1">
+                     O Rio Travel Club deixou minha viagem ao Rio muito mais
+                     emocionante e acessível. Sem os descontos não conseguiria
+                     fazer um terço dos passeios que fiz. Valeu muito a pena!
+                  </p>
+                  <p className="text-why-gray-200 mt-8">Fernanda Oliveira</p>
                </div>
-               <p className="text-why-gray-50 mt-8 flex-1">
-                  O Rio Travel Club é meu novo parceiro de viagem favorito! A
-                  economia genuína, a facilidade de reservar experiências e o
-                  suporte amigável da equipe tornaram minha viagem ao Rio uma
-                  aventura verdadeiramente inesquecível e despreocupada!
-               </p>
-               <p className="text-why-gray-200 mt-8">Patricia S.</p>
-            </div>
-         </SwiperSlide>
-         <SwiperSlide className="bg-[#008a9f] p-7 shadow-md rounded-md">
-            <div className="flex flex-col justify-stretch h-full">
-               <div className="flex">
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
-                  <Image
-                     src={'/img/Star.svg'}
-                     width={25}
-                     height={35}
-                     alt="Estrela de avaliação dos usuários"
-                  />
+            </SwiperSlide>
+            <SwiperSlide className="bg-[#008a9f] p-7 shadow-md rounded-md">
+               <div className="flex flex-col justify-stretch h-full">
+                  <div className="flex">
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                  </div>
+                  <p className="text-why-gray-50 mt-8 flex-1">
+                     Como uma família de viajantes, o Rio Travel Club nos
+                     ofereceu uma maneira incrivelmente econômica e fácil de
+                     explorar o Rio. Cada experiência foi única e a equipe nos
+                     ajudou a navegar por cada reserva com facilidade e
+                     confiança!
+                  </p>
+                  <p className="text-why-gray-200 mt-8">Carlos e Família</p>
                </div>
-               <p className="text-why-gray-50 mt-8 flex-1">
-                  Explorar o Rio com o Rio Travel Club foi uma experiência sem
-                  igual. A facilidade de uso, os descontos e a equipe de suporte
-                  dedicada tornaram cada momento da viagem suave e emocionante.
-                  Uma maneira revolucionária de viajar pelo Brasil!"
-               </p>
-               <p className="text-why-gray-200 mt-8">André L.</p>
-            </div>
-         </SwiperSlide>
+            </SwiperSlide>
+            <SwiperSlide className="bg-[#03877a] p-7 shadow-md rounded-md">
+               <div className="flex flex-col justify-stretch h-full">
+                  <div className="flex">
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                  </div>
+                  <p className="text-why-gray-50 mt-8 flex-1">
+                     A facilidade de reservar os passeios e o suporte amigável
+                     da equipe tornaram minha viagem ao Rio uma aventura
+                     inesquecível!
+                  </p>
+                  <p className="text-why-gray-200 mt-8">Patricia S.</p>
+               </div>
+            </SwiperSlide>
+            <SwiperSlide className="bg-[#008a9f] p-7 shadow-md rounded-md">
+               <div className="flex flex-col justify-stretch h-full">
+                  <div className="flex">
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                     <Image
+                        src={'/img/Star.svg'}
+                        width={25}
+                        height={35}
+                        alt="Estrela de avaliação dos usuários"
+                     />
+                  </div>
+                  <p className="text-why-gray-50 mt-8 flex-1">
+                     Explorar o Rio com o Rio Travel Club foi uma experiência
+                     sem igual. A facilidade de uso, os descontos e a equipe de
+                     suporte dedicada tornaram cada momento da viagem suave e
+                     emocionante!
+                  </p>
+                  <p className="text-why-gray-200 mt-8">André L.</p>
+               </div>
+            </SwiperSlide>
+         </div>
       </Swiper>
    );
 }

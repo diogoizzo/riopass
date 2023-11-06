@@ -38,9 +38,6 @@ function Reservar() {
       0
    );
 
-   console.log(quantity);
-
-   console.log(purchases);
    async function handleSubmit() {}
    return (
       <>
@@ -50,15 +47,15 @@ function Reservar() {
             subtitle="Granta sua vaga em uma de nossas atrações com apenas alguns cliques."
             img={'/img/rio.webp'}
          />
-         <main className="bg-why-gray-50 min-h-[100vh] text-why-gray-800 py-24">
+         <main className="bg-why-gray-50 min-h-[100vh] text-why-gray-800 py-10 lg:py-24">
             <div className="container px-4 mx-auto">
                <form id="reserva" ref={formRef} onSubmit={handleSubmit}>
                   <div className="flex flex-wrap -m-3 mb-3">
-                     <div className="w-full md:w-1/4 p-3">
-                        <h2 className="text-coolGray-900 text-xl font-semibold">
+                     <div className="w-full md:w-1/4 p-3 text-center md:text-left">
+                        <h2 className="text-why-gray-900 text-xl font-semibold">
                            Informações Pessoais
                         </h2>
-                        <p className="text-sm text-coolGray-500 font-medium">
+                        <p className="text-sm text-why-gray-800 mt-1 font-medium">
                            Confira e edite suas informações pessoais.
                         </p>
                      </div>
@@ -120,11 +117,11 @@ function Reservar() {
                      </div>
                   </div>
                   <div className="flex flex-wrap -m-3 mb-3">
-                     <div className="w-full md:w-1/4 p-3">
-                        <h2 className="text-coolGray-900 text-xl font-semibold">
+                     <div className="w-full md:w-1/4 p-3 text-center md:text-left">
+                        <h2 className="text-why-gray-900 text-xl font-semibold">
                            Informações da Reserva
                         </h2>
-                        <p className="text-sm text-coolGray-500 font-medium">
+                        <p className="text-sm text-why-gray-800 mt-1 font-medium">
                            Verifique e complete as informações da reserva.
                         </p>
                      </div>
@@ -217,15 +214,15 @@ function Reservar() {
                      </div>
                   </div>
                   <div className="flex flex-wrap -m-3 mb-3">
-                     <div className="w-full md:w-1/4 p-3">
-                        <h2 className="text-coolGray-900 text-xl font-semibold">
+                     <div className="w-full md:w-1/4 p-3 text-center md:text-left">
+                        <h2 className="text-why-gray-900 text-xl font-semibold">
                            Informações de Hospedagem
                         </h2>
-                        <p className="text-sm text-coolGray-500 font-medium">
+                        <p className="text-sm text-why-gray-800 mt-1 font-medium">
                            Insira as informações do local onde você estará
                            hospedado.
                         </p>
-                        <p className="text-sm text-coolGray-500 font-medium">
+                        <p className="text-sm text-why-gray-800  font-medium">
                            Essas informações serão utilizadas para tours que
                            incluem o serviço de busca diretamente no seu local
                            de estadia.
@@ -293,7 +290,7 @@ function Reservar() {
                               <div className="p-3 mt-2 w-full text-right">
                                  <button
                                     type="submit"
-                                    className="block ml-auto min-w-[160px] px-14 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg text-xl transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
+                                    className="block ml-auto w-full md:w-fit min-w-[160px] px-14 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg text-xl transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
                                  >
                                     Reservar
                                  </button>

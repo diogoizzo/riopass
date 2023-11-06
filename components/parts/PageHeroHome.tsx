@@ -15,7 +15,10 @@ function PageHero({
          style={{ backgroundImage: `url("${img}")` }}
       >
          <div className="w-full bg-white absolute tracking-wider font-medium bg-gradient-to-r from-why-yellow-400 via-why-green-500 to-why-blue-400 shadow-md shadow-black/30 text-why-gray-50 text-lg md:text-xl py-4 md:py-6 top-[5rem]">
-            <p>OFERTA DE BAIXA TEMPORADA DE R$150,00 POR R$99,00</p>
+            <p>
+               <span className="block md:inline">PROMOÇÃO DE LANÇAMENTO</span>{' '}
+               DE R$199,00 POR R$99,00
+            </p>
          </div>
          <div className="relative">
             <h1 className="text-5xl md:text-8xl px-3 md:px-0 tracking-wider text-white font-bold text-shadow-blue ">

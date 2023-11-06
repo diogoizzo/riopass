@@ -41,7 +41,7 @@ function Login() {
          redirect: false
       });
       if (res?.ok === true) {
-         router.push('/atracoes');
+         router.push('/perfil');
       } else {
          setLoading(false);
          router.push(
@@ -96,14 +96,14 @@ function Login() {
          </AlertDialog>
          <MenuFront />
          <main>
-            <section className="relative bg-[url('/img/rio2.webp')] min-h-[100vh] bg-cover pt-12  pb-20 md:pb-32 overflow-hidden">
+            <section className="relative bg-[url('/img/rio2.webp')] min-h-[100vh] bg-cover pt-20 md:pt-12  pb-20 md:pb-32 overflow-hidden">
                <div className="relative  pt-12 sm:pt-28 mx-auto">
                   <div className="relative container px-4 mx-auto">
-                     <div className="max-w-lg md:max-w-xl py-14 px-6 xs:px-12 lg:px-16 mx-auto bg-why-gray-50 rounded-xl shadow-lg shadow-black/60">
-                        <h3 className="font-heading text-4xl text-why-gray-900 font-semibold mb-4">
+                     <div className="max-w-lg md:max-w-xl py-10 md:py-14 px-6 xs:px-12 lg:px-16 mx-auto bg-why-gray-50 rounded-xl shadow-lg shadow-black/60">
+                        <h3 className="font-heading text-3xl text-center md:text-left md:text-4xl text-why-gray-900 font-semibold mb-4">
                            Faça login em sua conta
                         </h3>
-                        <p className="text-lg text-why-gray-800 mb-10">
+                        <p className=" text-base text-center md:text-left md:text-lg text-why-gray-800 mb-10">
                            Entre com as suas informações pessoais para acessar a
                            área de membros.
                         </p>

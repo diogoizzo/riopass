@@ -111,16 +111,16 @@ function index() {
             subtitle="A economia que você merece está a alguns cliques."
             img={'/img/rio.webp'}
          />
-         <main className="bg-why-gray-50 min-h-[100vh] text-why-gray-800 py-24">
+         <main className="bg-why-gray-50 min-h-[100vh] text-why-gray-800 py-10 lg:py-24">
             <div className="container px-4 mx-auto">
                <form id="checkout" ref={formRef} onSubmit={handleSubmit}>
                   <div className="flex flex-wrap -m-3 mb-3">
                      <div className="w-full md:w-1/4 p-3">
-                        <h2 className="text-coolGray-900 text-xl font-semibold">
+                        <h2 className="text-coolGray-900 text-center md:text-left  text-xl font-semibold">
                            Informações Pessoais
                         </h2>
-                        <p className="text-sm text-coolGray-500 font-medium">
-                           Preencha o formulário ao lado para criar seu usuário.
+                        <p className="text-sm text-center text-coolGray-500 md:text-left  font-medium">
+                           Preencha o formulário para criar seu usuário.
                         </p>
                      </div>
                      <div className="w-full md:w-3/4 p-3">
@@ -251,7 +251,7 @@ function index() {
                      </div>
                   </div>
                   <div className="flex flex-wrap -m-3">
-                     <div className="w-full md:w-1/4 p-3">
+                     <div className="w-full md:w-1/4 p-3 text-center md:text-left">
                         <h2 className="text-coolGray-900 text-xl font-semibold">
                            Informações da Compra
                         </h2>
@@ -293,11 +293,11 @@ function index() {
                                  </div>
                               </div>
                               <div className="w-full md:w-1/2 p-3">
-                                 <p className="mb-1.5 text-right font-bold drop-shadow-sm text-5xl tracking-wide underline underline-offset-8 text-coolGray-800">
+                                 <p className="mb-1.5 text-right font-bold drop-shadow-sm text-4xl md:text-5xl tracking-wide underline underline-offset-8 text-coolGray-800">
                                     Valor Total
                                  </p>
-                                 <div className="w-full text-right text-4xl font-semibold text-why-gray-800 mt-6">{`R$ ${price},00`}</div>
-                                 <div className="relative h-[104px] mt-6">
+                                 <div className="w-full text-right text-3xl md:text-4xl font-semibold text-why-gray-800 mt-6">{`R$ ${price},00`}</div>
+                                 <div className="relative h-[62px] md:h-[104px] mt-6">
                                     <Image
                                        className="drop-shadow-sm"
                                        src={'/img/compra-segura.png'}
@@ -309,7 +309,7 @@ function index() {
                            </div>
                            <button
                               type="submit"
-                              className="block ml-auto min-w-[160px] px-14 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg text-xl transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
+                              className="block ml-auto w-full md:w-fit md:min-w-[160px] px-14 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg text-xl transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
                            >
                               {loading ? (
                                  <ReactLoading

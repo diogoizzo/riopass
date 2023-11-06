@@ -44,3 +44,78 @@ tag da tabela status vermelho:
       );
 
       postgresql://dizzo:aw210787@localhost:5432/riopass?schema=public
+
+
+       <h2 className="text-3xl py-8 font-medium text-why-green-700">
+                        Links Úteis
+                     </h2>
+                     <div className=" bg-why-gray-50 rounded-md shadow-md p-8 flex">
+                        <div className="w-3/4">
+                           <h3 className="text-2xl font-medium text-why-green-700">
+                              Perguntas Frequentes
+                           </h3>
+                           <p className="mt-3 text-gray-500">
+                              Sua dúvida pode ser a mesma que a de muitos, por
+                              isso preparamos uma seção para responder as
+                              dúvidas mais comuns. Caso tenha alguma dúvida,
+                              antes de entrar em contato com o nosso suporte
+                              dedicado, confira nossa seção de perguntas
+                              frequentes.
+                           </p>
+                        </div>
+                        <div className="w-1/4 flex justify-center items-center">
+                           <Link
+                              href={'/atracoes'}
+                              className="inline-flex  items-center hover:bg-why-green-400/20 transition-all font-semibold ease-in-out duration-200 border-2 border-why-green-700 justify-center px-6 py-2 rounded-md shadow-sm text-why-green-700 bg-why-gray-50"
+                           >
+                              Saber Mais
+                           </Link>
+                        </div>
+                     </div>
+                     <div className=" bg-why-gray-50 rounded-md shadow-md p-8 flex mt-5">
+                        <div className="w-3/4">
+                           <h3 className="text-2xl font-medium text-why-green-700">
+                              Suporte Dedicado
+                           </h3>
+                           <p className="mt-3 text-gray-500">
+                              Contamos com um suporte dedicado e exclusivo para
+                              membros do club. Se você não encontrar a resposta
+                              para sua dúvida na seção de perguntas frequentes,
+                              estamos à disposição para atendê-lo, clique no
+                              botão ao lado para iniciar uma conversa pelo
+                              whatsapp com o nosso suporte.
+                           </p>
+                        </div>
+                        <div className="w-1/4 flex justify-center items-center">
+                           <Link
+                              href={'/atracoes'}
+                              className="inline-flex  items-center hover:bg-why-green-400/20 transition-all font-semibold ease-in-out duration-200 border-2 border-why-green-700 justify-center px-6 py-2 rounded-md shadow-sm text-why-green-700 bg-why-gray-50"
+                           >
+                              Whatsapp
+                           </Link>
+                        </div>
+                     </div>
+
+                     <div className=" bg-why-gray-50 rounded-md shadow-md p-8 flex mt-5 flex-col md:flex-row ">
+                     <div className="md:mr-6">
+                        <h3 className="text-2xl font-medium text-why-green-700">
+                           Suporte Dedicado
+                        </h3>
+                        <p className="mt-3 text-gray-500">
+                           Contamos com um suporte dedicado e exclusivo para
+                           membros do club. Se você não encontrar a resposta
+                           para sua dúvida na seção de perguntas frequentes,
+                           estamos à disposição para atendê-lo, clique no botão
+                           ao lado para iniciar uma conversa pelo whatsapp com o
+                           nosso suporte.
+                        </p>
+                     </div>
+                     <div className=" flex w-full justify-center items-center">
+                        <Link
+                           href={'/atracoes'}
+                           className="inline-flex w-full md:w-fit items-center hover:bg-why-green-400/20 transition-all font-semibold ease-in-out duration-200 border-2 border-why-green-700 justify-center px-6 py-2 rounded-md shadow-sm text-why-green-700 bg-why-gray-50"
+                        >
+                           Whatsapp
+                        </Link>
+                     </div>
+                  </div>

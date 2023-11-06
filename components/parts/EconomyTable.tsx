@@ -46,7 +46,7 @@ function EconomyTable() {
                         />
                      </g>
                   </svg>
-                  Vira a tela para melhor visualização da tabela abaixo.
+                  Vire a tela para melhor visualização da tabela abaixo.
                </p>
                <div className="w-full mt-3 md:mt-6 pb-6 overflow-x-auto">
                   <div className="h-5 bg-why-blue-900 w-[687px]  md:w-full "></div>
@@ -78,21 +78,21 @@ function EconomyTable() {
                            <td className="p-0 ">
                               <div className="flex items-center h-14 px-6">
                                  <span className="text-base text-why-gray-900 font-bold">
-                                    Dia 1: City Tour
+                                    Dia 1: City Tour Giro Carioca: 1 Dia no Rio
                                  </span>
                               </div>
                            </td>
                            <td className="p-0">
                               <div className="flex items-center h-14 px-6 border-x border-why-yellow-400 justify-center ">
                                  <span className="text-base text-why-gray-900 font-medium">
-                                    R$ 500,00
+                                    R$ 390,00
                                  </span>
                               </div>
                            </td>
                            <td className="p-0">
                               <div className="flex items-center h-14 px-6 justify-center ">
                                  <span className="text-base text-why-gray-900 font-medium">
-                                    R$ 400,00
+                                    R$ 295,00
                                  </span>
                               </div>
                            </td>
@@ -112,21 +112,22 @@ function EconomyTable() {
                            <td className="p-0">
                               <div className="flex items-center h-14 px-6">
                                  <span className="text-base text-why-gray-900 font-bold">
-                                    Dia 2: Aluguel de Stand Up Paddle
+                                    Dia 2: Passeio para Angra dos Reis e Ilha
+                                    Grande
                                  </span>
                               </div>
                            </td>
                            <td className="p-0">
                               <div className="flex items-center h-14 px-6 border-x border-why-yellow-400 justify-center ">
                                  <span className="inline-block py-1 text-base  text-why-gray-900 font-medium">
-                                    R$ 120,00
+                                    R$ 265,00
                                  </span>
                               </div>
                            </td>
                            <td className="p-0">
                               <div className="flex items-center h-14 px-6 justify-center ">
                                  <span className="text-base text-why-gray-900 font-medium">
-                                    R$ 80,00
+                                    R$ 140,00
                                  </span>
                               </div>
                            </td>
@@ -153,14 +154,14 @@ function EconomyTable() {
                            <td className="p-0">
                               <div className="flex items-center h-14 px-6 border-x border-why-yellow-400 justify-center ">
                                  <span className="text-base text-why-gray-900 font-medium ">
-                                    R$ 600
+                                    R$ 700,00
                                  </span>
                               </div>
                            </td>
                            <td className="p-0">
                               <div className="flex items-center h-14 px-6 justify-center  ">
                                  <span className="text-base text-why-gray-900 font-medium">
-                                    R$ 450,00
+                                    R$ 590,00
                                  </span>
                               </div>
                            </td>
@@ -187,14 +188,14 @@ function EconomyTable() {
                            <td className="p-0">
                               <div className="flex items-center justify-center h-14 px-6 border-x border-why-yellow-400">
                                  <span className="text-base text-why-gray-900 font-medium ">
-                                    R$ 1220,00
+                                    R$ 1.335,00
                                  </span>
                               </div>
                            </td>
                            <td className="p-0">
                               <div className="flex items-center h-14 px-6 justify-center  ">
                                  <span className="text-base text-why-gray-900 font-medium">
-                                    R$ 930,00
+                                    R$ 1.025,00
                                  </span>
                               </div>
                            </td>
@@ -221,7 +222,7 @@ function EconomyTable() {
                            <td colSpan={2} className="p-0 text-center">
                               <div className="flex w-full items-center justify-center h-14 px-6 ce">
                                  <span className="text-xl text-why-gray-900 font-bold ">
-                                    R$ 290,00
+                                    R$ 330,00
                                  </span>
                               </div>
                            </td>

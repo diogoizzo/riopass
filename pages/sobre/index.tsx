@@ -12,7 +12,7 @@ export default function Homepage<NextPage>() {
          <Head>
             <title>Sobre</title>
          </Head>
-         <MenuFront shadow={false} />
+         <MenuFront />
          <main>
             <PageHero
                title="Sobre Nós"

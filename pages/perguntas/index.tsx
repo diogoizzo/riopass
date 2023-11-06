@@ -165,7 +165,7 @@ function Faq() {
                      </summary>
 
                      <p className=" mt-4 leading-relaxed text-justify text-why-gray-800 text-lg">
-                        O valor original do Rio Travel club é de R$ 200,00 por
+                        O valor original do Rio Travel club é de R$ 199,00 por
                         pessoa. Em algumas épocas temos promoções de desconto.
                      </p>
                   </details>
@@ -280,12 +280,12 @@ function Faq() {
 
                      <p className=" mt-4 leading-relaxed text-justify text-why-gray-800 text-lg">
                         Após entrar para Rio Travel Club, você terá acesso a uma
-                        área de membros com todas as suas informações e nossos
-                        contatos para reservas. <br /> Basta mandar uma mensagem
-                        para nosso suporte com o passeio que você quer reserva e
-                        as datas que iremos fazer a sua reserva com nosso
-                        parceiro. Assim garantimos que você irá pagar o menor
-                        valor possível por aquela experiência.
+                        área de membros com todas as suas informações e o acesso
+                        ao botão de reservar as atrações desejadas. <br /> Basta
+                        clicar no botão e preencher o formulário de reserva que
+                        nossa equipe irá fazer a sua reserva com nosso parceiro.
+                        Assim garantimos que você irá pagar o menor valor
+                        possível por aquela experiência.
                      </p>
                   </details>
                   <details className="group font-roboto text-lg rounded-lg cursor-pointer border border-white bg-why-gray-50 shadow-md  p-6 mb-3">
@@ -373,8 +373,8 @@ function Faq() {
 
                      <p className=" mt-4 leading-relaxed text-justify text-why-gray-800 text-lg">
                         Sim. Se todos querem economizar em sua viagem, é
-                        necessária cada pessoa virar membro do Rio Travel Club
-                        para ter acesso aos descontos.
+                        necessária comprar um passe do Rio Travel Club para cada
+                        pessoa.
                      </p>
                   </details>
                   <details className="group font-roboto text-lg rounded-lg cursor-pointer border border-white bg-why-gray-50 shadow-md  p-6 mb-3">
@@ -461,9 +461,10 @@ function Faq() {
                      </summary>
 
                      <p className=" mt-4 leading-relaxed text-justify text-why-gray-800 text-lg">
-                        Claro. Após a sua compra, você será redirecionado para o
-                        cadastro em nossa área de membro, basta realizar o
-                        cadastro com os dados da pessoa presenteada.
+                        Claro. Após a sua compra, você será redirecionado para a
+                        nossa área de membros, basta entrar em contato com o
+                        nosso suporte para alterar o cadastro para o nome da
+                        pessoa presenteada.
                      </p>
                   </details>
                </div>

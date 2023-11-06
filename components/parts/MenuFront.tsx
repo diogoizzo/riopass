@@ -87,7 +87,7 @@ function MenuFront() {
                            como funciona
                         </li>
                      </Link>
-                     <Link href={'perguntas'}>
+                     <Link href={'/perguntas'}>
                         <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
                            FAQ
                         </li>
