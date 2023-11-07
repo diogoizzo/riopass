@@ -2,7 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/termos": "pages/termos.js",
-  "/privacidade": "pages/privacidade.js",
-  "/garantia": "pages/garantia.js"
+  "/home": "pages/home.js",
+  "/atracoes": "pages/atracoes.js",
+  "/api/front/tours": "pages/api/front/tours.js",
+  "/[lang]/[url]": "pages/[lang]/[url].js"
 }

@@ -300,18 +300,21 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                               COMO REALIZAR O PAGAMENTO DO PASSEIO?
                            </h3>
                            <p className="text-why-gray-800 mb-2">
-                              Ao entrar para o Rio Travel Club você será
-                              redirecionado para nossa área de membros onde você
-                              poderá realizar a reserva do seu passeio escolhido
-                              diretamente com o nosso suporte dedicado. Todos os
-                              pedidos de reserva passam pela nossa equipe, como
-                              forma de garantir o seu desconto final junto ao
-                              nosso parceiro.
+                              Todos os pagamentos dos passeios são realizados
+                              diretamente para nosso parceiro. Por isso os
+                              valores dos passeios com descontos anunciados em
+                              nosso site, são para pagamentos à vista, no
+                              dinheiro ou no PIX. Para pagamentos no cartão
+                              nossos parceiros poderão cobrar uma taxa de 5% a
+                              10% do valor com desconto.
                            </p>
                            <p className="text-why-gray-800 mb-6">
-                              Alguns parceiro e passeios podem exigir o
-                              pagamento de um sinal para realizar a reserva.
+                              <strong>
+                                 Alguns parceiro e passeios podem exigir o
+                                 pagamento de um sinal para realizar a reserva.
+                              </strong>
                            </p>
+
                            <h3 className="text-why-gray-900 mb-3 text-xl font-semibold">
                               PREÇOS PARA CRIANÇAS
                            </h3>

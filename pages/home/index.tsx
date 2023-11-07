@@ -59,9 +59,8 @@ export default function Homepage<NextPage>() {
                   maravilhas do Rio estão ao seu alcance.
                </p>
                <p className="md:pr-12 mt-2 text-why-gray-900 leading-7">
-                  <strong>Não espere mais!</strong> Junte-se ao Rio Travel Club
-                  e viva o Rio intensamente, economize e crie memórias
-                  inesquecíveis conosco!
+                  <strong>Não espere mais!</strong> Junte-se ao Rio Travel Club,
+                  comece a economizar e viva sua viagem ao Rio intensamente.
                </p>
             </HowItWork>
             <div className="bg-why-gray-50  text-why-blue-900 leading-tight font-medium text-center pt-3">

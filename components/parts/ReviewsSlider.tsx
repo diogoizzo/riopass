@@ -158,8 +158,8 @@ export default function ReviewsSlider() {
                   <p className="text-why-gray-50 mt-8 flex-1">
                      Para nós, o Rio Travel Club foi uma verdadeira ajuda em
                      nossa viagem ao Rio de Janeiro. A facilidade de uso e os
-                     descontos tornaram a nossa viagem ao Rio não muito melhor
-                     do que poderíamos imaginar!
+                     descontos tornaram a nossa viagem ao Rio muito melhor do
+                     que poderíamos imaginar!
                   </p>
                   <p className="text-why-gray-200 mt-8">Mariana e João</p>
                </div>

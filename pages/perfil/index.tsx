@@ -132,12 +132,12 @@ function Profile() {
                         </p>
                      </div>
                      <div className=" flex w-full mt-6 md:mt-0 justify-center items-center">
-                        <Link
-                           href={'/atracoes'}
+                        <a
+                           href={'https://wa.me/5521988341494'}
                            className="inline-flex w-full md:w-fit  items-center hover:bg-why-green-400/20 transition-all font-semibold ease-in-out duration-200 border-2 border-why-green-700 justify-center px-6 py-2 rounded-md shadow-sm text-why-green-700 bg-why-gray-50"
                         >
                            Whatsapp
-                        </Link>
+                        </a>
                      </div>
                   </div>
                </div>

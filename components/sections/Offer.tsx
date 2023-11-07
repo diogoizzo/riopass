@@ -21,6 +21,9 @@ function Offer() {
                   <span className="block text-7xl font-bold mt-1 text-shadow-lighter text-why-gray-50">
                      R$99,00
                   </span>
+                  <span className="mt-2  inline-block text-lg">
+                     Uma única parcela.
+                  </span>
                </p>
                <p className="text-lg text-why-gray-200">
                   <span className="block text-2xl md:text-3xl mb-2">

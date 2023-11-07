@@ -3,6 +3,7 @@ import MenuFront from '../../components/parts/MenuFront';
 import Footer from '../../components/sections/Footer';
 import PageHeader from '../../components/parts/PageHeader';
 import PageHero from '../../components/parts/PageHero';
+import Link from 'next/link';
 
 function TermosDeUso() {
    return (
@@ -127,14 +128,28 @@ function TermosDeUso() {
                </h3>
                <p className="text-why-gray-800">
                   Ao concordar com este termos de uso, você também está
-                  concordando expressamente com a nossa política de privacidade.
+                  concordando expressamente com a nossa{' '}
+                  <Link
+                     href={'/garantia'}
+                     className="underline underline-offset-2"
+                  >
+                     política de privacidade
+                  </Link>
+                  .
                </p>
                <h3 className="text-3xl font-medium text-why-gray-900 mb-3 mt-6">
                   Política de Garantia
                </h3>
                <p className="text-why-gray-800">
                   Ao concordar com este termos de uso, você também está
-                  concordando expressamente com a nossa política de garantia.
+                  concordando expressamente com a nossa{' '}
+                  <Link
+                     href={'/garantia'}
+                     className="underline underline-offset-2"
+                  >
+                     política de garantia
+                  </Link>
+                  .
                </p>
                <h3 className="text-3xl font-medium text-why-gray-900 mb-3 mt-6">
                   Modificações
