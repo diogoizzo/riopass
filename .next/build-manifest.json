@@ -27,11 +27,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/garantia.js"
     ],
-    "/privacidade": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/privacidade.js"
-    ],
     "/termos": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

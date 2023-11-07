@@ -17,7 +17,7 @@ function Footer() {
                </div>
                <div className="flex flex-col justify-start pb-10  md:py-12  items-center">
                   <div className="text-center lg:text-left">
-                     <h3 className="uppercase font-medium text-why-gray-50 text-xl text-left ">
+                     <h3 className="uppercase font-medium text-why-gray-50 text-xl text-center lg:text-left ">
                         Categorias
                      </h3>
                      <Link
@@ -147,14 +147,14 @@ function Footer() {
                </div>
             </div>
          </div>
-         <div className="bg-why-green-500 py-3 text-why-gray-200">
+         <div className="bg-why-green-500 py-5 lg:py-3 text-why-gray-200">
             <div className="container px-4 mx-auto">
-               <div className="flex justify-between">
+               <div className="flex justify-between flex-col lg:flex-row text-center">
                   <p>
                      Brasil Travel Club, um produto oferecido por Why Not
                      Creative Tours. CNPJ 24.538.473/0001-05
                   </p>
-                  <div className="space-x-4 flex items-center">
+                  <div className="space-y-1 lg:space-y-0 lg:space-x-4 flex flex-col lg:flex-row items-center mt-3 lg:mt-0">
                      <Link href={'termos'}>Termos de uso</Link>
                      <div className="w-[1px] bg-why-green-400 inline-block h-[70%]"></div>
                      <Link href={'privacidade'}>Política de Privacidade</Link>
