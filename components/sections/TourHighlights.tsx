@@ -14,10 +14,10 @@ function TourHighlights() {
             </h2>
             <div className="flex w-full flex-wrap relative ">
                <div className="flex flex-col group w-1/2 pb-[1px] pr-[1px] md:pb-3 md:pr-3">
-                  <h3 className="text-xl text-why-blue-900 leading-5 font-medium">
-                     Giro Carioca - Um dia no Rio
+                  <h3 className="text-base md:text-xl text-why-blue-900 leading-5 font-medium">
+                     Giro Carioca
                   </h3>
-                  <p className="mt-0 text-gray-500 mb-3">
+                  <p className="mt-0 text-sm md:text-base text-gray-500 mb-3">
                      City Tour, Tour em grupo
                   </p>
                   <div className="h-64 md:h-96 w-full relative rounded-br-[70px] md:rounded-br-[250px] rounded-tl-lg border-t-[6px] border-why-blue-600 overflow-hidden">
@@ -36,10 +36,12 @@ function TourHighlights() {
                   </div>
                </div>
                <div className="flex group flex-col text-right w-1/2 pb-[1px] pl-[1px] md:pb-3  md:pl-3">
-                  <h3 className="text-xl text-why-blue-900 leading-5 font-medium">
+                  <h3 className="text-base md:text-xl text-why-blue-900 leading-5 font-medium">
                      Vôo de Asa Delta
                   </h3>
-                  <p className="mt-0 text-gray-500 mb-3">Vôo Livre</p>
+                  <p className="mt-0 text-gray-500 mb-3 text-sm md:text-base">
+                     Vôo Livre
+                  </p>
                   <div className="h-64 md:h-96 w-full relative rounded-bl-[70px] md:rounded-bl-[250px] rounded-tr-lg overflow-hidden border-t-[6px] border-why-blue-600">
                      <div className="absolute right-0 px-6 w-full md:w-fit md:px-6  top-0 py-2 md:py-3 rounded-bl-md text-why-gray-50 bg-why-blue-600 z-30 ">
                         <div className="flex items-start justify-center font-medium space-x-2">
@@ -70,11 +72,11 @@ function TourHighlights() {
                         </div>
                      </div>
                   </div>
-                  <h3 className="text-xl text-why-blue-900 leading-5 font-medium mt-3">
-                     Passeio para Angra dos Reis e Ilha Grande
+                  <h3 className="text-base md:text-xl text-why-blue-900 leading-5 font-medium mt-3">
+                     Angra e Ilha Grande
                   </h3>
-                  <p className="mt-0 text-gray-500">
-                     Tour em grupo, Praias, Passeio de Barco
+                  <p className="mt-0 text-gray-500 text-sm md:text-base">
+                     Praias, Passeio de Barco
                   </p>
                </div>
                <div className="flex group flex-col w-1/2 pt-[1px] pl-[1px]  md:pt-3  md:pl-3 text-right">
@@ -92,11 +94,11 @@ function TourHighlights() {
                         className="object-cover group-hover:scale-110 transition-all ease-in-out duration-500 "
                      />
                   </div>
-                  <h3 className="text-xl text-why-blue-900 leading-5 font-medium mt-3">
+                  <h3 className="text-base md:text-xl text-why-blue-900 leading-5 font-medium mt-3">
                      Pedra do Telégrafo
                   </h3>
-                  <p className="mt-0 text-gray-500">
-                     Tour em grupo, Trilha, Jeep Tour
+                  <p className="mt-0 text-gray-500 text-sm md:text-base">
+                     Trilha, Jeep Tour
                   </p>
                </div>
                <div className="absolute w-16 md:h-fit md:w-fit  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
