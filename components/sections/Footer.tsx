@@ -14,11 +14,6 @@ function Footer() {
                      className="w-32 mx-auto"
                      alt="Logo do travel club na vertical"
                   />
-                  <p className="text-center mt-6 text-why-gray-200  text-lg">
-                     Brasil Travel Club, um produto oferecido por Why Not
-                     Creative Tours. <br />
-                     CNPJ 24.538.473/0001-05
-                  </p>
                </div>
                <div className="flex flex-col justify-start pb-10  md:py-12  items-center">
                   <div className="text-center lg:text-left">
@@ -49,14 +44,59 @@ function Footer() {
                            Trilha
                         </p>
                      </Link>
-
-                     <p className=" text-why-gray-200 mt-1 text-lg">
-                        Tour em Grupo
-                     </p>
+                     <Link
+                        href={{
+                           pathname: '/atracoes',
+                           query: {
+                              categoria: 'Passeio de Barco'
+                           }
+                        }}
+                     >
+                        <p className=" text-why-gray-200 mt-1 text-lg">
+                           Passeios de Barco
+                        </p>
+                     </Link>
+                     <Link
+                        href={{
+                           pathname: '/atracoes',
+                           query: {
+                              categoria: 'Praias'
+                           }
+                        }}
+                     >
+                        <p className=" text-why-gray-200 mt-1 text-lg">
+                           Praias
+                        </p>
+                     </Link>
+                     <Link
+                        href={{
+                           pathname: '/atracoes',
+                           query: {
+                              categoria: 'Jeep Tour'
+                           }
+                        }}
+                     >
+                        <p className=" text-why-gray-200 mt-1 text-lg">
+                           Jeep Tour
+                        </p>
+                     </Link>
+                     <Link
+                        href={{
+                           pathname: '/atracoes',
+                           query: {
+                              categoria: 'Vôo Livre'
+                           }
+                        }}
+                     >
+                        <p className=" text-why-gray-200 mt-1 text-lg">
+                           Vôo Livre
+                        </p>
+                     </Link>
                   </div>
                </div>
                <div className="flex flex-col justify-start pb-10 md:py-12  items-center">
                   <div className="text-center lg:text-left">
+                     {/* //todo tornar todos links para as respectivas páginas */}
                      <h3 className="uppercase font-medium text-why-gray-50 text-xl mb-3  ">
                         Links Úteis
                      </h3>
@@ -64,10 +104,10 @@ function Footer() {
                      <p className=" text-why-gray-200 mt-1 text-lg">
                         Como Funciona
                      </p>
-
                      <p className=" text-why-gray-200 mt-1 text-lg">Atrações</p>
                      <p className=" text-why-gray-200 mt-1 text-lg">FAQ</p>
                      <p className=" text-why-gray-200 mt-1 text-lg">Contato</p>
+                     <p className=" text-why-gray-200 mt-1 text-lg">Garantia</p>
                   </div>
                </div>
                <div className="flex flex-col justify-start md:py-12  items-center">
@@ -103,6 +143,23 @@ function Footer() {
                            alt="Ícone do twitter"
                         />
                      </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div className="bg-why-green-500 py-3 text-why-gray-200">
+            <div className="container px-4 mx-auto">
+               <div className="flex justify-between">
+                  <p>
+                     Brasil Travel Club, um produto oferecido por Why Not
+                     Creative Tours. CNPJ 24.538.473/0001-05
+                  </p>
+                  <div className="space-x-4 flex items-center">
+                     <Link href={'termos'}>Termos de uso</Link>
+                     <div className="w-[1px] bg-why-green-400 inline-block h-[70%]"></div>
+                     <Link href={'privacidade'}>Política de Privacidade</Link>
+                     <div className="w-[1px] bg-why-green-400 inline-block h-[70%]"></div>
+                     <Link href={'garantia'}>Política de Garantia</Link>
                   </div>
                </div>
             </div>

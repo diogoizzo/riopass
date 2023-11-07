@@ -103,6 +103,11 @@ function MenuFront() {
                            Contato
                         </li>
                      </Link>
+                     <Link href={'/garantia'}>
+                        <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
+                           Garantia
+                        </li>
+                     </Link>
                      {!authenticated ? (
                         <>
                            <Link href={'/login'}>
