@@ -11,7 +11,7 @@ function Footer() {
                      src={'/img/logo-simbol.png'}
                      width={480}
                      height={411}
-                     className="w-32 mx-auto"
+                     className="w-36 lg:w-48 mx-auto"
                      alt="Logo do travel club na vertical"
                   />
                </div>

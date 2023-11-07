@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/garantia": "pages/garantia.js",
   "/termos": "pages/termos.js",
-  "/privacidade": "pages/privacidade.js"
+  "/privacidade": "pages/privacidade.js",
+  "/garantia": "pages/garantia.js"
 }
