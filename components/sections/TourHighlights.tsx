@@ -14,7 +14,7 @@ function TourHighlights() {
             </h2>
             <div className="flex w-full flex-wrap relative ">
                <div className="flex flex-col group w-1/2 pb-[1px] pr-[1px] md:pb-3 md:pr-3">
-                  <h3 className="text-base md:text-xl text-why-blue-900 leading-5 font-medium">
+                  <h3 className="text-base md:text-2xl text-why-blue-900 leading-5 font-medium">
                      Giro Carioca
                   </h3>
                   <p className="mt-0 text-sm md:text-base text-gray-500 mb-3">
@@ -36,7 +36,7 @@ function TourHighlights() {
                   </div>
                </div>
                <div className="flex group flex-col text-right w-1/2 pb-[1px] pl-[1px] md:pb-3  md:pl-3">
-                  <h3 className="text-base md:text-xl text-why-blue-900 leading-5 font-medium">
+                  <h3 className="text-base md:text-2xl text-why-blue-900 leading-5 font-medium">
                      Vôo de Asa Delta
                   </h3>
                   <p className="mt-0 text-gray-500 mb-3 text-sm md:text-base">
@@ -72,7 +72,7 @@ function TourHighlights() {
                         </div>
                      </div>
                   </div>
-                  <h3 className="text-base md:text-xl text-why-blue-900 leading-5 font-medium mt-3">
+                  <h3 className="text-base md:text-2xl text-why-blue-900 leading-5 font-medium mt-3">
                      Angra e Ilha Grande
                   </h3>
                   <p className="mt-0 text-gray-500 text-sm md:text-base">
@@ -94,7 +94,7 @@ function TourHighlights() {
                         className="object-cover group-hover:scale-110 transition-all ease-in-out duration-500 "
                      />
                   </div>
-                  <h3 className="text-base md:text-xl text-why-blue-900 leading-5 font-medium mt-3">
+                  <h3 className="text-base md:text-2xl text-why-blue-900 leading-5 font-medium mt-3">
                      Pedra do Telégrafo
                   </h3>
                   <p className="mt-0 text-gray-500 text-sm md:text-base">
