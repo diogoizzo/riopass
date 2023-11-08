@@ -51,7 +51,7 @@ function Profile() {
                            nosso contato, com a confirmação de sua reserva.
                         </p>
                         <Link
-                           href={'/atracoes'}
+                           href={'/rio/pt/atracoes'}
                            className="inline-flex mt-6 items-center hover:bg-why-green-200/50 transition-all ease-in-out duration-200 justify-center px-6 py-2 rounded-md shadow-sm text-white bg-why-green-400"
                         >
                            Ver Atrações
