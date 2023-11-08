@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import MenuFront from '../../components/parts/MenuFront';
-import Footer from '../../components/sections/Footer';
-import PageHeader from '../../components/parts/PageHeader';
-import PageHero from '../../components/parts/PageHero';
+import MenuFront from '../../../../components/parts/MenuFront';
+import Footer from '../../../../components/sections/Footer';
+import PageHeader from '../../../../components/parts/PageHeader';
+import PageHero from '../../../../components/parts/PageHero';
 import Link from 'next/link';
 
 function TermosDeUso() {

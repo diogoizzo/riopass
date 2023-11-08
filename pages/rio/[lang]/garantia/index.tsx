@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import MenuFront from '../../components/parts/MenuFront';
-import PageHero from '../../components/parts/PageHero';
+import MenuFront from '../../../../components/parts/MenuFront';
+import PageHero from '../../../../components/parts/PageHero';
 import Link from 'next/link';
-import Footer from '../../components/sections/Footer';
+import Footer from '../../../../components/sections/Footer';
 
 export default function index() {
    return (

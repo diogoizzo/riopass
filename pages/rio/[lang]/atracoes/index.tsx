@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
-import SectionTitle from '../../components/atoms/SectionTitle';
-import MenuFront from '../../components/parts/MenuFront';
-import PageHero from '../../components/parts/PageHero';
-import TourFilter from '../../components/parts/TourFilter';
-import ITour from '../../interfaces/ITour';
+import SectionTitle from '../../../../components/atoms/SectionTitle';
+import MenuFront from '../../../../components/parts/MenuFront';
+import PageHero from '../../../../components/parts/PageHero';
+import TourFilter from '../../../../components/parts/TourFilter';
+import ITour from '../../../../interfaces/ITour';
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import LoadingFront from '../../components/sections/LoadingFront';
-import TourGrid from '../../components/sections/TourGrid';
-import Footer from '../../components/sections/Footer';
+import LoadingFront from '../../../../components/sections/LoadingFront';
+import TourGrid from '../../../../components/sections/TourGrid';
+import Footer from '../../../../components/sections/Footer';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 

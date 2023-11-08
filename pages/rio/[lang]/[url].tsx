@@ -3,27 +3,29 @@ import {
    TabsContent,
    TabsList,
    TabsTrigger
-} from '../../components/ui/FrontTab';
-import DetailDisplayLine from '../../components/atoms/DetailDisplayLine';
-import TourTag from '../../components/atoms/TourTag';
-import PriceCard from '../../components/parts/PriceCard';
-import CallToAction from '../../components/parts/CallToAction';
-import Info from '../../components/parts/Info';
-import DetailCheckLine from '../../components/atoms/DetailChecklLine';
-import DetailMarkLine from '../../components/atoms/DetailMarkLine';
-import TourCard from '../../components/atoms/TourCard';
-import PhotoGrid from '../../components/parts/PhotoGrid';
-import ITour from '../../interfaces/ITour';
-import TourTitle from '../../components/atoms/TourTitle';
-import DetailLinkLine from '../../components/atoms/DetailLinkLine';
-import prisma from '../../lib/prisma';
-import Itinerary from '../../components/parts/Intinerary';
+} from '../../../components/ui/FrontTab';
+import DetailDisplayLine from '../../../components/atoms/DetailDisplayLine';
+import TourTag from '../../../components/atoms/TourTag';
+import PriceCard from '../../../components/parts/PriceCard';
+import CallToAction from '../../../components/parts/CallToAction';
+import Info from '../../../components/parts/Info';
+import DetailCheckLine from '../../../components/atoms/DetailChecklLine';
+import DetailMarkLine from '../../../components/atoms/DetailMarkLine';
+import TourCard from '../../../components/atoms/TourCard';
+import PhotoGrid from '../../../components/parts/PhotoGrid';
+import ITour from '../../../interfaces/ITour';
+import TourTitle from '../../../components/atoms/TourTitle';
+import DetailLinkLine from '../../../components/atoms/DetailLinkLine';
+import prisma from '../../../lib/prisma';
+import Itinerary from '../../../components/parts/Intinerary';
 import { useState } from 'react';
-import PhotoModal from '../../components/modals/PhotoModal';
-import IImage from '../../interfaces/IImage';
+import PhotoModal from '../../../components/modals/PhotoModal';
+import IImage from '../../../interfaces/IImage';
 import Head from 'next/head';
-import MenuFront from '../../components/parts/MenuFront';
-import Footer from '../../components/sections/Footer';
+import MenuFront from '../../../components/parts/MenuFront';
+import Footer from '../../../components/sections/Footer';
+import { useSession } from 'next-auth/react';
+import ReservationCTA from '../../../components/parts/ReservationCTA';
 
 export interface Related {
    id: string;
@@ -141,6 +143,9 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
       }
    }
 
+   const { status } = useSession();
+   const authenticated = status === 'authenticated' ? true : false;
+
    const finalRelatedTours = relatedUniqueTours
       .filter((item) => item.id !== tour.id)
       .slice(0, 4);
@@ -220,6 +225,12 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                               <div className="space-y-2 mb-10 text-base md:text-lg text-why-gray-900">
                                  {tour?.longDescription}
                               </div>
+                              <DetailDisplayLine
+                                 label="Observações"
+                                 content={
+                                    'Os valores anunciados são para pagamento a vista, em dinheiro ou pix. A disponibilidade e a taxa para pagamento com cartão de crédito, dependem do procedimento do parceiro responsável pela atração.'
+                                 }
+                              />
                               <DetailDisplayLine
                                  label="Línguas"
                                  content={tour?.languages}
@@ -343,7 +354,7 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                         price={tour?.price}
                         finalPrice={tour?.finalPrice}
                      />
-                     <CallToAction />
+                     {authenticated ? <ReservationCTA /> : <CallToAction />}
                   </div>
                   <div className=" w-full mt-6  pt-10 pb-24">
                      <h2 className=" text-4xl text-why-gray-900 mb-10 font-medium">

@@ -28,7 +28,7 @@ function MenuFront() {
          >
             <header className="container  overflow-visible mx-auto flex flex-col lg:flex-row justify-between items-center py-4  font-medium">
                <div className=" flex justify-between items-center w-full lg:w-auto ">
-                  <Link href={'/home'}>
+                  <Link href={'/rio/pt'}>
                      <Image
                         src={'/img/travelclub.svg'}
                         quality={100}
@@ -72,57 +72,57 @@ function MenuFront() {
                   } `}
                >
                   <ul className="flex lg:w-auto w-full flex-col  lg:flex-row lg:space-x-10 uppercase lg:items-center lg:justify-center  text-why-gray-900">
-                     <Link href={'/'}>
+                     <Link href={'/rio/pt'}>
                         <li className="border-b border-why-gray-200 lg:border-none   py-3 lg:py-0">
                            Home
                         </li>
                      </Link>
-                     <Link href={'/atracoes'}>
+                     <Link href={'/rio/pt/atracoes'}>
                         <li className="border-b border-why-gray-200 lg:border-none   py-3 lg:py-0">
                            atrações
                         </li>
                      </Link>
-                     <Link href={'/comofunciona'}>
+                     <Link href={'/rio/pt/comofunciona'}>
                         <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0 ">
                            como funciona
                         </li>
                      </Link>
-                     <Link href={'/perguntas'}>
+                     <Link href={'/rio/pt/perguntas'}>
                         <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
                            FAQ
                         </li>
                      </Link>
-                     <Link href={'/sobre'}>
+                     <Link href={'/rio/pt/sobre'}>
                         <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
                            Sobre
                         </li>
                      </Link>
 
-                     <Link href={'/contato'}>
+                     <Link href={'/rio/pt/contato'}>
                         <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
                            Contato
                         </li>
                      </Link>
-                     <Link href={'/garantia'}>
+                     <Link href={'/rio/pt/garantia'}>
                         <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
                            Garantia
                         </li>
                      </Link>
                      {!authenticated ? (
                         <>
-                           <Link href={'/login'}>
+                           <Link href={'/rio/pt/login'}>
                               <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
                                  Login
                               </li>
                            </Link>
-                           <Link href={'/checkout'}>
+                           <Link href={'/rio/pt/checkout'}>
                               <li className=" inline-flex lg:hidden mt-5 justify-center px-8 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 ">
                                  Comprar Agora
                               </li>
                            </Link>
                         </>
                      ) : (
-                        <Link href={'/perfil'}>
+                        <Link href={'/rio/pt/perfil'}>
                            <div className="bg-gradient-to-r lg:hidden w-fit mt-5 mx-auto  from-why-yellow-400 via-why-green-500 p-[2px] rounded-full  to-why-blue-400 shadow-sm">
                               <div className="rounded-full px-6 text-lg py-1 bg-why-gray-100  hover:bg-white cursor-pointer transition-all ease-in-out duration-200 ">
                                  <div className="flex space-x-3 items-center bg-gradient-to-r  from-why-yellow-400 via-why-green-500 to-why-blue-400 bg-clip-text">
@@ -159,7 +159,7 @@ function MenuFront() {
                </nav>
                {!authenticated ? (
                   <Link
-                     href={'/checkout'}
+                     href={'/rio/pt/checkout'}
                      className=" hidden lg:inline-flex items-center justify-center px-8 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
                   >
                      Comprar Agora
@@ -210,7 +210,7 @@ function MenuFront() {
                         <DropdownMenuItem>
                            <Link
                               className="block w-full text-why-gray-900"
-                              href={'/atracoes'}
+                              href={'/rio/pt/atracoes'}
                            >
                               Reservar
                            </Link>
@@ -218,7 +218,7 @@ function MenuFront() {
                         <DropdownMenuItem>
                            <Link
                               className="block w-full text-why-gray-900"
-                              href={'/perfil'}
+                              href={'/rio/pt/perfil'}
                            >
                               Perfil
                            </Link>
@@ -226,10 +226,9 @@ function MenuFront() {
                         <DropdownMenuSeparator className="bg-why-gray-200" />
                         <DropdownMenuItem>
                            <button
-                              //todo alterar para / depois
                               onClick={() =>
                                  signOut({
-                                    callbackUrl: '/home'
+                                    callbackUrl: '/rio/pt'
                                  })
                               }
                               className="block w-full text-left text-why-gray-900"

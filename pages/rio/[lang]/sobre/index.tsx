@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import MenuFront from '../../components/parts/MenuFront';
-import Footer from '../../components/sections/Footer';
-import PageHero from '../../components/parts/PageHero';
-import ReviewsSlider from '../../components/parts/ReviewsSlider';
-import About from '../../components/sections/About';
-import Doubts from '../../components/sections/Doubts';
+import MenuFront from '../../../../components/parts/MenuFront';
+import Footer from '../../../../components/sections/Footer';
+import PageHero from '../../../../components/parts/PageHero';
+import ReviewsSlider from '../../../../components/parts/ReviewsSlider';
+import About from '../../../../components/sections/About';
+import Doubts from '../../../../components/sections/Doubts';
 
 export default function Homepage<NextPage>() {
    return (

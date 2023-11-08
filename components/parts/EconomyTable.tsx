@@ -49,8 +49,8 @@ function EconomyTable() {
                   Vire a tela para melhor visualização da tabela abaixo.
                </p>
                <div className="w-full mt-3 md:mt-6 pb-6 overflow-x-auto">
-                  <div className="h-5 bg-why-blue-900 w-[687px]  md:w-full "></div>
-                  <div className="h-5 bg-why-yellow-600 w-[687px] md:w-full "></div>
+                  <div className="h-5 bg-why-blue-900 w-[794px]  md:w-full "></div>
+                  <div className="h-5 bg-why-yellow-600 w-[794px] md:w-full "></div>
                   <table className="w-full min-w-max">
                      <thead>
                         <tr className="text-left">

@@ -22,7 +22,7 @@ function Offer() {
                      R$99,00
                   </span>
                   <span className="mt-2  inline-block text-lg">
-                     Uma única parcela.
+                     Pagamento Único.
                   </span>
                </p>
                <p className="text-lg text-why-gray-200">
@@ -33,7 +33,7 @@ function Offer() {
                   Janeiro.
                </p>
                <Link
-                  href={'/checkout'}
+                  href={'/rio/pt/checkout'}
                   className="mt-12 inline-flex items-center justify-center px-12 font-semibold  rounded-md  shadow-md  hover:scale-105 hover:shadow-lg transition-all ease-in-out   text-why-gray-50 py-3 bg-why-yellow-500 "
                >
                   COMPRAR AGORA

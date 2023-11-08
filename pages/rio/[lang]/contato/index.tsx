@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import MenuFront from '../../components/parts/MenuFront';
-import PageHero from '../../components/parts/PageHero';
-import ContactForm from '../../components/sections/ContactForm';
-import Footer from '../../components/sections/Footer';
+import MenuFront from '../../../../components/parts/MenuFront';
+import PageHero from '../../../../components/parts/PageHero';
+import ContactForm from '../../../../components/sections/ContactForm';
+import Footer from '../../../../components/sections/Footer';
 
 function Contact() {
    return (

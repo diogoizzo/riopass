@@ -22,7 +22,7 @@ function Doubts() {
                   height={56}
                   alt="ilustração de balões de fala"
                />
-               <Link href={'/contato'}>Entrar em Contato</Link>
+               <Link href={'/rio/pt/contato'}>Entrar em Contato</Link>
             </button>
          </div>
       </section>

@@ -1,5 +1,16 @@
 import Head from 'next/head';
+import MenuFront from '../components/parts/MenuFront';
+import PageHeroHome from '../components/parts/PageHeroHome';
+import Highlights from '../components/sections/Highlights';
+import HowItWork from '../components/sections/HowItWork';
+import TourHighlights from '../components/sections/TourHighlights';
+import Footer from '../components/sections/Footer';
 import Image from 'next/image';
+import Offer from '../components/sections/Offer';
+import EconomyTable from '../components/parts/EconomyTable';
+import ReviewsSection from '../components/sections/ReviewsSection';
+import About from '../components/sections/About';
+import Doubts from '../components/sections/Doubts';
 
 export default function Homepage<NextPage>() {
    return (
@@ -7,113 +18,70 @@ export default function Homepage<NextPage>() {
          <Head>
             <title>Home</title>
          </Head>
-         <div className="bg-gray-200 font-sans leading-normal tracking-normal">
-            <section className="bg-white py-20">
-               <div className="container mx-auto px-4">
-                  <div className="max-w-2xl mx-auto text-center">
-                     <Image
-                        src={'/img/travelclub.svg'}
-                        width={1083}
-                        height={240}
-                        alt="Logo do travel club"
-                     />
-
-                     <h1 className="text-4xl mt-10 font-bold mb-6 text-why-gray-900">
-                        Uma nova forma de economizar em suas viagens no Rio de
-                        Janeiro.
-                     </h1>
-                     <p className="text-gray-600 mb-12">
-                        Cadastre seu email abaixo para ser o primeiro a saber
-                        quando lançarmos, para que você comece a economizar
-                        imediatamente.
-                     </p>
-                     <form id="newsletter" className="max-w-md mx-auto">
-                        <div className="flex items-center">
-                           <input
-                              type="email"
-                              className="bg-gray-100 mr-3 py-2 px-4 w-full rounded-md focus:outline-none focus:bg-white"
-                              placeholder="Insira seu email"
-                           />
-                           <button
-                              type="submit"
-                              className="bg-why-blue-600 text-why-gray-100 py-2 px-4 rounded-md hover:bg-why-blue-400 focus:outline-none focus:ring-2 focus:ring-why-blue-500 focus:ring-opacity-50"
-                           >
-                              Cadastrar
-                           </button>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </section>
-
-            <section className="bg-gray-200 py-20">
-               <div className="container mx-auto px-4">
-                  <div className="max-w-2xl mx-auto text-center">
-                     <h2 className="text-3xl font-bold text-why-gray-900 text-wh mb-6">
-                        O que você pode esperar
-                     </h2>
-                     <p className="text-why-gray-800 mb-12">
-                        Um club de descontos exclusivo, onde você irá pagar um
-                        valor fixo para obter um cupom de desconto para todas as
-                        atrações dos nossos parceiros. Compra uma vez e utilize
-                        em quantas atrações quiser.
-                     </p>
-                  </div>
-                  <div className="flex flex-wrap -mx-4 mt-12">
-                     <div className="w-full md:w-1/3 px-4 mb-8">
-                        <div className="rounded-md bg-why-blue-600 shadow-md p-8">
-                           <div className="text-4xl font-bold text-why-yellow-600 mb-4">
-                              01
-                           </div>
-                           <h3 className="text-2xl font-bold text-why-gray-100 mb-4">
-                              Compre uma vez
-                           </h3>
-                           <p className=" mb-4 text-why-gray-200">
-                              O travel club terá um preço único, que você vai
-                              pagar um única vez e vai receber um cupom que te
-                              dará desconto em dezenas de atrações, sem limite
-                              de utilização.
-                           </p>
-                        </div>
-                     </div>
-                     <div className="w-full md:w-1/3 px-4 mb-8">
-                        <div className="rounded-md bg-why-blue-600 shadow-md p-8">
-                           <div className="text-4xl font-bold text-why-yellow-600 mb-4">
-                              02
-                           </div>
-                           <h3 className="text-2xl font-bold text-why-gray-100 mb-4">
-                              Use várias vezes
-                           </h3>
-                           <p className=" text-why-gray-200 mb-4">
-                              Ao comprar o travel club você terá acesso aos
-                              descontos em todas as atrações dos nossos
-                              parceiros, e, a partir da primeira utilização,
-                              você poderá utilizar o benefício por um mês,
-                              quantas vezes quiser.
-                           </p>
-                        </div>
-                     </div>
-
-                     <div className="w-full md:w-1/3 px-4 mb-8">
-                        <div className="rounded-md bg-why-blue-600  shadow-md p-8">
-                           <div className="text-4xl font-bold text-why-yellow-600  mb-4">
-                              03
-                           </div>
-                           <h3 className="text-2xl font-bold mb-4 text-why-gray-100">
-                              Reserve com facilidade
-                           </h3>
-                           <p className="text-why-gray-200 mb-4">
-                              Ao utilizar o travel club nos faremos a sua
-                              reserva na atração desejada, basta solicitar pelo
-                              site ou whatsapp e aguardar a confirmação da sua
-                              reserva.
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-         </div>
+         <MenuFront />
+         <main>
+            <PageHeroHome
+               title="Rio Travel Club"
+               subtitle="Explore o Rio de Janeiro com descontos exclusivos para quem é do clube."
+               img="/img/home-banner.jpg"
+            />
+            <Highlights />
+            <Offer />
+            <TourHighlights />
+            <HowItWork>
+               <h2 className=" text-3xl md:text-5xl text-why-blue-900 font-medium leading-[70px]">
+                  Como o
+                  <Image
+                     className="w-54"
+                     src={'/img/travel-text.svg'}
+                     width={304}
+                     height={60}
+                     alt="Texto da logo do travel club"
+                  />
+                  Funciona?
+               </h2>
+               <p className="md:pr-12 mt-5 text-why-gray-900 leading-7">
+                  Com o Rio Travel Club, viajar pelo Rio é fácil e econômico.
+                  Compre, escolha, reserve e viva momentos mágicos com descontos
+                  exclusivos! Estamos redefinindo a maneira como você
+                  experimenta o turismo. Enquanto a maioria das agências e
+                  atrações lucra com comissões e reservas, nós escolhemos uma
+                  abordagem diferente: colocar você em primeiro lugar. Como
+                  membro do nosso clube, você desbloqueia descontos exclusivos
+                  que podem chegar a impressionantes 50% em passeios e
+                  atividades turísticas na Cidade Maravilhosa.
+               </p>
+               <p className="md:pr-12 mt-2 text-why-gray-900 leading-7">
+                  E o melhor? Você tem a liberdade de comprar agora e aproveitar
+                  suas vantagens durante um ano inteiro. Seja para uma escapada
+                  rápida no fim de semana ou uma aventura mais extensa, as
+                  maravilhas do Rio estão ao seu alcance.
+               </p>
+               <p className="md:pr-12 mt-2 text-why-gray-900 leading-7">
+                  <strong>Não espere mais!</strong> Junte-se ao Rio Travel Club,
+                  comece a economizar e viva sua viagem ao Rio intensamente.
+               </p>
+            </HowItWork>
+            <div className="bg-why-gray-50  text-why-blue-900 leading-tight font-medium text-center pt-3">
+               <h3 className="max-w-5xl mx-auto pb-4 px-4">
+                  <span className="inline-block py-3 px-7 mb-3 md:mb-10 font-semibold text-2xl md:leading-5 text-why-blue-900/80 underline underline-offset-4  md:underline-offset-[1rem] decoration-2">
+                     Garantia de Economia
+                  </span>
+                  <span className="block text-3xl md:text-5xl mb-3 md:mb-4 font-medium">
+                     Com o Rio Travel Club é Muito Fácil Economizar!
+                  </span>
+                  <span className="text-xl md:text-3xl text-why-blue-900/90 ">
+                     Confira a simulação abaixo e veja como é simples.
+                  </span>
+               </h3>
+            </div>
+            <EconomyTable />
+            <Offer />
+            <ReviewsSection />
+            <About withButton={true} />
+            <Doubts />
+         </main>
+         <Footer />
       </>
    );
 }

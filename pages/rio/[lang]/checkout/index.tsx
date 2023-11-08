@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
-import MercadoPagoServices from '../../services/MercadoPagoServices';
+import MercadoPagoServices from '../../../../services/MercadoPagoServices';
 import Image from 'next/image';
-import MenuFront from '../../components/parts/MenuFront';
-import Footer from '../../components/sections/Footer';
+import MenuFront from '../../../../components/parts/MenuFront';
+import Footer from '../../../../components/sections/Footer';
 import { signIn } from 'next-auth/react';
 import ReactLoading from 'react-loading';
 import {
@@ -13,9 +13,9 @@ import {
    AlertDialogFooter,
    AlertDialogHeader,
    AlertDialogTitle
-} from '../../components/ui/alert-dialog';
-import PageHeroCheckout from '../../components/parts/PageHeroCheckout';
-import togglePassword from '../../lib/togglePassword';
+} from '../../../../components/ui/alert-dialog';
+import PageHeroCheckout from '../../../../components/parts/PageHeroCheckout';
+import togglePassword from '../../../../lib/togglePassword';
 
 function index() {
    const formRef = useRef<HTMLFormElement>(null);

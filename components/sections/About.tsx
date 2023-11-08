@@ -46,7 +46,7 @@ function About({ withButton }: { withButton?: boolean }) {
                   </p>
                   {withButton ? (
                      <Link
-                        href="/sobre"
+                        href="/rio/pt/sobre"
                         className="mt-14 inline-flex mx-auto md:mx-0 w-fit items-center justify-center px-14 font-semibold  rounded-md  shadow-md  hover:scale-105 hover:shadow-lg transition-all ease-in-out   text-why-gray-50 py-3 bg-why-yellow-500 "
                      >
                         Saiba Mais

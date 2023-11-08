@@ -1,17 +1,16 @@
 import Head from 'next/head';
-import MenuFront from '../../components/parts/MenuFront';
-import PageHeroHome from '../../components/parts/PageHeroHome';
-import Highlights from '../../components/sections/Highlights';
-import HowItWork from '../../components/sections/HowItWork';
-import TourHighlights from '../../components/sections/TourHighlights';
-import Footer from '../../components/sections/Footer';
+import MenuFront from '../../../components/parts/MenuFront';
+import PageHeroHome from '../../../components/parts/PageHeroHome';
+import Highlights from '../../../components/sections/Highlights';
+import HowItWork from '../../../components/sections/HowItWork';
+import TourHighlights from '../../../components/sections/TourHighlights';
+import Footer from '../../../components/sections/Footer';
 import Image from 'next/image';
-import Offer from '../../components/sections/Offer';
-import EconomyTable from '../../components/parts/EconomyTable';
-import ReviewsSlider from '../../components/parts/ReviewsSlider';
-import ReviewsSection from '../../components/sections/ReviewsSection';
-import About from '../../components/sections/About';
-import Doubts from '../../components/sections/Doubts';
+import Offer from '../../../components/sections/Offer';
+import EconomyTable from '../../../components/parts/EconomyTable';
+import ReviewsSection from '../../../components/sections/ReviewsSection';
+import About from '../../../components/sections/About';
+import Doubts from '../../../components/sections/Doubts';
 
 export default function Homepage<NextPage>() {
    return (

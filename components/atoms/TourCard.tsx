@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import { Related } from '../../pages/[lang]/[url]';
 import Link from 'next/link';
+import { Related } from '../../pages/rio/[lang]/[url]';
 
 function TourCard({
    name,

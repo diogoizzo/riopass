@@ -22,7 +22,7 @@ function Footer() {
                      </h3>
                      <Link
                         href={{
-                           pathname: '/atracoes',
+                           pathname: '/rio/pt/atracoes',
                            query: {
                               categoria: 'City Tour'
                            }
@@ -34,7 +34,7 @@ function Footer() {
                      </Link>
                      <Link
                         href={{
-                           pathname: '/atracoes',
+                           pathname: '/rio/pt/atracoes',
                            query: {
                               categoria: 'Trilha'
                            }
@@ -46,7 +46,7 @@ function Footer() {
                      </Link>
                      <Link
                         href={{
-                           pathname: '/atracoes',
+                           pathname: '/rio/pt/atracoes',
                            query: {
                               categoria: 'Passeio de Barco'
                            }
@@ -58,7 +58,7 @@ function Footer() {
                      </Link>
                      <Link
                         href={{
-                           pathname: '/atracoes',
+                           pathname: '/rio/pt/atracoes',
                            query: {
                               categoria: 'Praias'
                            }
@@ -70,7 +70,7 @@ function Footer() {
                      </Link>
                      <Link
                         href={{
-                           pathname: '/atracoes',
+                           pathname: '/rio/pt/atracoes',
                            query: {
                               categoria: 'Jeep Tour'
                            }
@@ -82,7 +82,7 @@ function Footer() {
                      </Link>
                      <Link
                         href={{
-                           pathname: '/atracoes',
+                           pathname: '/rio/pt/atracoes',
                            query: {
                               categoria: 'Vôo Livre'
                            }
@@ -100,14 +100,32 @@ function Footer() {
                      <h3 className="uppercase font-medium text-why-gray-50 text-xl mb-3  ">
                         Links Úteis
                      </h3>
-                     <p className=" text-why-gray-200 mt-1 text-lg">Home</p>
-                     <p className=" text-why-gray-200 mt-1 text-lg">
-                        Como Funciona
-                     </p>
-                     <p className=" text-why-gray-200 mt-1 text-lg">Atrações</p>
-                     <p className=" text-why-gray-200 mt-1 text-lg">FAQ</p>
-                     <p className=" text-why-gray-200 mt-1 text-lg">Contato</p>
-                     <p className=" text-why-gray-200 mt-1 text-lg">Garantia</p>
+                     <Link href={'/rio/pt/'}>
+                        <p className=" text-why-gray-200 mt-1 text-lg">Home</p>
+                     </Link>
+                     <Link href={'/rio/pt/comofunciona'}>
+                        <p className=" text-why-gray-200 mt-1 text-lg">
+                           Como Funciona
+                        </p>
+                     </Link>
+                     <Link href={'/rio/pt/atracoes'}>
+                        <p className=" text-why-gray-200 mt-1 text-lg">
+                           Atrações
+                        </p>
+                     </Link>
+                     <Link href={'/rio/pt/perguntas'}>
+                        <p className=" text-why-gray-200 mt-1 text-lg">FAQ</p>
+                     </Link>
+                     <Link href={'/rio/pt/contato'}>
+                        <p className=" text-why-gray-200 mt-1 text-lg">
+                           Contato
+                        </p>
+                     </Link>
+                     <Link href={'/rio/pt/garantia'}>
+                        <p className=" text-why-gray-200 mt-1 text-lg">
+                           Garantia
+                        </p>
+                     </Link>
                   </div>
                </div>
                <div className="flex flex-col justify-start md:py-12  items-center">
@@ -124,24 +142,28 @@ function Footer() {
                         Social Media
                      </h3>
                      <div className="flex items-center md:justify-start justify-center w-full pb-10 md:pb-0 mt-3 space-x-2">
-                        <Image
-                           src={'/img/Instagram.svg'}
-                           width={40}
-                           height={41}
-                           alt="Ícone do instagram"
-                        />
-                        <Image
-                           src={'/img/Facebook.svg'}
-                           width={40}
-                           height={41}
-                           alt="Ícone do facebook"
-                        />
-                        <Image
-                           src={'/img/twitter.svg'}
-                           width={40}
-                           height={41}
-                           alt="Ícone do twitter"
-                        />
+                        <a
+                           href="https://instagram.com/rio.travelclub"
+                           target="_blank"
+                        >
+                           <Image
+                              src={'/img/Instagram.svg'}
+                              width={40}
+                              height={41}
+                              alt="Ícone do instagram"
+                           />
+                        </a>
+                        <a
+                           href="https://facebook.com/riotravelclub"
+                           target="_blank"
+                        >
+                           <Image
+                              src={'/img/Facebook.svg'}
+                              width={40}
+                              height={41}
+                              alt="Ícone do facebook"
+                           />
+                        </a>
                      </div>
                   </div>
                </div>
@@ -155,11 +177,13 @@ function Footer() {
                      Creative Tours. CNPJ 24.538.473/0001-05
                   </p>
                   <div className="space-y-1 lg:space-y-0 lg:space-x-4 flex flex-col lg:flex-row items-center mt-3 lg:mt-0">
-                     <Link href={'termos'}>Termos de uso</Link>
+                     <Link href={'/rio/pt/termos'}>Termos de uso</Link>
                      <div className="w-[1px] bg-why-green-400 inline-block h-[70%]"></div>
-                     <Link href={'privacidade'}>Política de Privacidade</Link>
+                     <Link href={'/rio/pt/privacidade'}>
+                        Política de Privacidade
+                     </Link>
                      <div className="w-[1px] bg-why-green-400 inline-block h-[70%]"></div>
-                     <Link href={'garantia'}>Política de Garantia</Link>
+                     <Link href={'/rio/pt/garantia'}>Política de Garantia</Link>
                   </div>
                </div>
             </div>

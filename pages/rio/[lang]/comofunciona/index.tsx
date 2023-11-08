@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import MenuFront from '../../components/parts/MenuFront';
-import PageHero from '../../components/parts/PageHero';
-import HowItWork from '../../components/sections/HowItWork';
-import EconomyTable from '../../components/parts/EconomyTable';
-import Footer from '../../components/sections/Footer';
-import Offer from '../../components/sections/Offer';
+import MenuFront from '../../../../components/parts/MenuFront';
+import PageHero from '../../../../components/parts/PageHero';
+import HowItWork from '../../../../components/sections/HowItWork';
+import EconomyTable from '../../../../components/parts/EconomyTable';
+import Footer from '../../../../components/sections/Footer';
+import Offer from '../../../../components/sections/Offer';
 import Image from 'next/image';
 
 function HowItWorks() {

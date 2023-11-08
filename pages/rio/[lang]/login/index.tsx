@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import MenuFront from '../../components/parts/MenuFront';
+import MenuFront from '../../../../components/parts/MenuFront';
 
-import Footer from '../../components/sections/Footer';
+import Footer from '../../../../components/sections/Footer';
 import { signIn } from 'next-auth/react';
 import { useEffect, useRef, useState } from 'react';
-import togglePassword from '../../lib/togglePassword';
+import togglePassword from '../../../../lib/togglePassword';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
@@ -15,7 +15,7 @@ import {
    AlertDialogFooter,
    AlertDialogHeader,
    AlertDialogTitle
-} from '../../components/ui/alert-dialog';
+} from '../../../../components/ui/alert-dialog';
 import ReactLoading from 'react-loading';
 
 function Login() {
@@ -41,23 +41,23 @@ function Login() {
          redirect: false
       });
       if (res?.ok === true) {
-         router.push('/perfil');
+         router.push('/rio/pt//perfil');
       } else {
          setLoading(false);
          router.push(
             {
-               pathname: '/login',
+               pathname: '/rio/pt/login',
                query: {
                   error: 'invalidCredentials'
                }
             },
-            '/login'
+            '/rio/pt/login'
          );
       }
    }
    useEffect(() => {
       if (urlQuery === 'invalidCredentials') setAlertOpen(true);
-      router.replace('/login');
+      router.replace('/rio/pt/login');
    }, [urlQuery]);
    return (
       <>

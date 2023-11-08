@@ -1,16 +1,16 @@
 import React, { useRef, useState } from 'react';
-import MenuFront from '../../components/parts/MenuFront';
-import PageHeroCheckout from '../../components/parts/PageHeroCheckout';
-import Footer from '../../components/sections/Footer';
+import MenuFront from '../../../../components/parts/MenuFront';
+import PageHeroCheckout from '../../../../components/parts/PageHeroCheckout';
+import Footer from '../../../../components/sections/Footer';
 import {
    Popover,
    PopoverContent,
    PopoverTrigger
-} from '../../components/ui/popover';
-import { Button } from '../../components/ui/button';
-import { cn } from '../../lib/utils';
+} from '../../../../components/ui/popover';
+import { Button } from '../../../../components/ui/button';
+import { cn } from '../../../../lib/utils';
 import { CalendarIcon } from 'lucide-react';
-import { Calendar } from '../../components/ui/calendar';
+import { Calendar } from '../../../../components/ui/calendar';
 import dayjs from 'dayjs';
 import pt from 'dayjs/locale/pt-br';
 import { useSession } from 'next-auth/react';

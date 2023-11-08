@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import MenuFront from '../../components/parts/MenuFront';
-import Footer from '../../components/sections/Footer';
+import MenuFront from '../../../../components/parts/MenuFront';
+import Footer from '../../../../components/sections/Footer';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useQuery } from 'react-query';
-import UserServices from '../../services/UserServices';
+import UserServices from '../../../../services/UserServices';
 import Image from 'next/image';
 
 function Profile() {
@@ -110,7 +110,7 @@ function Profile() {
                      </div>
                      <div className=" flex w-full mt-6 md:mt-0 justify-center items-center">
                         <Link
-                           href={'/atracoes'}
+                           href={'/rio/pt/perguntas'}
                            className="inline-flex w-full md:w-fit  items-center hover:bg-why-green-400/20 transition-all font-semibold ease-in-out duration-200 border-2 border-why-green-700 justify-center px-6 py-2 rounded-md shadow-sm text-why-green-700 bg-why-gray-50"
                         >
                            Saber Mais
