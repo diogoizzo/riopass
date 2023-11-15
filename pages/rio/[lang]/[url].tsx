@@ -354,7 +354,11 @@ export default function Homepage<NextPage>({ tour }: { tour: ITour }) {
                         price={tour?.price}
                         finalPrice={tour?.finalPrice}
                      />
-                     {authenticated ? <ReservationCTA /> : <CallToAction />}
+                     {authenticated ? (
+                        <ReservationCTA id={tour.id} name={tour.name} />
+                     ) : (
+                        <CallToAction />
+                     )}
                   </div>
                   <div className=" w-full mt-6  pt-10 pb-24">
                      <h2 className=" text-4xl text-why-gray-900 mb-10 font-medium">

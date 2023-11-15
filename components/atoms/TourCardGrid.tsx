@@ -80,7 +80,7 @@ function TourCardGrid({
                   <div className="flex w-full justify-center items-center py-4 text-center border-t border-why-gray-200">
                      <Link
                         href={{
-                           pathname: '/reservar',
+                           pathname: '/rio/pt/reservar',
                            query: {
                               id,
                               name
