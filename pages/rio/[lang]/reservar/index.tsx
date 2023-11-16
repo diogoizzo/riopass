@@ -44,7 +44,7 @@ function Reservar() {
          <MenuFront />
          <PageHeroCheckout
             title="Reserve sua Experiência"
-            subtitle="Granta sua vaga em uma de nossas atrações com apenas alguns cliques."
+            subtitle="Garanta sua vaga em uma de nossas atrações com apenas alguns cliques."
             img={'/img/rio.webp'}
          />
          <main className="bg-why-gray-50 min-h-[100vh] text-why-gray-800 py-10 lg:py-24">
