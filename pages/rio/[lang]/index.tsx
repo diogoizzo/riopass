@@ -22,7 +22,7 @@ export default function Homepage<NextPage>() {
          <main>
             <PageHeroHome
                title="Rio Travel Club"
-               subtitle="Explore o Rio de Janeiro com descontos exclusivos para quem é do clube."
+               subtitle="Explore o Rio de Janeiro com descontos em passeios turísticos para quem é do clube."
                img="/img/home-banner.jpg"
             />
             <Highlights />

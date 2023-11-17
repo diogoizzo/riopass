@@ -48,7 +48,7 @@ function Highlights() {
                            alt=""
                         />
                         <p className="text-3xl text-center text-why-gray-50">
-                           Garantia de <br /> Economia
+                           Garantia de <br /> 90 dias
                         </p>
                      </div>
                   </div>

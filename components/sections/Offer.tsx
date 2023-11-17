@@ -8,7 +8,7 @@ function Offer() {
                Promoção de Lançamento
             </span>
             <h2 className="mb-16 xl:mb-16 text-why-blue-900 text-3xl md:text-5xl leading-tight ">
-               Descubra o Rio com Descontos Exclusivos!
+               Descubra o Rio e Economize em seus Passeios!
                <br />
                Você compra agora e usa quando quiser.
             </h2>
