@@ -33,14 +33,11 @@ export default function index() {
                <p className="text-why-gray-800">
                   O Rio Travel Club é sinônimo de grandes economias,
                   flexibilidade e experiências incríveis. É por isso que
-                  introduzimos nossa Garantia de Economia Sem Risco. Assim, não
-                  importa o que aconteça, você economizará dinheiro em sua
-                  programação turística e terá uma viagem pela cidade livre de
-                  estresse conosco.
+                  introduzimos nossa Garantia sem Risco. Assim, não importa o
+                  que aconteça, você economizará dinheiro em sua programação
+                  turística e terá uma viagem pela cidade livre de estresse
+                  conosco.
                </p>
-               <h2 className="text-3xl font-medium text-why-gray-900 mt-6 mb-3 ">
-                  Garantia de Economia
-               </h2>
                <p className="text-why-gray-800">
                   Com o Rio Travel Club, você economiza em sua programação
                   turística – essa é a nossa promessa para você!
