@@ -30,7 +30,7 @@ export default function index() {
                <h2 className="text-3xl font-medium text-why-gray-900 mt-6 mb-3 ">
                   Garantia Sem Risco do Rio Travel Club
                </h2>
-               <p className="text-why-gray-800">
+               <p className="text-why-gray-800 mb-2">
                   O Rio Travel Club é sinônimo de grandes economias,
                   flexibilidade e experiências incríveis. É por isso que
                   introduzimos nossa Garantia sem Risco. Assim, não importa o
@@ -38,11 +38,11 @@ export default function index() {
                   turística e terá uma viagem pela cidade livre de estresse
                   conosco.
                </p>
-               <p className="text-why-gray-800">
+               <p className="text-why-gray-800 mb-2">
                   Com o Rio Travel Club, você economiza em sua programação
                   turística – essa é a nossa promessa para você!
                </p>
-               <p className="text-why-gray-800">
+               <p className="text-why-gray-800 mb-2">
                   Se acontecer de você não conseguir reservar os passeios
                   desejados em nossa plataforma com desconto por qualquer
                   problema dos nossos parceiros, nós reembolsaremos o seu passe
