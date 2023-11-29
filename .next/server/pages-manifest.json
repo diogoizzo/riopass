@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/rio/[lang]/atracoes": "pages/rio/[lang]/atracoes.js",
-  "/rio/[lang]": "pages/rio/[lang].js"
+  "/rio/[lang]": "pages/rio/[lang].js",
+  "/rio/[lang]/atracoes": "pages/rio/[lang]/atracoes.js"
 }

@@ -28,7 +28,7 @@ function MenuFront() {
          >
             <header className="container  overflow-visible mx-auto flex flex-col lg:flex-row justify-between items-center py-4  font-medium">
                <div className=" flex  items-center justify-between w-full md:w-fit">
-                  <Link href={'/rio/pt'}>
+                  <Link href={'/rio/pt'} className="min-w-[220px] inline-block">
                      <Image
                         src={'/img/travelclub.svg'}
                         height={990}
