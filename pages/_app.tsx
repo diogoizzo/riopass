@@ -36,7 +36,7 @@ export default function App({ Component, pageProps }: AppProps) {
    return (
       <>
          <Head>
-            <link rel="icon" type="image/x-icon" href="/img/favicon.svg"></link>
+            <link rel="icon" href="/img/favicon2.svg"></link>
          </Head>
          <noscript>
             <iframe

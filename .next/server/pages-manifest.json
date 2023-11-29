@@ -4,5 +4,6 @@
   "/_document": "pages/_document.js",
   "/rio/[lang]": "pages/rio/[lang].js",
   "/rio/[lang]/perfil": "pages/rio/[lang]/perfil.js",
-  "/rio/[lang]/login": "pages/rio/[lang]/login.js"
+  "/rio/[lang]/login": "pages/rio/[lang]/login.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
 }
