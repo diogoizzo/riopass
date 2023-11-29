@@ -41,7 +41,7 @@ function Login() {
          redirect: false
       });
       if (res?.ok === true) {
-         router.push('/rio/pt//perfil');
+         router.push('/rio/pt/perfil');
       } else {
          setLoading(false);
          router.push(

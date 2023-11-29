@@ -27,8 +27,8 @@ function MenuFront() {
                shadow-md z-50 overflow-visible`}
          >
             <header className="container  overflow-visible mx-auto flex flex-col lg:flex-row justify-between items-center py-4  font-medium">
-               <div className=" flex  items-center justify-between w-full md:w-fit">
-                  <Link href={'/rio/pt'} className="min-w-[220px] inline-block">
+               <div className=" flex  items-center justify-between w-full md:w-fit min-w-[220px]">
+                  <Link href={'/rio/pt'}>
                      <Image
                         src={'/img/travelclub.svg'}
                         height={990}
@@ -70,40 +70,44 @@ function MenuFront() {
                      menuOpen ? null : 'hidden lg:flex'
                   } `}
                >
-                  <ul className="flex lg:w-auto w-full flex-col  lg:flex-row lg:space-x-10 uppercase lg:items-center lg:justify-center  text-why-gray-900">
+                  <ul className="flex lg:w-auto w-full flex-col  lg:flex-row  uppercase lg:items-center lg:justify-center  text-why-gray-900">
                      <Link href={'/rio/pt'}>
-                        <li className="border-b border-why-gray-200 lg:border-none   py-3 lg:py-0">
+                        <li className="border-b border-why-gray-200 lg:border-none lg:mr-8  py-3 lg:py-0">
                            Home
                         </li>
                      </Link>
                      <Link href={'/rio/pt/atracoes'}>
-                        <li className="border-b border-why-gray-200 lg:border-none   py-3 lg:py-0">
+                        <li className="border-b border-why-gray-200 lg:border-none  lg:mr-8  py-3 lg:py-0">
                            atrações
                         </li>
                      </Link>
                      <Link href={'/rio/pt/comofunciona'}>
-                        <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0 ">
+                        <li className="border-b border-why-gray-200 lg:border-none lg:mr-8  py-3 lg:py-0 ">
                            como funciona
                         </li>
                      </Link>
                      <Link href={'/rio/pt/perguntas'}>
-                        <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
+                        <li className="border-b border-why-gray-200 lg:border-none lg:mr-8   py-3 lg:py-0">
                            FAQ
                         </li>
                      </Link>
                      <Link href={'/rio/pt/sobre'}>
-                        <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
+                        <li className="border-b border-why-gray-200 lg:border-none lg:mr-8  py-3 lg:py-0">
                            Sobre
                         </li>
                      </Link>
 
                      <Link href={'/rio/pt/contato'}>
-                        <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
+                        <li className="border-b border-why-gray-200 lg:border-none lg:mr-8  py-3 lg:py-0">
                            Contato
                         </li>
                      </Link>
                      <Link href={'/rio/pt/garantia'}>
-                        <li className="border-b border-why-gray-200 lg:border-none  py-3 lg:py-0">
+                        <li
+                           className={`border-b border-why-gray-200 lg:border-none ${
+                              authenticated ? null : 'lg:mr-8'
+                           }   py-3 lg:py-0`}
+                        >
                            Garantia
                         </li>
                      </Link>

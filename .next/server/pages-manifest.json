@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
   "/rio/[lang]": "pages/rio/[lang].js",
-  "/rio/[lang]/atracoes": "pages/rio/[lang]/atracoes.js"
+  "/rio/[lang]/perfil": "pages/rio/[lang]/perfil.js",
+  "/rio/[lang]/login": "pages/rio/[lang]/login.js"
 }
