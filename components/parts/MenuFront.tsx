@@ -27,11 +27,10 @@ function MenuFront() {
                shadow-md z-50 overflow-visible`}
          >
             <header className="container  overflow-visible mx-auto flex flex-col lg:flex-row justify-between items-center py-4  font-medium">
-               <div className=" flex justify-between items-center w-full lg:w-auto ">
+               <div className=" flex  items-center justify-between w-full md:w-fit">
                   <Link href={'/rio/pt'}>
                      <Image
                         src={'/img/travelclub.svg'}
-                        quality={100}
                         height={990}
                         width={220}
                         alt="Logo em svg do brasil travel club"
@@ -157,88 +156,95 @@ function MenuFront() {
                      )}
                   </ul>
                </nav>
-               {!authenticated ? (
-                  <Link
-                     href={'/rio/pt/checkout'}
-                     className=" hidden lg:inline-flex items-center justify-center px-8 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
-                  >
-                     Comprar Agora
-                  </Link>
-               ) : (
-                  <DropdownMenu open={dropOpen} onOpenChange={setDropOpen}>
-                     <DropdownMenuTrigger asChild className="hidden lg:block">
-                        <div className="bg-gradient-to-r  from-why-yellow-400 via-why-green-500 p-[2px] rounded-full  to-why-blue-400 shadow-sm">
-                           <div
-                              className={`rounded-full px-5 w-fit text-lg py-1 ${
-                                 dropOpen
-                                    ? 'bg-white'
-                                    : 'bg-why-gray-100 hover:bg-white'
-                              }    cursor-pointer transition-all ease-in-out duration-200`}
-                           >
-                              <div className="flex space-x-3 items-center bg-gradient-to-r  from-why-yellow-400 via-why-green-500 to-why-blue-400 bg-clip-text">
-                                 <Image
-                                    src={'/img/profile.svg'}
-                                    width={24}
-                                    height={24}
-                                    alt="ícone de perfil"
-                                 />
-
-                                 <p className=" text-transparent">{userName}</p>
-                                 <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth={1.5}
-                                    stroke="currentColor"
-                                    className="w-6 h-6 text-why-blue-400"
-                                 >
-                                    <path
-                                       strokeLinecap="round"
-                                       strokeLinejoin="round"
-                                       d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+               <div>
+                  {!authenticated ? (
+                     <Link
+                        href={'/rio/pt/checkout'}
+                        className=" hidden lg:inline-flex items-center justify-center px-8 font-semibold  rounded-md  shadow-md shadow-why-yellow-600/40 hover:scale-105 hover:shadow-lg transition-all ease-in-out hover:shadow-why-yellow-600/30 text-why-gray-50 py-3 bg-why-yellow-500 "
+                     >
+                        Comprar Agora
+                     </Link>
+                  ) : (
+                     <DropdownMenu open={dropOpen} onOpenChange={setDropOpen}>
+                        <DropdownMenuTrigger
+                           asChild
+                           className="hidden lg:block"
+                        >
+                           <div className="bg-gradient-to-r  from-why-yellow-400 via-why-green-500 p-[2px] rounded-full  to-why-blue-400 shadow-sm">
+                              <div
+                                 className={`rounded-full px-5 w-fit text-lg py-1 ${
+                                    dropOpen
+                                       ? 'bg-white'
+                                       : 'bg-why-gray-100 hover:bg-white'
+                                 }    cursor-pointer transition-all ease-in-out duration-200`}
+                              >
+                                 <div className="flex space-x-3 items-center bg-gradient-to-r  from-why-yellow-400 via-why-green-500 to-why-blue-400 bg-clip-text">
+                                    <Image
+                                       src={'/img/profile.svg'}
+                                       width={24}
+                                       height={24}
+                                       alt="ícone de perfil"
                                     />
-                                 </svg>
+
+                                    <p className=" text-transparent">
+                                       {userName}
+                                    </p>
+                                    <svg
+                                       xmlns="http://www.w3.org/2000/svg"
+                                       fill="none"
+                                       viewBox="0 0 24 24"
+                                       strokeWidth={1.5}
+                                       stroke="currentColor"
+                                       className="w-6 h-6 text-why-blue-400"
+                                    >
+                                       <path
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                                       />
+                                    </svg>
+                                 </div>
                               </div>
                            </div>
-                        </div>
-                     </DropdownMenuTrigger>
-                     <DropdownMenuContent className="w-44 py-2 relative bg-why-gray-50 ">
-                        <DropdownMenuLabel className="text-why-gray-900">
-                           Área de Membros
-                        </DropdownMenuLabel>
-                        <DropdownMenuSeparator className="bg-why-gray-200" />
-                        <DropdownMenuItem>
-                           <Link
-                              className="block w-full text-why-gray-900"
-                              href={'/rio/pt/atracoes'}
-                           >
-                              Reservar
-                           </Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                           <Link
-                              className="block w-full text-why-gray-900"
-                              href={'/rio/pt/perfil'}
-                           >
-                              Perfil
-                           </Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuSeparator className="bg-why-gray-200" />
-                        <DropdownMenuItem>
-                           <button
-                              onClick={() =>
-                                 signOut({
-                                    callbackUrl: '/rio/pt'
-                                 })
-                              }
-                              className="block w-full text-left text-why-gray-900"
-                           >
-                              Sair
-                           </button>
-                        </DropdownMenuItem>
-                     </DropdownMenuContent>
-                  </DropdownMenu>
-               )}
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className="w-44 py-2 relative bg-why-gray-50 ">
+                           <DropdownMenuLabel className="text-why-gray-900">
+                              Área de Membros
+                           </DropdownMenuLabel>
+                           <DropdownMenuSeparator className="bg-why-gray-200" />
+                           <DropdownMenuItem>
+                              <Link
+                                 className="block w-full text-why-gray-900"
+                                 href={'/rio/pt/atracoes'}
+                              >
+                                 Reservar
+                              </Link>
+                           </DropdownMenuItem>
+                           <DropdownMenuItem>
+                              <Link
+                                 className="block w-full text-why-gray-900"
+                                 href={'/rio/pt/perfil'}
+                              >
+                                 Perfil
+                              </Link>
+                           </DropdownMenuItem>
+                           <DropdownMenuSeparator className="bg-why-gray-200" />
+                           <DropdownMenuItem>
+                              <button
+                                 onClick={() =>
+                                    signOut({
+                                       callbackUrl: '/rio/pt'
+                                    })
+                                 }
+                                 className="block w-full text-left text-why-gray-900"
+                              >
+                                 Sair
+                              </button>
+                           </DropdownMenuItem>
+                        </DropdownMenuContent>
+                     </DropdownMenu>
+                  )}
+               </div>
             </header>
          </div>
       </>

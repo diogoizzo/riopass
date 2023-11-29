@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
   "/": "pages/index.js",
-  "/rio/[lang]/garantia": "pages/rio/[lang]/garantia.js"
+  "/rio/[lang]/atracoes": "pages/rio/[lang]/atracoes.js",
+  "/rio/[lang]": "pages/rio/[lang].js"
 }
